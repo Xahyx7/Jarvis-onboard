@@ -1,0 +1,26 @@
+{
+  "name": "jarvis-ai-assistant",
+  "version": "1.0.0",
+  "description": "Jarvis AI Study Assistant with Arc Reactor intro",
+  "main": "01-index.html",
+  "scripts": {
+    "start": "python backend/app.py",
+    "dev": "python -m http.server 8000",
+    "install-deps": "pip install -r 07-requirements.txt",
+    "setup": "npm run install-deps && python backend/app.py"
+  },
+  "keywords": ["AI", "Education", "CBSE", "Study Assistant", "Voice", "Arc Reactor"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/Jarvis-Initializer.git"
+  },
+  "homepage": "https://yourusername.github.io/Jarvis-Initializer/",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
