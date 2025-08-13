@@ -240,7 +240,8 @@ class JarvisIntro {
         }
         
         setTimeout(() => {
-            window.location.href = 'main.html';
+            window.location.href = '04-main.html';
+
         }, 1200);
     }
 
