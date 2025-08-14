@@ -1,17 +1,24 @@
-// ULTIMATE DIAMOND-LEVEL CBSE AI - COMPLETE WORKING VERSION
+// ═══════════════════════════════════════════════════════════════════════════════════════════════════
+// 💎 ULTIMATE DIAMOND-LEVEL CBSE AI - COMPLETE SYSTEM WITH EVERYTHING
+// Version: 6.0 Diamond Edition - 5000+ Lines of Pure Intelligence
+// Features: ChatGPT Intelligence + Perplexity Search + Diagram Library + Complete CBSE Coverage
+// ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
 class UltimateDiamondCBSEAI {
     constructor() {
-        // CORE SYSTEM PROPERTIES
-        this.version = "Diamond-Level-5.0";
+        // CORE SYSTEM ARCHITECTURE
+        this.version = "Diamond-Level-6.0-Ultimate";
+        this.buildNumber = "5000Plus-ChatGPT-Perplexity-Edition";
         this.isRecording = false;
         this.isProcessing = false;
         this.recognition = null;
         this.synthesis = null;
         this.apiCache = new Map();
         this.conversationMemory = [];
-        this.sessionId = this.generateSessionId();
+        this.sessionId = this.generateAdvancedSessionId();
+        this.systemStartTime = Date.now();
         
-        // ADVANCED AI INTELLIGENCE SYSTEMS
+        // ADVANCED AI INTELLIGENCE ENGINES
         this.languageProcessor = new AdvancedLanguageProcessor();
         this.contextualIntelligence = new ContextualIntelligenceEngine();
         this.emotionalIntelligence = new EmotionalIntelligenceEngine();
@@ -20,16 +27,32 @@ class UltimateDiamondCBSEAI {
         this.knowledgeGraph = new KnowledgeGraphEngine();
         this.neuralNetwork = new SimpleNeuralNetwork();
         this.machineLearning = new MachineLearningEngine();
+        this.semanticAnalyzer = new SemanticAnalysisEngine();
+        this.intentClassifier = new IntentClassificationEngine();
+        this.responseOptimizer = new ResponseOptimizationEngine();
+        
+        // DIAGRAM AND VISUALIZATION LIBRARY
+        this.diagramLibrary = new ComprehensiveDiagramLibrary();
+        this.visualizationEngine = new VisualizationEngine();
+        this.chartGenerator = new ChartGeneratorEngine();
+        this.mindMapGenerator = new MindMapGenerator();
+        this.flowchartCreator = new FlowchartCreator();
+        this.geometryRenderer = new GeometryRenderer();
+        this.scientificDiagrammer = new ScientificDiagrammer();
+        this.literaryVisualizer = new LiteraryVisualizationEngine();
         
         // COMPREHENSIVE LEARNING SYSTEMS
         this.learningDatabase = new UltraAdvancedLearningDatabase();
-        this.personalityEngine = new GPTLevelPersonalityEngine();
+        this.personalityEngine = new ChatGPTLevelPersonalityEngine();
         this.userProfile = new ComprehensiveUserProfile();
         this.adaptiveLearning = new AdaptiveLearningEngine();
         this.studyPlanner = new IntelligentStudyPlanner();
         this.motivationEngine = new AdvancedMotivationEngine();
         this.memoryConsolidation = new MemoryConsolidationEngine();
         this.metacognitionEngine = new MetacognitionEngine();
+        this.learningStyleDetector = new LearningStyleDetector();
+        this.cognitiveLoadManager = new CognitiveLoadManager();
+        this.attentionManager = new AttentionManagementEngine();
         
         // ULTRA-COMPREHENSIVE CBSE SYSTEMS
         this.cbseDatabase = new UltraComprehensiveCBSEDatabase();
@@ -40,45 +63,73 @@ class UltimateDiamondCBSEAI {
         this.questionAnalyzer = new QuestionAnalysisEngine();
         this.difficultyAdjuster = new DifficultyAdjustmentEngine();
         this.learningPathOptimizer = new LearningPathOptimizer();
+        this.curriculumMapper = new CurriculumMappingEngine();
+        this.assessmentEngine = new AssessmentEngine();
+        this.feedbackGenerator = new FeedbackGenerationEngine();
         
-        // ADVANCED WEB & SEARCH INTEGRATION
-        this.webSearchEngine = new AdvancedWebSearchEngine();
-        this.factChecker = new FactCheckingEngine();
+        // ADVANCED WEB & SEARCH INTEGRATION (PERPLEXITY-LEVEL)
+        this.webSearchEngine = new PerplexityLevelWebSearchEngine();
+        this.factChecker = new AdvancedFactCheckingEngine();
         this.sourceValidator = new SourceValidationEngine();
         this.contentCurator = new ContentCurationEngine();
         this.realTimeUpdater = new RealTimeUpdateEngine();
         this.knowledgeExtractor = new KnowledgeExtractionEngine();
+        this.academicSearchEngine = new AcademicSearchEngine();
+        this.newsIntegrator = new NewsIntegrationEngine();
+        this.currentAffairsEngine = new CurrentAffairsEngine();
+        this.trendAnalyzer = new TrendAnalysisEngine();
         
         // MULTIMODAL INTERACTION SYSTEMS
         this.voiceEngine = new AdvancedVoiceEngine();
         this.textProcessor = new TextProcessingEngine();
-        this.responseGenerator = new GPTStyleResponseGenerator();
+        this.responseGenerator = new ChatGPTStyleResponseGenerator();
         this.conversationManager = new ConversationManager();
         this.contextManager = new ContextManager();
         this.dialogueSystem = new DialogueSystem();
+        this.speechSynthesizer = new AdvancedSpeechSynthesizer();
+        this.languageTranslator = new LanguageTranslationEngine();
+        this.codeInterpreter = new CodeInterpretationEngine();
+        this.mathematicalSolver = new MathematicalSolvingEngine();
         
         // GAMIFICATION & ENGAGEMENT SYSTEMS
-        this.gamificationEngine = new GamificationEngine();
+        this.gamificationEngine = new AdvancedGamificationEngine();
         this.achievementSystem = new AchievementSystem();
         this.progressTracker = new ProgressTracker();
         this.streakTracker = new StreakTracker();
         this.rewardSystem = new RewardSystem();
         this.leaderboardSystem = new LeaderboardSystem();
+        this.challengeGenerator = new ChallengeGenerator();
+        this.competitionManager = new CompetitionManager();
+        this.socialLearningEngine = new SocialLearningEngine();
         
-        // DATA STORAGE & ANALYTICS
+        // ADVANCED ANALYTICS & INTELLIGENCE
+        this.behaviorAnalytics = new BehaviorAnalyticsEngine();
+        this.learningAnalytics = new LearningAnalyticsEngine();
+        this.performancePredictor = new PerformancePredictionEngine();
+        this.riskAssessment = new RiskAssessmentEngine();
+        this.interventionEngine = new InterventionEngine();
+        this.outcomeOptimizer = new OutcomeOptimizationEngine();
+        this.insightGenerator = new InsightGenerationEngine();
+        this.reportGenerator = new ReportGenerationEngine();
+        
+        // COMPREHENSIVE DATA STORAGE
         this.testHistory = [];
         this.learningProgress = new Map();
         this.performanceMetrics = new Map();
         this.engagementAnalytics = new Map();
-        this.behaviorAnalytics = new Map();
-        this.learningAnalytics = new Map();
+        this.behaviorMetrics = new Map();
+        this.learningAnalyticsData = new Map();
         this.weaknessTracker = new Map();
         this.strengthTracker = new Map();
+        this.conceptMastery = new Map();
+        this.skillAssessment = new Map();
         this.lastGeneratedTest = null;
         this.currentContext = null;
         this.userPreferences = new Map();
+        this.sessionData = new Map();
+        this.interactionHistory = [];
         
-        // UI ELEMENTS (Will be properly initialized)
+        // UI ELEMENTS AND INTERFACE
         this.chatMessages = null;
         this.messageInput = null;
         this.sendBtn = null;
@@ -86,1334 +137,1454 @@ class UltimateDiamondCBSEAI {
         this.stopBtn = null;
         this.statusText = null;
         this.voiceIndicator = null;
+        this.diagramCanvas = null;
+        this.progressDisplay = null;
+        this.achievementDisplay = null;
+        this.analyticsDisplay = null;
         
-        // SYSTEM FLAGS
+        // SYSTEM FLAGS AND STATE
         this.isInitialized = false;
-        this.debugMode = false;
+        this.debugMode = true;
+        this.learningMode = 'adaptive';
+        this.personalityMode = 'dynamic';
+        this.diagramMode = 'intelligent';
+        this.searchMode = 'comprehensive';
         
-        // INITIALIZE EVERYTHING
-        this.initializeCompleteSystem();
+        // INITIALIZE COMPLETE SYSTEM
+        this.initializeUltimateDiamondSystem();
     }
 
-    generateSessionId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // SYSTEM INITIALIZATION - COMPLETE SETUP
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
+    generateAdvancedSessionId() {
+        const timestamp = Date.now().toString(36);
+        const random = Math.random().toString(36).substring(2);
+        const userAgent = navigator.userAgent.slice(0, 10).replace(/[^a-zA-Z0-9]/g, '');
+        return `DIAMOND_${timestamp}_${random}_${userAgent}`;
     }
 
-    async initializeCompleteSystem() {
+    async initializeUltimateDiamondSystem() {
         console.log('🚀 Initializing Ultimate Diamond CBSE AI System...');
+        console.log(`💎 Version: ${this.version}`);
+        console.log(`🏗️ Build: ${this.buildNumber}`);
         
         try {
-            // STEP 1: WAIT FOR DOM TO BE READY
-            await this.waitForDOM();
+            // PHASE 1: CORE FOUNDATION
+            await this.initializePhase1_CoreFoundation();
             
-            // STEP 2: INITIALIZE UI ELEMENTS
-            await this.initializeUIElements();
+            // PHASE 2: AI INTELLIGENCE ENGINES
+            await this.initializePhase2_AIEngines();
             
-            // STEP 3: SET UP EVENT LISTENERS
-            await this.setupEventListeners();
+            // PHASE 3: CBSE EDUCATIONAL SYSTEMS
+            await this.initializePhase3_EducationalSystems();
             
-            // STEP 4: INITIALIZE SPEECH SYSTEMS
-            await this.initializeSpeechSystems();
+            // PHASE 4: DIAGRAM AND VISUALIZATION
+            await this.initializePhase4_DiagramSystems();
             
-            // STEP 5: LOAD ALL DATA
-            await this.loadAllSystemData();
+            // PHASE 5: WEB AND SEARCH INTEGRATION
+            await this.initializePhase5_WebIntegration();
             
-            // STEP 6: START BACKGROUND PROCESSES
-            await this.startBackgroundProcesses();
+            // PHASE 6: USER INTERFACE CREATION
+            await this.initializePhase6_UserInterface();
             
-            // STEP 7: CREATE ADVANCED INTERFACES
-            await this.createAdvancedInterfaces();
+            // PHASE 7: ADVANCED FEATURES
+            await this.initializePhase7_AdvancedFeatures();
             
-            // STEP 8: DISPLAY WELCOME
-            await this.displayUltimateDiamondWelcome();
+            // PHASE 8: SYSTEM FINALIZATION
+            await this.initializePhase8_SystemFinalization();
             
-            // STEP 9: MARK AS INITIALIZED
             this.isInitialized = true;
-            
-            // STEP 10: PLAY WELCOME SOUND
-            this.playAdvancedWelcomeSound();
-            
             console.log('💎 Diamond-Level CBSE AI fully operational and ready!');
-            this.updateStatus('Diamond AI Ready - Ask me anything!');
+            this.displayUltimateDiamondWelcome();
             
         } catch (error) {
-            console.error('❌ Initialization error:', error);
-            this.handleInitializationError(error);
+            console.error('❌ Critical system initialization error:', error);
+            this.handleCriticalInitializationError(error);
         }
     }
 
-    async waitForDOM() {
-        return new Promise((resolve) => {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', resolve);
-            } else {
-                resolve();
-            }
-        });
+    async initializePhase1_CoreFoundation() {
+        console.log('🏗️ Phase 1: Initializing Core Foundation...');
+        
+        await this.waitForDOMReady();
+        await this.setupCoreDataStructures();
+        await this.initializeSystemLogging();
+        await this.setupErrorHandling();
+        await this.initializeSecuritySystems();
+        
+        console.log('✅ Phase 1 Complete: Core Foundation Ready');
     }
 
-    async initializeUIElements() {
-        console.log('🎨 Initializing UI Elements...');
+    async initializePhase2_AIEngines() {
+        console.log('🧠 Phase 2: Initializing AI Intelligence Engines...');
         
-        // CREATE MAIN CONTAINER IF NOT EXISTS
-        let mainContainer = document.querySelector('.jarvis-container') || document.querySelector('.main-container');
-        if (!mainContainer) {
-            mainContainer = this.createMainContainer();
-        }
+        await this.languageProcessor.initialize();
+        await this.contextualIntelligence.initialize();
+        await this.emotionalIntelligence.initialize();
+        await this.reasoningEngine.initialize();
+        await this.creativityEngine.initialize();
+        await this.knowledgeGraph.initialize();
+        await this.neuralNetwork.initialize();
+        await this.machineLearning.initialize();
+        await this.semanticAnalyzer.initialize();
         
-        // INITIALIZE CHAT MESSAGES AREA
-        this.chatMessages = document.getElementById('chatMessages');
-        if (!this.chatMessages) {
-            this.chatMessages = this.createChatMessagesArea();
-        }
+        console.log('✅ Phase 2 Complete: AI Engines Operational');
+    }
+
+    async initializePhase3_EducationalSystems() {
+        console.log('📚 Phase 3: Initializing Educational Systems...');
         
-        // INITIALIZE MESSAGE INPUT
-        this.messageInput = document.getElementById('messageInput');
-        if (!this.messageInput) {
-            this.messageInput = this.createMessageInput();
-        }
+        await this.cbseDatabase.initialize();
+        await this.solutionEngine.initialize();
+        await this.testGenerator.initialize();
+        await this.performanceAnalyzer.initialize();
+        await this.conceptExplainer.initialize();
+        await this.curriculumMapper.initialize();
         
-        // INITIALIZE SEND BUTTON
-        this.sendBtn = document.getElementById('sendBtn');
-        if (!this.sendBtn) {
-            this.sendBtn = this.createSendButton();
-        }
+        console.log('✅ Phase 3 Complete: Educational Systems Ready');
+    }
+
+    async initializePhase4_DiagramSystems() {
+        console.log('🎨 Phase 4: Initializing Diagram and Visualization Systems...');
         
-        // INITIALIZE VOICE BUTTONS
-        this.recordBtn = document.getElementById('recordBtn');
-        this.stopBtn = document.getElementById('stopBtn');
-        if (!this.recordBtn || !this.stopBtn) {
-            this.createVoiceButtons();
-        }
+        await this.diagramLibrary.initialize();
+        await this.visualizationEngine.initialize();
+        await this.chartGenerator.initialize();
+        await this.mindMapGenerator.initialize();
+        await this.flowchartCreator.initialize();
+        await this.geometryRenderer.initialize();
+        await this.scientificDiagrammer.initialize();
         
-        // INITIALIZE STATUS TEXT
-        this.statusText = document.getElementById('statusText');
-        if (!this.statusText) {
-            this.statusText = this.createStatusText();
-        }
+        console.log('✅ Phase 4 Complete: Diagram Systems Operational');
+    }
+
+    async initializePhase5_WebIntegration() {
+        console.log('🌐 Phase 5: Initializing Web Integration Systems...');
         
-        // INITIALIZE VOICE INDICATOR
-        this.voiceIndicator = document.getElementById('jarvisVoiceIndicator');
-        if (!this.voiceIndicator) {
-            this.voiceIndicator = this.createVoiceIndicator();
-        }
+        await this.webSearchEngine.initialize();
+        await this.factChecker.initialize();
+        await this.academicSearchEngine.initialize();
+        await this.currentAffairsEngine.initialize();
         
-        console.log('✅ UI Elements initialized successfully');
+        console.log('✅ Phase 5 Complete: Web Integration Active');
+    }
+
+    async initializePhase6_UserInterface() {
+        console.log('🎨 Phase 6: Creating Advanced User Interface...');
+        
+        await this.createUltimateUserInterface();
+        await this.setupAdvancedEventListeners();
+        await this.initializeVoiceSystems();
+        await this.setupDiagramCanvas();
+        
+        console.log('✅ Phase 6 Complete: User Interface Ready');
+    }
+
+    async initializePhase7_AdvancedFeatures() {
+        console.log('🚀 Phase 7: Initializing Advanced Features...');
+        
+        await this.setupGamificationSystems();
+        await this.initializeAnalyticsSystems();
+        await this.setupLearningPersonalization();
+        await this.initializeBackgroundProcesses();
+        
+        console.log('✅ Phase 7 Complete: Advanced Features Active');
+    }
+
+    async initializePhase8_SystemFinalization() {
+        console.log('🎯 Phase 8: System Finalization...');
+        
+        await this.loadUserData();
+        await this.performSystemChecks();
+        await this.optimizePerformance();
+        await this.activateAllSystems();
+        
+        console.log('✅ Phase 8 Complete: System Fully Operational');
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // USER INTERFACE CREATION - ULTIMATE DESIGN
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
+    async createUltimateUserInterface() {
+        console.log('🎨 Creating Ultimate User Interface...');
+        
+        // CREATE MAIN CONTAINER
+        this.createMainContainer();
+        
+        // CREATE CHAT INTERFACE
+        this.createAdvancedChatInterface();
+        
+        // CREATE INPUT SYSTEM
+        this.createIntelligentInputSystem();
+        
+        // CREATE VOICE CONTROLS
+        this.createAdvancedVoiceControls();
+        
+        // CREATE DIAGRAM CANVAS
+        this.createDiagramCanvas();
+        
+        // CREATE PROGRESS DISPLAYS
+        this.createProgressDisplays();
+        
+        // CREATE ANALYTICS DASHBOARD
+        this.createAnalyticsDashboard();
+        
+        // CREATE QUICK ACTION PANELS
+        this.createQuickActionPanels();
+        
+        // APPLY ADVANCED STYLING
+        this.applyAdvancedStyling();
     }
 
     createMainContainer() {
+        // REMOVE ANY EXISTING CONTAINER
+        const existing = document.querySelector('.diamond-ai-container');
+        if (existing) existing.remove();
+        
         const container = document.createElement('div');
-        container.className = 'jarvis-container';
+        container.className = 'diamond-ai-container';
         container.style.cssText = `
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 20% 80%, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            color: #ffffff;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
-            max-width: 1200px;
-            margin: 0 auto;
+            overflow: hidden;
+            z-index: 1000;
         `;
+        
+        // ADD ANIMATED BACKGROUND PARTICLES
+        this.createAnimatedBackground(container);
+        
         document.body.appendChild(container);
-        return container;
+        this.mainContainer = container;
     }
 
-    createChatMessagesArea() {
-        const chatArea = document.createElement('div');
-        chatArea.id = 'chatMessages';
-        chatArea.className = 'messages-container';
-        chatArea.style.cssText = `
+    createAnimatedBackground(container) {
+        const canvas = document.createElement('canvas');
+        canvas.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: -1;
+        `;
+        
+        container.appendChild(canvas);
+        
+        // ANIMATE PARTICLES
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const particles = [];
+        for (let i = 0; i < 50; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                size: Math.random() * 3 + 1
+            });
+        }
+        
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(79, 124, 255, 0.5)';
+            
+            particles.forEach(particle => {
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                
+                if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+                
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            
+            requestAnimationFrame(animate);
+        };
+        
+        animate();
+    }
+
+    createAdvancedChatInterface() {
+        const chatContainer = document.createElement('div');
+        chatContainer.className = 'chat-container';
+        chatContainer.style.cssText = `
             flex: 1;
-            background: rgba(30, 33, 57, 0.8);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow: hidden;
+        `;
+        
+        // CHAT HEADER
+        const header = document.createElement('div');
+        header.className = 'chat-header';
+        header.style.cssText = `
+            background: rgba(30, 33, 57, 0.9);
+            padding: 20px;
+            border-radius: 16px 16px 0 0;
             border: 1px solid rgba(79, 124, 255, 0.3);
-            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        `;
+        
+        header.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #4f7cff, #00d4ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">💎</div>
+                <div>
+                    <h1 style="margin: 0; font-size: 24px; background: linear-gradient(135deg, #4f7cff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Diamond CBSE AI</h1>
+                    <p style="margin: 0; color: rgba(180, 184, 204, 0.8); font-size: 14px;">ChatGPT-Level Intelligence • Complete CBSE Coverage</p>
+                </div>
+            </div>
+            <div id="statusText" style="color: rgba(180, 184, 204, 0.8); font-size: 14px;">Initializing...</div>
+        `;
+        
+        // CHAT MESSAGES AREA
+        const messagesContainer = document.createElement('div');
+        messagesContainer.id = 'chatMessages';
+        messagesContainer.className = 'messages-container';
+        messagesContainer.style.cssText = `
+            flex: 1;
+            background: rgba(30, 33, 57, 0.9);
+            border: 1px solid rgba(79, 124, 255, 0.3);
+            border-top: none;
+            border-bottom: none;
             padding: 20px;
             overflow-y: auto;
-            min-height: 500px;
-            max-height: 70vh;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            scroll-behavior: smooth;
         `;
         
-        // ADD SCROLLBAR STYLING
-        const style = document.createElement('style');
-        style.textContent = `
-            #chatMessages::-webkit-scrollbar {
-                width: 8px;
+        // CUSTOM SCROLLBAR
+        const scrollbarStyle = document.createElement('style');
+        scrollbarStyle.textContent = `
+            .messages-container::-webkit-scrollbar {
+                width: 12px;
             }
-            #chatMessages::-webkit-scrollbar-track {
+            .messages-container::-webkit-scrollbar-track {
                 background: rgba(22, 33, 62, 0.5);
-                border-radius: 4px;
+                border-radius: 6px;
             }
-            #chatMessages::-webkit-scrollbar-thumb {
+            .messages-container::-webkit-scrollbar-thumb {
                 background: linear-gradient(135deg, #4f7cff, #00d4ff);
-                border-radius: 4px;
+                border-radius: 6px;
+                border: 2px solid rgba(22, 33, 62, 0.5);
+            }
+            .messages-container::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, #5f8cff, #10e4ff);
             }
         `;
-        document.head.appendChild(style);
+        document.head.appendChild(scrollbarStyle);
         
-        document.querySelector('.jarvis-container').appendChild(chatArea);
-        return chatArea;
+        chatContainer.appendChild(header);
+        chatContainer.appendChild(messagesContainer);
+        this.mainContainer.appendChild(chatContainer);
+        
+        this.chatMessages = messagesContainer;
+        this.statusText = header.querySelector('#statusText');
     }
 
-    createMessageInput() {
+    createIntelligentInputSystem() {
         const inputContainer = document.createElement('div');
         inputContainer.className = 'input-container';
         inputContainer.style.cssText = `
-            display: flex;
-            gap: 12px;
-            align-items: flex-end;
-            background: rgba(30, 33, 57, 0.8);
+            background: rgba(30, 33, 57, 0.9);
             padding: 20px;
-            border-radius: 16px;
             border: 1px solid rgba(79, 124, 255, 0.3);
-            backdrop-filter: blur(10px);
-            margin-bottom: 20px;
+            border-radius: 0 0 16px 16px;
+            backdrop-filter: blur(20px);
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
         `;
         
-        const input = document.createElement('textarea');
-        input.id = 'messageInput';
-        input.className = 'message-input';
-        input.placeholder = 'Ask me anything about CBSE Class 10 - Math, Science, English, Hindi, Social Science...';
-        input.style.cssText = `
+        // ADVANCED TEXT INPUT
+        const textInput = document.createElement('textarea');
+        textInput.id = 'messageInput';
+        textInput.className = 'message-input';
+        textInput.placeholder = 'Ask me anything about CBSE Class 10 - Math, Science, English, Hindi, Social Science, or request diagrams...';
+        textInput.style.cssText = `
             flex: 1;
-            background: rgba(15, 15, 35, 0.8);
+            background: rgba(15, 15, 35, 0.9);
             border: 2px solid rgba(79, 124, 255, 0.3);
-            border-radius: 12px;
-            padding: 15px 20px;
+            border-radius: 16px;
+            padding: 20px;
             color: white;
             font-size: 16px;
             font-family: inherit;
             resize: vertical;
-            min-height: 50px;
-            max-height: 150px;
+            min-height: 60px;
+            max-height: 200px;
             transition: all 0.3s ease;
             outline: none;
+            line-height: 1.4;
         `;
         
-        // ADD INPUT FOCUS STYLING
-        input.addEventListener('focus', () => {
-            input.style.borderColor = '#4f7cff';
-            input.style.boxShadow = '0 0 20px rgba(79, 124, 255, 0.3)';
+        // INPUT ENHANCEMENTS
+        textInput.addEventListener('focus', () => {
+            textInput.style.borderColor = '#4f7cff';
+            textInput.style.boxShadow = '0 0 30px rgba(79, 124, 255, 0.3)';
+            textInput.style.background = 'rgba(15, 15, 35, 1)';
         });
         
-        input.addEventListener('blur', () => {
-            input.style.borderColor = 'rgba(79, 124, 255, 0.3)';
-            input.style.boxShadow = 'none';
+        textInput.addEventListener('blur', () => {
+            textInput.style.borderColor = 'rgba(79, 124, 255, 0.3)';
+            textInput.style.boxShadow = 'none';
+            textInput.style.background = 'rgba(15, 15, 35, 0.9)';
         });
         
-        inputContainer.appendChild(input);
-        document.querySelector('.jarvis-container').appendChild(inputContainer);
+        // AUTO-RESIZE FUNCTIONALITY
+        textInput.addEventListener('input', () => {
+            textInput.style.height = 'auto';
+            textInput.style.height = Math.min(textInput.scrollHeight, 200) + 'px';
+            this.handleInputChange();
+        });
         
-        return input;
-    }
-
-    createSendButton() {
-        const button = document.createElement('button');
-        button.id = 'sendBtn';
-        button.textContent = 'Send';
-        button.style.cssText = `
+        // SEND BUTTON
+        const sendButton = document.createElement('button');
+        sendButton.id = 'sendBtn';
+        sendButton.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+            </svg>
+            <span>Send</span>
+        `;
+        sendButton.style.cssText = `
             background: linear-gradient(135deg, #4f7cff 0%, #00d4ff 100%);
             border: none;
-            border-radius: 12px;
+            border-radius: 16px;
             color: white;
             font-size: 16px;
             font-weight: 600;
-            padding: 15px 30px;
+            padding: 20px 30px;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 100px;
-            height: 50px;
-            box-shadow: 0 4px 15px rgba(79, 124, 255, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 25px rgba(79, 124, 255, 0.4);
+            min-width: 120px;
+            justify-content: center;
         `;
         
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'translateY(-2px)';
-            button.style.boxShadow = '0 6px 25px rgba(79, 124, 255, 0.6)';
+        sendButton.addEventListener('mouseenter', () => {
+            sendButton.style.transform = 'translateY(-3px)';
+            sendButton.style.boxShadow = '0 12px 35px rgba(79, 124, 255, 0.6)';
+            sendButton.style.background = 'linear-gradient(135deg, #5f8cff 0%, #10e4ff 100%)';
         });
         
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'translateY(0)';
-            button.style.boxShadow = '0 4px 15px rgba(79, 124, 255, 0.4)';
+        sendButton.addEventListener('mouseleave', () => {
+            sendButton.style.transform = 'translateY(0)';
+            sendButton.style.boxShadow = '0 8px 25px rgba(79, 124, 255, 0.4)';
+            sendButton.style.background = 'linear-gradient(135deg, #4f7cff 0%, #00d4ff 100%)';
         });
         
-        document.querySelector('.input-container').appendChild(button);
-        return button;
+        inputContainer.appendChild(textInput);
+        inputContainer.appendChild(sendButton);
+        
+        this.chatMessages.parentNode.appendChild(inputContainer);
+        this.messageInput = textInput;
+        this.sendBtn = sendButton;
     }
 
-    createVoiceButtons() {
+    createAdvancedVoiceControls() {
         const voiceContainer = document.createElement('div');
         voiceContainer.className = 'voice-controls';
         voiceContainer.style.cssText = `
             display: flex;
-            gap: 8px;
+            gap: 12px;
+            align-items: center;
         `;
         
-        // RECORD BUTTON
+        // VOICE RECORD BUTTON
         const recordBtn = document.createElement('button');
         recordBtn.id = 'recordBtn';
-        recordBtn.innerHTML = '🎤';
-        recordBtn.title = 'Start voice input';
+        recordBtn.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 1C10.34 1 9 2.34 9 4V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V4C15 2.34 13.66 1 12 1ZM19 10V12C19 16.97 15.39 21.16 10.5 21.93V24H13.5V22.93C17.95 22.16 21.5 18.54 21.5 14H19.5C19.5 17.04 16.54 19.5 12 19.5C7.46 19.5 4.5 17.04 4.5 14H2.5C2.5 18.54 6.05 22.16 10.5 22.93V24H13.5V21.93C15.39 21.16 19 16.97 19 12V10H19Z" fill="currentColor"/>
+            </svg>
+        `;
+        recordBtn.title = 'Start voice input (Click to record)';
         recordBtn.style.cssText = `
-            background: rgba(30, 33, 57, 0.8);
+            background: rgba(30, 33, 57, 0.9);
             border: 2px solid rgba(79, 124, 255, 0.3);
-            border-radius: 12px;
-            color: white;
+            border-radius: 16px;
+            color: #4f7cff;
             font-size: 20px;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(10px);
         `;
         
-        // STOP BUTTON
+        // VOICE STOP BUTTON
         const stopBtn = document.createElement('button');
         stopBtn.id = 'stopBtn';
-        stopBtn.innerHTML = '⏹️';
+        stopBtn.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="6" y="6" width="12" height="12" fill="currentColor"/>
+            </svg>
+        `;
         stopBtn.title = 'Stop voice input';
         stopBtn.style.cssText = `
-            background: rgba(255, 71, 87, 0.8);
+            background: rgba(255, 71, 87, 0.9);
             border: 2px solid rgba(255, 71, 87, 0.5);
-            border-radius: 12px;
+            border-radius: 16px;
             color: white;
             font-size: 20px;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: none;
             align-items: center;
             justify-content: center;
+            backdrop-filter: blur(10px);
         `;
         
-        voiceContainer.appendChild(recordBtn);
-        voiceContainer.appendChild(stopBtn);
-        document.querySelector('.input-container').appendChild(voiceContainer);
-        
-        this.recordBtn = recordBtn;
-        this.stopBtn = stopBtn;
-    }
-
-    createStatusText() {
-        const status = document.createElement('div');
-        status.id = 'statusText';
-        status.textContent = 'Initializing Diamond AI...';
-        status.style.cssText = `
-            text-align: center;
-            color: rgba(180, 184, 204, 0.8);
-            font-size: 14px;
-            padding: 10px;
-            background: rgba(30, 33, 57, 0.5);
-            border-radius: 8px;
-            margin-top: 10px;
-        `;
-        
-        document.querySelector('.jarvis-container').appendChild(status);
-        return status;
-    }
-
-    createVoiceIndicator() {
-        const indicator = document.createElement('div');
-        indicator.id = 'jarvisVoiceIndicator';
-        indicator.style.cssText = `
+        // VOICE INDICATOR
+        const voiceIndicator = document.createElement('div');
+        voiceIndicator.id = 'jarvisVoiceIndicator';
+        voiceIndicator.style.cssText = `
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background: linear-gradient(135deg, #4f7cff 0%, #00d4ff 100%);
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 10000;
-            font-size: 48px;
-            box-shadow: 0 0 50px rgba(79, 124, 255, 0.8);
-            animation: voicePulse 1.5s infinite;
+            font-size: 60px;
+            box-shadow: 0 0 100px rgba(79, 124, 255, 0.8);
+            backdrop-filter: blur(20px);
         `;
         
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes voicePulse {
-                0%, 100% { 
-                    transform: translate(-50%, -50%) scale(1);
-                    opacity: 0.8;
+        voiceContainer.appendChild(recordBtn);
+        voiceContainer.appendChild(stopBtn);
+        document.body.appendChild(voiceIndicator);
+        
+        // ADD TO INPUT CONTAINER
+        document.querySelector('.input-container').appendChild(voiceContainer);
+        
+        this.recordBtn = recordBtn;
+        this.stopBtn = stopBtn;
+        this.voiceIndicator = voiceIndicator;
+    }
+
+    createDiagramCanvas() {
+        const diagramContainer = document.createElement('div');
+        diagramContainer.className = 'diagram-container';
+        diagramContainer.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: rgba(30, 33, 57, 0.95);
+            border: 1px solid rgba(79, 124, 255, 0.3);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            display: none;
+            flex-direction: column;
+            z-index: 1001;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        `;
+        
+        const diagramHeader = document.createElement('div');
+        diagramHeader.style.cssText = `
+            padding: 15px;
+            border-bottom: 1px solid rgba(79, 124, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        `;
+        
+        diagramHeader.innerHTML = `
+            <h3 style="margin: 0; color: #4f7cff;">Diagram Viewer</h3>
+            <button onclick="this.parentNode.parentNode.style.display='none'" style="background: none; border: none; color: #ff4757; font-size: 20px; cursor: pointer;">×</button>
+        `;
+        
+        const diagramCanvas = document.createElement('canvas');
+        diagramCanvas.id = 'diagramCanvas';
+        diagramCanvas.width = 260;
+        diagramCanvas.height = 320;
+        diagramCanvas.style.cssText = `
+            margin: 20px;
+            border: 1px solid rgba(79, 124, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(15, 15, 35, 0.5);
+        `;
+        
+        diagramContainer.appendChild(diagramHeader);
+        diagramContainer.appendChild(diagramCanvas);
+        document.body.appendChild(diagramContainer);
+        
+        this.diagramContainer = diagramContainer;
+        this.diagramCanvas = diagramCanvas;
+    }
+
+    createProgressDisplays() {
+        const progressContainer = document.createElement('div');
+        progressContainer.className = 'progress-displays';
+        progressContainer.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 1001;
+        `;
+        
+        // LEARNING PROGRESS
+        const learningProgress = document.createElement('div');
+        learningProgress.style.cssText = `
+            background: rgba(30, 33, 57, 0.9);
+            border: 1px solid rgba(79, 124, 255, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            backdrop-filter: blur(20px);
+            min-width: 180px;
+        `;
+        
+        learningProgress.innerHTML = `
+            <h4 style="margin: 0 0 10px 0; color: #4f7cff; font-size: 14px;">📈 Learning Progress</h4>
+            <div>Tests Taken: <span id="testsCount" style="color: #00d4ff; font-weight: 600;">0</span></div>
+            <div>Concepts Learned: <span id="conceptsCount" style="color: #00d4ff; font-weight: 600;">0</span></div>
+            <div>Current Streak: <span id="streakCount" style="color: #00d4ff; font-weight: 600;">0</span> days</div>
+        `;
+        
+        // ACHIEVEMENTS
+        const achievements = document.createElement('div');
+        achievements.style.cssText = `
+            background: rgba(30, 33, 57, 0.9);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            backdrop-filter: blur(20px);
+            min-width: 180px;
+        `;
+        
+        achievements.innerHTML = `
+            <h4 style="margin: 0 0 10px 0; color: #ffd700; font-size: 14px;">🏆 Achievements</h4>
+            <div id="achievementsList">
+                <div style="font-size: 12px; color: rgba(180, 184, 204, 0.8);">Complete your first test to unlock achievements!</div>
+            </div>
+        `;
+        
+        progressContainer.appendChild(learningProgress);
+        progressContainer.appendChild(achievements);
+        document.body.appendChild(progressContainer);
+        
+        this.progressDisplay = progressContainer;
+    }
+
+    createAnalyticsDashboard() {
+        const analyticsBtn = document.createElement('button');
+        analyticsBtn.innerHTML = '📊 Analytics';
+        analyticsBtn.style.cssText = `
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(30, 33, 57, 0.9);
+            border: 1px solid rgba(79, 124, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            padding: 12px 20px;
+            cursor: pointer;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        `;
+        
+        analyticsBtn.addEventListener('click', () => this.showAnalyticsDashboard());
+        document.body.appendChild(analyticsBtn);
+    }
+
+    createQuickActionPanels() {
+        const quickActions = document.createElement('div');
+        quickActions.className = 'quick-actions';
+        quickActions.style.cssText = `
+            padding: 20px;
+            background: rgba(30, 33, 57, 0.8);
+            border: 1px solid rgba(79, 124, 255, 0.3);
+            border-radius: 12px;
+            margin: 0 20px 20px 20px;
+            backdrop-filter: blur(20px);
+        `;
+        
+        quickActions.innerHTML = `
+            <h3 style="margin: 0 0 15px 0; color: #4f7cff; text-align: center;">🚀 Quick Actions</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                <button onclick="window.diamondAI.quickAction('math_test')" class="quick-action-btn">📊 Math Test</button>
+                <button onclick="window.diamondAI.quickAction('science_help')" class="quick-action-btn">🧪 Science Help</button>
+                <button onclick="window.diamondAI.quickAction('diagram_request')" class="quick-action-btn">📐 Show Diagram</button>
+                <button onclick="window.diamondAI.quickAction('study_plan')" class="quick-action-btn">📅 Study Plan</button>
+                <button onclick="window.diamondAI.quickAction('solutions')" class="quick-action-btn">💡 Solutions</button>
+                <button onclick="window.diamondAI.quickAction('motivation')" class="quick-action-btn">🌟 Motivation</button>
+            </div>
+        `;
+        
+        this.mainContainer.appendChild(quickActions);
+    }
+
+    applyAdvancedStyling() {
+        const advancedStyles = document.createElement('style');
+        advancedStyles.textContent = `
+            .quick-action-btn {
+                background: linear-gradient(135deg, rgba(79, 124, 255, 0.8), rgba(0, 212, 255, 0.8));
+                border: 1px solid rgba(79, 124, 255, 0.5);
+                border-radius: 10px;
+                color: white;
+                padding: 12px 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: blur(10px);
+            }
+            
+            .quick-action-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(79, 124, 255, 0.4);
+                background: linear-gradient(135deg, rgba(79, 124, 255, 1), rgba(0, 212, 255, 1));
+            }
+            
+            .message {
+                margin: 15px 0;
+                padding: 0;
+                animation: messageSlideIn 0.3s ease-out;
+            }
+            
+            @keyframes messageSlideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
                 }
-                50% { 
-                    transform: translate(-50%, -50%) scale(1.1);
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .user-message .message-content {
+                background: linear-gradient(135deg, #4f7cff, #00d4ff);
+                color: white;
+                padding: 15px 20px;
+                border-radius: 20px 20px 5px 20px;
+                margin-left: auto;
+                max-width: 80%;
+                box-shadow: 0 4px 15px rgba(79, 124, 255, 0.3);
+            }
+            
+            .jarvis-message .message-content {
+                background: rgba(30, 33, 57, 0.9);
+                border: 1px solid rgba(79, 124, 255, 0.3);
+                color: white;
+                padding: 20px;
+                border-radius: 20px 20px 20px 5px;
+                margin-right: auto;
+                max-width: 90%;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+            
+            .processing-indicator {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #4f7cff;
+                font-style: italic;
+            }
+            
+            .typing-dots {
+                display: flex;
+                gap: 4px;
+            }
+            
+            .typing-dots span {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #4f7cff;
+                animation: typingDots 1.4s infinite ease-in-out;
+            }
+            
+            .typing-dots span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            
+            .typing-dots span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+            
+            @keyframes typingDots {
+                0%, 60%, 100% {
+                    transform: scale(0.8);
+                    opacity: 0.5;
+                }
+                30% {
+                    transform: scale(1);
                     opacity: 1;
                 }
             }
             
-            @keyframes voiceListening {
+            @keyframes voicePulse {
                 0%, 100% { 
-                    box-shadow: 0 0 50px rgba(79, 124, 255, 0.8);
+                    transform: translate(-50%, -50%) scale(1);
+                    box-shadow: 0 0 100px rgba(79, 124, 255, 0.8);
                 }
                 50% { 
-                    box-shadow: 0 0 80px rgba(79, 124, 255, 1);
+                    transform: translate(-50%, -50%) scale(1.1);
+                    box-shadow: 0 0 150px rgba(79, 124, 255, 1);
                 }
             }
+            
+            #jarvisVoiceIndicator {
+                animation: voicePulse 1.5s infinite;
+            }
         `;
-        document.head.appendChild(style);
         
-        document.body.appendChild(indicator);
-        return indicator;
+        document.head.appendChild(advancedStyles);
     }
 
-    async setupEventListeners() {
-        console.log('🔧 Setting up event listeners...');
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // EVENT HANDLING SYSTEM - ADVANCED INTERACTION MANAGEMENT
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
+    async setupAdvancedEventListeners() {
+        console.log('🔧 Setting up advanced event listeners...');
         
-        // MAIN MESSAGE PROCESSING - PRIMARY EVENT
+        // PRIMARY MESSAGE PROCESSING
         this.sendBtn.addEventListener('click', (e) => {
             e.preventDefault();
             this.processMessage();
         });
         
-        // ENTER KEY HANDLING WITH PROPER FOCUS
+        // INTELLIGENT ENTER KEY HANDLING
         this.messageInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                this.processMessage();
+            if (e.key === 'Enter') {
+                if (e.shiftKey) {
+                    // Allow line break with Shift+Enter
+                    return;
+                } else {
+                    e.preventDefault();
+                    this.processMessage();
+                }
             }
         });
         
-        // VOICE CONTROLS
+        // VOICE CONTROL EVENTS
         this.recordBtn.addEventListener('click', () => this.startVoiceRecording());
         this.stopBtn.addEventListener('click', () => this.stopVoiceRecording());
         
         // ADVANCED INPUT HANDLING
-        this.messageInput.addEventListener('input', () => this.handleInputChange());
+        this.messageInput.addEventListener('input', () => this.handleAdvancedInputChange());
         this.messageInput.addEventListener('focus', () => this.handleInputFocus());
         this.messageInput.addEventListener('blur', () => this.handleInputBlur());
-        
-        // PASTE HANDLING
         this.messageInput.addEventListener('paste', (e) => {
-            setTimeout(() => this.handleInputChange(), 10);
+            setTimeout(() => this.handleAdvancedInputChange(), 10);
         });
         
-        // PREVENT FORM SUBMISSION
+        // GLOBAL KEY SHORTCUTS
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && e.target === this.messageInput && !e.shiftKey) {
+            // Ctrl/Cmd + / for quick focus
+            if ((e.ctrlKey || e.metaKey) && e.key === '/') {
                 e.preventDefault();
+                this.messageInput.focus();
+            }
+            
+            // Escape to clear input
+            if (e.key === 'Escape' && document.activeElement === this.messageInput) {
+                this.messageInput.value = '';
+                this.messageInput.blur();
             }
         });
         
-        console.log('✅ Event listeners configured successfully');
+        // WINDOW EVENTS
+        window.addEventListener('resize', () => this.handleWindowResize());
+        window.addEventListener('beforeunload', () => this.handleWindowClose());
+        
+        console.log('✅ Advanced event listeners configured successfully');
     }
 
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // ULTIMATE WELCOME DISPLAY - COMPREHENSIVE FEATURE SHOWCASE
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
     displayUltimateDiamondWelcome() {
-        const welcomeMessage = `**💎 ULTIMATE DIAMOND-LEVEL CBSE AI - GPT-PERPLEXITY INTELLIGENCE**
+        const ultimateWelcomeMessage = `**💎 ULTIMATE DIAMOND-LEVEL CBSE AI - COMPLETE SYSTEM OPERATIONAL**
 
-🌟 **WORLD'S MOST ADVANCED CBSE CLASS 10 AI SYSTEM**
+🌟 **WORLD'S MOST ADVANCED EDUCATIONAL AI WITH EVERYTHING INCLUDED**
 
-**🎓 COMPLETE CBSE UNIVERSE - ALL SUBJECTS MASTERED:**
+**🎓 COMPLETE CBSE CLASS 10 UNIVERSE - TOTAL MASTERY:**
 
-**📚 CORE SUBJECTS - TOTAL EXPERTISE:**
-• **Mathematics:** Real Numbers, Polynomials, Pair of Linear Equations, Quadratic Equations, Arithmetic Progressions, Triangles, Coordinate Geometry, Trigonometry, Applications of Trigonometry, Circles, Constructions, Areas & Volumes, Statistics, Probability
-• **Science - Physics:** Light (Reflection & Refraction), Human Eye & Colorful World, Electricity, Magnetic Effects of Electric Current, Sources of Energy
-• **Science - Chemistry:** Chemical Reactions & Equations, Acids Bases & Salts, Metals & Non-metals, Carbon & Its Compounds, Periodic Classification of Elements
-• **Science - Biology:** Life Processes, Control & Coordination, How Do Organisms Reproduce, Heredity & Evolution, Light - Life Processes, Our Environment, Management of Natural Resources
+**📚 ALL SUBJECTS - COMPREHENSIVE COVERAGE:**
+• **Mathematics:** Real Numbers, Polynomials, Pair of Linear Equations, Quadratic Equations, Arithmetic Progressions, Triangles, Coordinate Geometry, Introduction to Trigonometry, Applications of Trigonometry, Circles, Constructions, Areas & Volumes, Statistics, Probability
+• **Science - Physics:** Light (Reflection & Refraction), Human Eye & Colorful World, Electricity, Magnetic Effects of Electric Current, Sources of Energy, Our Environment
+• **Science - Chemistry:** Chemical Reactions & Equations, Acids Bases & Salts, Metals & Non-metals, Carbon & Its Compounds, Periodic Classification of Elements, Natural Resource Management
+• **Science - Biology:** Life Processes (Nutrition, Respiration, Transportation, Excretion), Control & Coordination, How Do Organisms Reproduce, Heredity & Evolution, Our Environment, Natural Resource Management
 • **Social Science - History:** The Rise of Nationalism in Europe, The Nationalist Movement in Indo-China, Nationalism in India, The Making of a Global World, The Age of Industrialization, Print Culture and the Modern World
 • **Social Science - Geography:** Resources and Development, Forest and Wildlife Resources, Water Resources, Agriculture, Minerals and Energy Resources, Manufacturing Industries, Lifelines of National Economy
 • **Social Science - Political Science:** Power Sharing, Federalism, Democracy and Diversity, Gender Religion and Caste, Popular Struggles and Movements, Political Parties, Outcomes of Democracy, Challenges to Democracy
 • **Social Science - Economics:** Development, Sectors of the Indian Economy, Money and Credit, Globalization and the Indian Economy, Consumer Rights
 
-**📖 LANGUAGE MASTERY - COMPREHENSIVE COVERAGE:**
-• **English Course A:** First Flight (Prose & Poetry), Footprints Without Feet (Supplementary Reader), Grammar, Writing Skills, Literature Analysis, Character Studies, Theme Analysis, Creative Writing, Speech Writing, Debate Writing
-• **English Course B:** Interact in English (Main Course Book), Literature Reader, Workbook, Communicative Grammar, Functional English, Speaking & Listening Skills, Reading Comprehension
-• **Hindi Course A:** कृतिका (काव्य खंड), क्षितिज (गद्य खंड), व्याकरण, रचनात्मक लेखन, साहित्य बोध, भाव एवं कला पक्ष, चरित्र चित्रण, विषय वस्तु
-• **Hindi Course B:** स्पर्श (काव्य व गद्य), संचयन (पूरक पुस्तक), व्यावहारिक व्याकरण, कार्यात्मक हिंदी, संवाद कौशल, लेखन कौशल
+**📖 LANGUAGE EXCELLENCE - COMPLETE MASTERY:**
+• **English Course A:** First Flight (Prose: A Letter to God, Nelson Mandela, Two Stories about Flying, From the Diary of Anne Frank, The Hundred Dresses, Glimpses of India, Mijbil the Otter, Madam Rides the Bus, The Sermon at Benares, The Proposal) + Poetry (Dust of Snow, Fire and Ice, A Tiger in the Zoo, How to Tell Wild Animals, The Ball Poem, Amanda, Animals, The Trees, Fog, The Tale of Custard the Dragon) + Footprints Without Feet (A Triumph of Surgery, The Thief's Story, The Midnight Visitor, A Question of Trust, Footprints without Feet, The Making of a Scientist, The Necklace, Bholi, The Book That Saved the Earth)
+• **English Course B:** Interact in English + Literature Reader + Main Course Book + Workbook + Grammar + Writing Skills
+• **Hindi Course A:** कृतिका (काव्य खंड: सूरदास, तुलसीदास, देव, जयशंकर प्रसाद, सूर्यकांत त्रिपाठी 'निराला', नागार्जुन, गिरिजाकुमार माथुर, ऋतुराज, मंगलेश डबराल) + क्षितिज (गद्य खंड: बालगोबिन भगत, लखनवी अंदाज, मानवीय करुणा की दिव्य चमक, एक कहानी यह भी, साना साना हाथ जोड़ि, पतझर में टूटी पत्तियाँ, कारतूस, बालगोविंद भगत)
+• **Hindi Course B:** स्पर्श + संचयन + व्याकरण + लेखन कौशल
 
-**💻 MODERN TECHNOLOGY & SKILL SUBJECTS:**
-• **Information Technology:** Digital Documentation, Electronic Spreadsheet, Database Management System, Internet & Web Technologies, Digital Presentation, IT Applications, Cyber Ethics & Safety
-• **Artificial Intelligence:** Introduction to AI, AI Project Cycle, Data Sciences, Computer Vision, Natural Language Processing, AI Ethics, Machine Learning Basics
-• **Computer Science:** Programming Fundamentals, Python Programming, Data Structures, Algorithms, Problem Solving Methodologies, Computational Thinking
-• **Physical Education:** Physical Fitness, Sports Skills, Yoga, Health Education, Sports Psychology, Training Methods, Olympic Movement, Sports Medicine
-• **Art Education:** Drawing, Painting, Sculpture, Applied Arts, Art History, Aesthetic Sense, Creative Expression, Visual Arts
-• **Music:** Hindustani Classical Music, Carnatic Music, Folk Music, Instrumental Music, Music Theory, Music Appreciation
-• **Sanskrit:** Vyakarana (Grammar), Sahitya (Literature), Shloka Recitation, Classical Texts, Sanskrit Composition
+**💻 MODERN SUBJECTS - COMPLETE INTEGRATION:**
+• **Information Technology:** Digital Documentation (Writer), Electronic Spreadsheet (Calc), Database Management System (Base), Internet & Web Technologies, Digital Presentation (Impress), IT Applications, Cyber Ethics & Safety, Digital Citizenship
+• **Artificial Intelligence:** Introduction to AI, AI Project Cycle, Data Sciences, Computer Vision, Natural Language Processing, AI Ethics, Machine Learning Fundamentals, Neural Networks, AI Applications
+• **Computer Science:** Programming Fundamentals, Python Programming, Data Structures, Algorithms, Problem Solving, Computational Thinking, Digital Logic, Computer Systems Architecture
 
-**🌐 ADDITIONAL & VOCATIONAL SUBJECTS:**
-• **French/German:** Basic Grammar, Vocabulary, Conversation Skills, Culture Studies, Literature Introduction
-• **Home Science:** Food & Nutrition, Child Development, Family Resource Management, Textiles & Clothing, Human Development & Family Studies
-• **Entrepreneurship:** Business Studies, Innovation & Creativity, Business Planning, Marketing Basics, Financial Literacy
-• **Beauty & Wellness:** Skincare Technology, Haircare, Wellness Practices, Health & Nutrition, Beauty Therapy
-• **Tourism:** Travel & Tourism Industry, Hospitality Management, Indian Heritage & Culture, Tourism Geography
-• **Agriculture:** Crop Production, Animal Husbandry, Agricultural Economics, Horticulture, Sustainable Agriculture
+**🎨 SKILL & VOCATIONAL SUBJECTS:**
+• **Physical Education:** Physical Fitness & Wellness, Sports & Games, Yoga, Olympic Movement, Sports Psychology, Training Methods, Sports Medicine, Adventure Sports
+• **Art Education:** Drawing, Painting, Sculpture, Applied Arts, Art History, Aesthetic Appreciation, Creative Expression, Visual Communication
+• **Music:** Hindustani Classical Music, Carnatic Classical Music, Folk Music, Instrumental Music, Vocal Music, Music Theory, Music History
+• **Dance:** Classical Dance Forms, Folk Dances, Contemporary Dance, Dance History, Choreography, Performance Arts
+• **Sanskrit:** Shemushi (Prose), Abhyaswaan Bhav (Poetry), Vyakaranvithi (Grammar), Sanskrit Literature, Shloka Recitation
 
-**🧠 GPT-PERPLEXITY LEVEL INTELLIGENCE:**
+**🎯 CHATGPT + PERPLEXITY LEVEL INTELLIGENCE:**
 
-**🎯 ULTIMATE AI CAPABILITIES:**
-• **Advanced Natural Language Understanding:** Deep comprehension of context, nuance, implied meanings, complex multi-step problems, mathematical reasoning, scientific analysis
-• **Contextual Memory System:** Perfect recall of entire conversation history with deep contextual connections across multiple topics and sessions
-• **Multi-Step Reasoning Engine:** Solves complex problems using sophisticated logical reasoning chains, mathematical proofs, scientific methodology
-• **Creative Problem Solving:** Generates original approaches, innovative analogies, creative explanations, storytelling techniques, visual metaphors
-• **Emotional Intelligence Matrix:** Advanced emotion recognition, empathetic responses, mood adaptation, stress detection, confidence building
-• **Dynamic Personality Adaptation:** Real-time adjustment to user's communication style, learning preferences, emotional state, cultural background
-• **Meta-Cognitive Awareness:** Understanding of own thinking processes, learning strategies, problem-solving approaches, knowledge limitations
-• **Transfer Learning Capabilities:** Advanced knowledge application across subjects, interdisciplinary connections, real-world applications
+**🧠 ULTIMATE AI CAPABILITIES:**
+• **Advanced Natural Language Understanding:** Deep contextual comprehension, nuance detection, implied meaning extraction, complex reasoning, mathematical problem solving, scientific analysis, literary interpretation
+• **Multi-Modal Intelligence:** Text processing, voice interaction, diagram generation, visual explanations, mathematical notation, scientific formulas, code interpretation
+• **Contextual Memory System:** Perfect conversation recall, topic tracking, learning progression monitoring, personalized adaptation, behavioral pattern recognition
+• **Advanced Reasoning Engine:** Multi-step logical reasoning, causal analysis, comparative thinking, critical evaluation, creative problem solving, abstract thinking
+• **Emotional Intelligence Matrix:** Emotion recognition, empathetic responses, mood adaptation, stress detection, confidence building, motivational support
+• **Personality Adaptation System:** Communication style matching, tone adjustment, complexity optimization, cultural sensitivity, regional understanding
+• **Meta-Cognitive Awareness:** Self-reflection on thinking processes, learning strategy recognition, knowledge gap identification, continuous improvement
 
 **📚 EDUCATIONAL EXCELLENCE SYSTEMS:**
-• **Personalized Learning Engine:** Individual learning style adaptation, cognitive load optimization, pace adjustment, preference learning
-• **Intelligent Tutoring System:** Step-by-step guidance, Socratic questioning, scaffolded learning, adaptive feedback
-• **Multi-Modal Teaching Support:** Visual learners (diagrams, charts), Auditory learners (explanations, discussions), Kinesthetic learners (activities, examples), Reading/Writing learners (texts, notes)
-• **Adaptive Assessment System:** Real-time difficulty adjustment, performance-based question selection, competency gap analysis
-• **Spaced Repetition Algorithm:** Scientifically optimized review timing, memory consolidation techniques, retention optimization
-• **Active Learning Implementation:** Retrieval practice, elaborative interrogation, self-explanation, distributed practice, interleaving
-• **Metacognitive Training:** Learning strategy instruction, self-monitoring techniques, reflection skills, goal setting
-• **Mastery-Based Progression:** Competency verification, skill building sequences, prerequisite checking, advancement criteria
+• **Personalized Learning Engine:** Individual cognitive profiling, learning style detection, pace optimization, strength leveraging, weakness targeting
+• **Intelligent Tutoring System:** Socratic method implementation, scaffolded learning, adaptive questioning, conceptual bridging, skill building
+• **Comprehensive Assessment:** Diagnostic testing, formative assessment, summative evaluation, competency mapping, progress tracking
+• **Curriculum Mapping:** NCERT alignment, CBSE pattern matching, board exam preparation, competitive exam readiness
+• **Learning Analytics:** Performance prediction, risk identification, intervention recommendations, outcome optimization
 
-**🎮 ADVANCED GAMIFICATION & ENGAGEMENT:**
-• **Dynamic Achievement System:** 100+ badges, progressive levels, milestone rewards, skill mastery recognition
-• **Interactive Progress Visualization:** Real-time charts, skill trees, learning pathways, performance trends
-• **Streak & Habit Tracking:** Daily study streaks, consistency rewards, habit formation support
-• **Skill Development Trees:** Visual progression maps for each subject, unlockable content, mastery pathways
-• **Competitive Elements:** Optional leaderboards, peer comparison, collaborative challenges
-• **Challenge System:** Daily brain teasers, weekly subject challenges, monthly mega challenges
-• **XP & Reward System:** Experience points for all activities, virtual currency, unlockable features
-• **Virtual Study Companion:** AI pet that grows with your progress, emotional support, celebration partner
+**🎨 COMPREHENSIVE DIAGRAM LIBRARY:**
 
-**💎 ULTIMATE RESPONSE GENERATION:**
-• **Multi-Format Intelligence:** Seamless switching between explanations, examples, stories, analogies, diagrams, step-by-step solutions
-• **Dynamic Content Optimization:** Perfect length adjustment based on context, user level, time constraints, learning objectives
-• **Tone & Style Mastery:** Formal academic, casual friendly, encouraging motivational, humorous engaging, professional instructional
-• **Cultural Intelligence:** Deep understanding of Indian educational system, cultural values, regional variations, local examples
-• **Critical Thinking Enhancement:** Analysis frameworks, evaluation criteria, synthesis techniques, independent thinking promotion
-• **Socratic Method Implementation:** Guided discovery through questioning, assumption challenging, deeper understanding development
+**📐 MATHEMATICAL DIAGRAMS:**
+• **Geometry:** Triangle constructions, circle theorems, coordinate graphs, geometric proofs, angle relationships, similarity demonstrations
+• **Algebra:** Function graphs, quadratic parabolas, linear equations, polynomial curves, statistical distributions
+• **Trigonometry:** Unit circle, sine/cosine curves, angle measurements, triangle solutions, wave patterns
+• **Statistics:** Histograms, pie charts, bar graphs, scatter plots, probability trees, normal distributions
 
-**🌐 REAL-TIME WEB INTELLIGENCE:**
-• **Live Information Integration:** Latest news, current affairs, scientific discoveries, technological developments, educational updates
-• **Educational Resource Network:** Khan Academy, BYJU'S, Vedantu, Unacademy, Coursera, MIT OpenCourseWare integration references
-• **CBSE Official Updates:** Real-time syllabus changes, examination patterns, board notifications, result announcements, policy updates
-• **Research Database Access:** Academic papers, peer-reviewed journals, scholarly articles, research publications, scientific studies
-• **Comprehensive Fact Verification:** Multi-source cross-referencing, credibility assessment, accuracy validation, source authentication
-• **Intelligent Content Curation:** Best resource selection, relevance filtering, quality assessment, learning outcome alignment
-• **Live Data Streams:** Real-time statistics, current events integration, trending topics, breaking news relevant to curriculum
+**🔬 SCIENTIFIC DIAGRAMS:**
+• **Physics:** Circuit diagrams, light ray diagrams, wave patterns, electromagnetic field visualizations, energy transformations
+• **Chemistry:** Molecular structures, periodic table trends, reaction mechanisms, atomic models, bonding diagrams, pH scales
+• **Biology:** Cell diagrams, organ systems, life processes flowcharts, ecosystem relationships, genetic inheritance patterns, evolutionary trees
 
-**🔥 ULTIMATE COMMAND EXAMPLES:**
+**🌍 SOCIAL SCIENCE VISUALIZATIONS:**
+• **History:** Timeline visualizations, map progressions, cause-effect diagrams, historical comparisons, event sequences
+• **Geography:** Physical maps, climate diagrams, resource distribution, demographic charts, economic flow diagrams
+• **Civics:** Government structure charts, democratic processes, constitutional frameworks, rights illustrations
+• **Economics:** Market diagrams, supply-demand curves, economic indicators, trade flow charts
+
+**📖 LANGUAGE ARTS VISUALS:**
+• **Literature:** Character relationship maps, plot structure diagrams, theme analysis charts, literary device illustrations
+• **Grammar:** Sentence structure trees, parts of speech diagrams, tense timeline charts, writing process flowcharts
+
+**🌐 PERPLEXITY-LEVEL WEB INTEGRATION:**
+
+**🔍 ADVANCED SEARCH CAPABILITIES:**
+• **Real-Time Information Access:** Live news updates, current affairs, latest scientific discoveries, technology developments, CBSE notifications
+• **Multi-Source Intelligence:** Academic databases, research papers, educational websites, government portals, international resources
+• **Fact Verification System:** Cross-reference validation, source credibility assessment, information accuracy checking, bias detection
+• **Trend Analysis:** Educational trends, exam pattern changes, syllabus updates, teaching methodology evolution
+• **Comprehensive Research:** Topic deep-dives, comparative studies, historical analysis, future projections
+
+**📊 EDUCATIONAL RESOURCE INTEGRATION:**
+• **CBSE Official Resources:** Latest circulars, exam patterns, marking schemes, sample papers, study materials
+• **Leading Educational Platforms:** Khan Academy concepts, BYJU'S methods, Vedantu approaches, Unacademy strategies
+• **Academic Journals:** Research findings, educational studies, pedagogical innovations, learning science discoveries
+• **Global Educational Standards:** International comparisons, best practices, innovative methodologies, success stories
+
+**🎮 ULTIMATE GAMIFICATION SYSTEM:**
+
+**🏆 COMPREHENSIVE ACHIEVEMENT SYSTEM:**
+• **Learning Milestones:** Concept mastery badges, skill development awards, subject expertise certificates, overall excellence recognition
+• **Progress Tracking:** Daily study streaks, weekly challenges completed, monthly goals achieved, annual progress summaries
+• **Skill Trees:** Subject-wise progression maps, interdisciplinary connections, advanced concept unlocking, specialization pathways
+• **Challenge System:** Daily brain teasers, weekly subject challenges, monthly mega-challenges, seasonal competitions
+
+**📈 ADVANCED ANALYTICS DASHBOARD:**
+• **Performance Metrics:** Accuracy rates, response times, concept understanding levels, skill development graphs
+• **Learning Analytics:** Study pattern analysis, attention span tracking, difficulty preference mapping, learning velocity measurement
+• **Predictive Insights:** Performance forecasting, risk assessment, intervention recommendations, success probability calculations
+• **Comparative Analysis:** Peer benchmarking, standard comparisons, improvement trajectories, achievement rankings
+
+**🚀 ULTIMATE COMMAND EXAMPLES:**
 
 **📝 ADVANCED TEST GENERATION:**
-- "Create ultimate CBSE board exam simulation for mathematics 80 marks with complete solutions, marking scheme, and performance prediction"
-- "Generate adaptive science test that adjusts difficulty in real-time based on my performance with detailed explanations and improvement suggestions"
-- "Design comprehensive English Course A test with literature analysis, grammar, creative writing, and speech writing sections"
-- "Make personalized mixed-subject revision test focusing on my identified weak areas with targeted improvement strategies"
-- "Create full-length mock test series for all subjects with board exam timing, pattern, and comprehensive analytics dashboard"
+- "Create ultimate CBSE board simulation for mathematics 80 marks with real-time difficulty adjustment, comprehensive analytics, and predictive scoring"
+- "Generate adaptive mixed-subject test that evolves based on my responses with detailed explanations and personalized improvement roadmap"
+- "Design comprehensive English Course A test covering all prose, poetry, and grammar with creative assessment and detailed feedback analysis"
+- "Make intelligent revision test identifying my knowledge gaps across all subjects with targeted remediation strategies"
 
-**🧠 DEEP LEARNING & CONCEPT MASTERY:**
-- "Explain photosynthesis using multiple teaching methods: storytelling, visual analogies, real-world connections, interactive questioning, and hands-on activities"
-- "Teach quadratic equations through all solution methods: factoring, quadratic formula, completing the square, graphing with real-world applications and problem-solving strategies"
-- "Help me master the concept of nationalism through historical narratives, cause-effect analysis, character studies, timeline analysis, and modern relevance"
-- "Create comprehensive study plan with scientifically optimized spaced repetition, active recall techniques, and metacognitive strategies"
-- "Analyze my complete learning patterns and create personalized improvement plan with specific action steps, timeline, and progress tracking"
+**🧠 DEEP CONCEPT MASTERY:**
+- "Explain photosynthesis using multiple learning modalities: visual diagrams, analogical reasoning, real-world connections, interactive questioning, and hands-on simulations"
+- "Master quadratic equations through comprehensive approach: visual graphing, algebraic manipulation, real-world applications, problem-solving strategies, and conceptual connections"
+- "Understand nationalism in India through immersive storytelling: character narratives, timeline visualization, cause-effect analysis, comparative studies, and contemporary relevance"
 
-**🎭 PERSONALITY & INTERACTION MASTERY:**
-- "Be my enthusiastic study buddy who celebrates every small achievement, provides emotional support during challenges, and maintains high energy throughout learning"
-- "Act as wise mentor providing life guidance alongside academic support, sharing philosophical insights, and helping with personal development"
-- "Become creative storyteller making every concept memorable through engaging narratives, character-driven plots, and emotional connections"
-- "Be patient teacher who explains concepts multiple times using different approaches, never gets frustrated, and adapts to my learning pace"
-- "Act as professional study coach analyzing my habits, optimizing productivity, building discipline, and creating sustainable learning routines"
+**🎨 DIAGRAM GENERATION COMMANDS:**
+- "Show me detailed diagram of human respiratory system with labeled parts and process explanation"
+- "Create geometric proof diagram for Pythagoras theorem with step-by-step visual construction"
+- "Generate flowchart for photosynthesis process showing light and dark reactions with molecular details"
+- "Draw mind map connecting all chapters in mathematics showing conceptual relationships and dependencies"
 
-**📊 COMPREHENSIVE ANALYTICS & INSIGHTS:**
-- "Show detailed learning analytics with progress visualization, performance trends, predictive modeling, and actionable improvement recommendations"
-- "Analyze my test performances identifying specific error patterns, knowledge gaps, conceptual misunderstandings, and strategic improvement opportunities"
-- "Create comprehensive performance report comparing with CBSE standards, peer benchmarking, and providing detailed gap analysis with remediation plans"
-- "Generate personalized learning pathway based on my cognitive strengths, subject interests, career aspirations, and optimal learning sequence"
-- "Track my emotional learning journey with stress pattern analysis, motivation optimization, confidence building, and mental health support"
+**📊 COMPREHENSIVE ANALYTICS:**
+- "Analyze my complete learning journey with performance trends, strength-weakness mapping, and future predictions"
+- "Generate detailed subject-wise performance report with improvement recommendations and study strategies"
+- "Show comparative analysis of my progress against CBSE standards and peer performance benchmarks"
+- "Create personalized dashboard tracking all learning metrics, achievements, and goal progress"
 
-**🎨 CREATIVE & ADVANCED LEARNING MODES:**
-- "Transform the French Revolution into epic historical drama with character development, plot twists, emotional arcs, and immersive storytelling"
-- "Create mathematical adventure game where solving quadratic equations saves kingdoms, with hero's journey narrative and progressive difficulty"
-- "Design virtual science laboratory for chemical reactions with realistic simulations, safety protocols, and experimental methodology"
-- "Generate creative writing workshop connecting English literature with current social issues, personal reflection, and critical analysis"
-- "Create comprehensive mind mapping system with visual hierarchies, concept connections, memory palaces, and retrieval cues"
+**🎭 PERSONALITY & INTERACTION:**
+- "Be my comprehensive learning companion adapting to my emotional state, providing encouragement during challenges, and celebrating achievements"
+- "Act as Socratic tutor using questioning techniques to guide my understanding without direct answers"
+- "Become creative storyteller transforming every concept into engaging narratives with characters, plots, and memorable experiences"
 
-**🌟 ULTIMATE INTELLIGENCE EXAMPLES:**
+**💎 I AM YOUR ULTIMATE LEARNING UNIVERSE**
 
-**Try These Advanced Commands:**
-- "I'm completely overwhelmed by coordinate geometry - break it down from absolute fundamentals, build my confidence step-by-step, provide emotional support, and create mastery pathway"
-- "Design comprehensive 6-month board exam master strategy with daily micro-schedules, weekly assessments, monthly reviews, revision cycles, stress management, and performance optimization"
-- "Explain the interconnections between photosynthesis, cellular respiration, carbon cycle, nitrogen cycle, and climate change using advanced analogies and visual representations"
-- "Create interdisciplinary project connecting mathematics, physics, chemistry, and environmental science showing real-world applications and career relevance"
-- "Be my personal learning psychologist analyzing my study behaviors, identifying cognitive biases, optimizing learning strategies, and building growth mindset"
-- "Help me overcome severe math anxiety through systematic desensitization, confidence building exercises, positive reinforcement, and gradual exposure therapy"
+With ChatGPT-level intelligence, Perplexity-level search, comprehensive diagram library, complete CBSE coverage, advanced analytics, and unlimited capabilities - I'm your complete educational solution!
 
-**💎 I AM YOUR ULTIMATE LEARNING COMPANION**
+**🌟 Ready to revolutionize your learning? Ask me ANYTHING! 🚀**
 
-From the smallest doubt to the biggest academic challenge, from basic concept clarification to advanced problem-solving, from exam preparation to career guidance - I'm here to revolutionize your learning experience!
+**Try these Ultimate Commands:**
+- "I need complete help with coordinate geometry - teach me everything from basics to advanced with diagrams"
+- "Create 3-month board exam masterplan with daily schedules, practice tests, and progress tracking"
+- "Show me how photosynthesis connects to respiration, carbon cycle, and climate change with visual explanations"
+- "Generate comprehensive English literature analysis connecting themes across all prescribed texts"
+- "Be my AI tutor for mathematics helping me overcome fear and build rock-solid confidence"
 
-**🚀 Ready to achieve academic excellence? Ask me ANYTHING! 🌟**`;
+**💎 Your Ultimate Learning Journey Starts Now! 🎓✨**`;
 
-        this.addMessage(welcomeMessage, 'jarvis');
-        this.gamificationEngine.displayWelcomeAchievement();
+        this.addMessage(ultimateWelcomeMessage, 'jarvis');
+        this.updateStatus('Diamond AI Fully Operational - Ready for anything!');
+        this.playUltimateWelcomeSound();
+        this.showWelcomeAnimations();
     }
 
-    // MAIN MESSAGE PROCESSING - CORE FUNCTION
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // CORE MESSAGE PROCESSING - MAIN INTELLIGENCE ENGINE
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
     async processMessage() {
-        // CHECK IF ALREADY PROCESSING
+        // PREVENT MULTIPLE SIMULTANEOUS PROCESSING
         if (this.isProcessing) {
             console.log('⏳ Already processing a message, please wait...');
             return;
         }
 
-        // GET MESSAGE FROM INPUT
+        // GET AND VALIDATE INPUT
         const message = this.messageInput.value.trim();
         if (!message) {
-            console.log('❌ Empty message, returning...');
+            console.log('❌ Empty message, focusing input...');
+            this.messageInput.focus();
             return;
         }
 
-        // SET PROCESSING FLAG
+        // SET PROCESSING STATE
         this.isProcessing = true;
 
         try {
             console.log('🚀 Processing message:', message);
             
-            // CLEAR INPUT IMMEDIATELY
+            // IMMEDIATE UI UPDATES
             this.messageInput.value = '';
-            
-            // ADD USER MESSAGE TO CHAT
             this.addMessage(message, 'user');
-            
-            // SHOW PROCESSING INDICATOR
             this.showAdvancedProcessingIndicator();
-            
-            // UPDATE STATUS
-            this.updateStatus('Analyzing with Diamond AI...');
+            this.updateStatus('Analyzing with Diamond AI intelligence...');
 
-            // COMPREHENSIVE MESSAGE ANALYSIS
+            // COMPREHENSIVE ANALYSIS PIPELINE
+            const analysisStartTime = Date.now();
             const analysis = await this.performUltimateAnalysis(message);
+            const analysisTime = Date.now() - analysisStartTime;
             
-            console.log('🎯 Analysis complete:', analysis);
+            console.log(`🎯 Analysis complete in ${analysisTime}ms:`, analysis);
             
-            // GENERATE ULTIMATE RESPONSE
+            // RESPONSE GENERATION PIPELINE
+            const responseStartTime = Date.now();
             let response = await this.generateUltimateResponse(message, analysis);
+            const responseTime = Date.now() - responseStartTime;
             
-            // ENHANCE RESPONSE WITH AI
-            response = await this.enhanceResponseWithDiamondAI(response, analysis);
+            // RESPONSE ENHANCEMENT PIPELINE
+            const enhancementStartTime = Date.now();
+            response = await this.enhanceResponseWithUltimateAI(response, analysis);
+            const enhancementTime = Date.now() - enhancementStartTime;
             
-            // STORE IN CONVERSATION MEMORY
-            this.storeConversation(message, response, analysis);
+            // DIAGRAM GENERATION (if requested)
+            if (analysis.needsDiagram) {
+                await this.generateAndShowDiagram(analysis.diagramType, analysis.diagramContext);
+            }
             
-            // HIDE PROCESSING INDICATOR
+            // CONVERSATION STORAGE
+            this.storeConversationData(message, response, analysis);
+            
+            // UI UPDATES
             this.hideAdvancedProcessingIndicator();
-            
-            // DISPLAY RESPONSE
             this.addMessage(response, 'jarvis');
             
-            // SPEAK RESPONSE IF ENABLED
-            this.speakResponse(response, analysis.language);
+            // VOICE SYNTHESIS
+            if (this.userPreferences.get('autoSpeak')) {
+                this.speakResponse(response, analysis.language);
+            }
             
-            // UPDATE STATUS
-            this.updateStatus('Ready for your next question!');
+            // ANALYTICS UPDATE
+            this.updateComprehensiveAnalytics(message, response, analysis, {
+                analysisTime,
+                responseTime,
+                enhancementTime
+            });
+            
+            // STATUS UPDATE
+            this.updateStatus(`Ready for next question! (Processed in ${analysisTime + responseTime + enhancementTime}ms)`);
             
             // FOCUS BACK TO INPUT
             setTimeout(() => {
-                if (this.messageInput) {
+                if (this.messageInput && document.contains(this.messageInput)) {
                     this.messageInput.focus();
                 }
             }, 100);
             
         } catch (error) {
-            console.error('💥 Processing error:', error);
-            this.handleProcessingError(error, message);
+            console.error('💥 Critical processing error:', error);
+            this.handleCriticalProcessingError(error, message);
         } finally {
             // ALWAYS CLEAR PROCESSING FLAG
             this.isProcessing = false;
         }
     }
 
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+    // ULTIMATE ANALYSIS ENGINE - COMPREHENSIVE UNDERSTANDING
+    // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
     async performUltimateAnalysis(message) {
-        console.log('🔬 Performing ultimate analysis...');
+        console.log('🔬 Performing ultimate comprehensive analysis...');
         
-        const analysis = {
+        const analysisResult = {
+            // CORE IDENTIFIERS
             originalMessage: message,
             timestamp: Date.now(),
             sessionId: this.sessionId,
+            messageId: this.generateMessageId(),
             
             // LANGUAGE ANALYSIS
-            language: this.detectLanguage(message),
-            languageConfidence: this.calculateLanguageConfidence(message),
+            language: await this.detectAdvancedLanguage(message),
+            languageConfidence: await this.calculateLanguageConfidence(message),
+            languageMixture: await this.analyzeLanguageMixture(message),
+            regionalVariants: await this.detectRegionalVariants(message),
             
-            // INTENT ANALYSIS
-            intent: this.analyzeAdvancedIntent(message),
-            intentConfidence: this.calculateIntentConfidence(message),
+            // INTENT CLASSIFICATION
+            intent: await this.classifyAdvancedIntent(message),
+            intentConfidence: await this.calculateIntentConfidence(message),
+            subIntents: await this.identifySubIntents(message),
+            intentHierarchy: await this.buildIntentHierarchy(message),
             
-            // EMOTIONAL ANALYSIS
-            emotion: this.analyzeEmotionalState(message),
-            emotionIntensity: this.calculateEmotionIntensity(message),
+            // EMOTIONAL INTELLIGENCE
+            emotion: await this.analyzeEmotionalSpectrum(message),
+            emotionIntensity: await this.calculateEmotionIntensity(message),
+            emotionalContext: await this.analyzeEmotionalContext(message),
+            moodIndicators: await this.identifyMoodIndicators(message),
             
-            // COMPLEXITY ANALYSIS
-            complexity: this.analyzeMessageComplexity(message),
-            cognitiveLoad: this.calculateCognitiveLoad(message),
+            // COGNITIVE ANALYSIS
+            complexity: await this.analyzeCognitiveComplexity(message),
+            cognitiveLoad: await this.calculateCognitiveLoad(message),
+            processingDifficulty: await this.assessProcessingDifficulty(message),
+            abstractionLevel: await this.measureAbstractionLevel(message),
+            
+            // EDUCATIONAL CONTEXT
+            subjects: await this.identifyEducationalSubjects(message),
+            topics: await this.extractEducationalTopics(message),
+            concepts: await this.identifyKeyConcepts(message),
+            learningObjectives: await this.deriveLearningObjectives(message),
+            difficultyLevel: await this.assessDifficultyLevel(message),
             
             // ENTITY EXTRACTION
-            entities: this.extractAdvancedEntities(message),
+            entities: await this.extractComprehensiveEntities(message),
+            namedEntities: await this.identifyNamedEntities(message),
+            numericalEntities: await this.extractNumericalEntities(message),
+            temporalEntities: await this.identifyTemporalEntities(message),
             
-            // CONTEXT ANALYSIS
-            context: this.analyzeCurrentContext(message),
-            conversationContext: this.getConversationContext(),
+            // CONTEXTUAL INTELLIGENCE
+            conversationContext: await this.analyzeConversationContext(message),
+            topicalContext: await this.deriveTopicalContext(message),
+            situationalContext: await this.assessSituationalContext(message),
+            culturalContext: await this.identifyCulturalContext(message),
             
-            // LEARNING ANALYSIS
-            learningObjectives: this.identifyLearningObjectives(message),
-            difficultyCues: this.extractDifficultyCues(message),
+            // DIAGRAM REQUIREMENTS
+            needsDiagram: await this.assessDiagramNeed(message),
+            diagramType: await this.determineDiagramType(message),
+            diagramContext: await this.extractDiagramContext(message),
+            visualizationPreference: await this.determineVisualizationPreference(message),
             
             // USER ANALYSIS
-            userState: this.analyzeUserState(message),
-            engagement: this.calculateEngagementLevel(message)
+            userState: await this.analyzeUserState(message),
+            learningStyle: await this.inferLearningStyle(message),
+            engagementLevel: await this.calculateEngagementLevel(message),
+            motivationState: await this.assessMotivationState(message),
+            
+            // RESPONSE REQUIREMENTS
+            responseType: await this.determineResponseType(message),
+            responseComplexity: await this.calculateRequiredComplexity(message),
+            responseLength: await this.estimateOptimalLength(message),
+            responseStyle: await this.determineOptimalStyle(message)
         };
         
-        return analysis;
+        return analysisResult;
     }
 
-    detectLanguage(text) {
-        const hindiWords = ['है', 'हैं', 'का', 'की', 'के', 'में', 'को', 'से', 'और', 'या', 'मैं', 'आप', 'क्या', 'कैसे', 'कब', 'कहाँ', 'क्यों', 'कौन'];
-        const englishWords = ['the', 'is', 'are', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'about'];
+    async detectAdvancedLanguage(text) {
+        // COMPREHENSIVE LANGUAGE DETECTION
+        const languagePatterns = {
+            hindi: {
+                script: /[\u0900-\u097F]/,
+                words: ['है', 'हैं', 'का', 'की', 'के', 'में', 'को', 'से', 'और', 'या', 'मैं', 'आप', 'क्या', 'कैसे', 'कब', 'कहाँ', 'क्यों', 'कौन', 'जो', 'वह', 'यह', 'तो', 'भी', 'नहीं', 'अब', 'फिर'],
+                weight: 3
+            },
+            english: {
+                words: ['the', 'is', 'are', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'about', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'between'],
+                weight: 1
+            },
+            hinglish: {
+                patterns: [/\b(hai|nahi|aur|ya|main|aap|kya|kaise|kab)\b/gi],
+                weight: 2
+            }
+        };
         
         const words = text.toLowerCase().split(/\s+/);
-        let hindiCount = 0;
-        let englishCount = 0;
+        let scores = { hindi: 0, english: 0, hinglish: 0 };
         
+        // SCRIPT DETECTION
+        if (languagePatterns.hindi.script.test(text)) {
+            scores.hindi += 10;
+        }
+        
+        // WORD PATTERN MATCHING
         words.forEach(word => {
-            if (hindiWords.includes(word)) hindiCount++;
-            if (englishWords.includes(word)) englishCount++;
-        });
-        
-        const devanagariRegex = /[\u0900-\u097F]/;
-        const hasDevanagari = devanagariRegex.test(text);
-        
-        if (hasDevanagari || hindiCount > englishCount * 1.5) {
-            return 'hindi';
-        } else if (hindiCount > 0 && englishCount > hindiCount) {
-            return 'hinglish';
-        } else {
-            return 'english';
-        }
-    }
-
-    analyzeAdvancedIntent(message) {
-        const msg = message.toLowerCase();
-        
-        // TEST GENERATION INTENTS
-        if (this.matchesPatterns(msg, ['test', 'exam', 'paper', 'questions', 'practice', 'quiz']) &&
-            this.matchesPatterns(msg, ['create', 'generate', 'make', 'give', 'take', 'prepare', 'design'])) {
-            return 'test_generation';
-        }
-        
-        // SOLUTION REQUEST INTENTS
-        if (this.matchesPatterns(msg, ['solution', 'answer', 'solve', 'explain', 'show']) &&
-            (this.matchesPatterns(msg, ['step', 'detailed', 'how', 'method']) || msg.includes('solution'))) {
-            return 'solution_request';
-        }
-        
-        // CONCEPT EXPLANATION INTENTS
-        if (this.matchesPatterns(msg, ['what', 'how', 'why', 'explain', 'teach', 'define', 'describe', 'tell me about'])) {
-            return 'concept_explanation';
-        }
-        
-        // STUDY PLANNING INTENTS
-        if (this.matchesPatterns(msg, ['study', 'plan', 'schedule', 'strategy', 'prepare', 'revision'])) {
-            return 'study_planning';
-        }
-        
-        // PERFORMANCE ANALYSIS INTENTS
-        if (this.matchesPatterns(msg, ['performance', 'analysis', 'progress', 'score', 'improvement', 'weak', 'strong'])) {
-            return 'performance_analysis';
-        }
-        
-        // MOTIVATION & SUPPORT INTENTS
-        if (this.matchesPatterns(msg, ['motivate', 'encourage', 'support', 'help', 'confidence', 'stress', 'anxiety'])) {
-            return 'motivation_support';
-        }
-        
-        // CREATIVE & INTERACTIVE INTENTS
-        if (this.matchesPatterns(msg, ['story', 'game', 'fun', 'creative', 'interactive', 'analogy', 'example'])) {
-            return 'creative_interaction';
-        }
-        
-        // DEFAULT GENERAL HELP
-        return 'general_help';
-    }
-
-    matchesPatterns(text, patterns) {
-        return patterns.some(pattern => text.includes(pattern));
-    }
-
-    analyzeEmotionalState(message) {
-        const emotionalPatterns = {
-            frustrated: ['confused', 'don\'t understand', 'difficult', 'hard', 'stuck', 'can\'t', 'frustrated', 'annoying'],
-            excited: ['excited', 'love', 'amazing', 'awesome', 'great', 'fantastic', 'wonderful', 'brilliant'],
-            worried: ['worried', 'anxious', 'stressed', 'nervous', 'scared', 'afraid', 'concerned', 'pressure'],
-            confident: ['confident', 'ready', 'understand', 'easy', 'got it', 'clear', 'sure', 'know'],
-            curious: ['interesting', 'curious', 'wonder', 'want to know', 'how does', 'why does', 'what if'],
-            determined: ['will', 'going to', 'want to learn', 'need to understand', 'must', 'determined']
-        };
-        
-        const msg = message.toLowerCase();
-        const detectedEmotions = [];
-        
-        for (const [emotion, patterns] of Object.entries(emotionalPatterns)) {
-            const matches = patterns.filter(pattern => msg.includes(pattern));
-            if (matches.length > 0) {
-                detectedEmotions.push({
-                    emotion,
-                    intensity: matches.length,
-                    indicators: matches
-                });
+            if (languagePatterns.hindi.words.includes(word)) {
+                scores.hindi += languagePatterns.hindi.weight;
             }
-        }
-        
-        if (detectedEmotions.length === 0) {
-            return { primary: 'neutral', intensity: 0, indicators: [] };
-        }
-        
-        // SORT BY INTENSITY AND RETURN PRIMARY
-        detectedEmotions.sort((a, b) => b.intensity - a.intensity);
-        return detectedEmotions[0];
-    }
-
-    analyzeMessageComplexity(message) {
-        const words = message.split(/\s+/);
-        const sentences = message.split(/[.!?]+/).filter(s => s.trim());
-        const avgWordLength = words.reduce((sum, word) => sum + word.length, 0) / words.length;
-        const questionWords = ['what', 'how', 'why', 'when', 'where', 'who', 'which'];
-        const hasQuestions = questionWords.some(qw => message.toLowerCase().includes(qw));
-        
-        let complexity = 'low';
-        
-        if (words.length > 20 || sentences.length > 3 || avgWordLength > 6) {
-            complexity = 'high';
-        } else if (words.length > 10 || sentences.length > 1 || hasQuestions) {
-            complexity = 'medium';
-        }
-        
-        return {
-            level: complexity,
-            wordCount: words.length,
-            sentenceCount: sentences.length,
-            avgWordLength: Math.round(avgWordLength * 10) / 10,
-            hasQuestions
-        };
-    }
-
-    extractAdvancedEntities(message) {
-        const entities = {
-            subjects: this.extractSubjects(message),
-            topics: this.extractTopics(message),
-            numbers: this.extractNumbers(message),
-            difficulty: this.extractDifficulty(message),
-            timeframes: this.extractTimeframes(message),
-            actions: this.extractActions(message)
-        };
-        
-        return entities;
-    }
-
-    extractSubjects(message) {
-        const subjectPatterns = {
-            mathematics: ['math', 'maths', 'mathematics', 'algebra', 'geometry', 'trigonometry', 'statistics', 'probability'],
-            science: ['science', 'physics', 'chemistry', 'biology', 'scientific'],
-            physics: ['physics', 'motion', 'force', 'electricity', 'light', 'sound', 'energy'],
-            chemistry: ['chemistry', 'chemical', 'reaction', 'acid', 'base', 'metal', 'compound'],
-            biology: ['biology', 'life', 'cell', 'organism', 'plant', 'animal', 'human', 'evolution'],
-            english: ['english', 'literature', 'grammar', 'writing', 'poem', 'story', 'essay'],
-            hindi: ['hindi', 'हिंदी', 'व्याकरण', 'साहित्य', 'कविता', 'गद्य'],
-            social_science: ['social', 'history', 'geography', 'civics', 'economics', 'political'],
-            history: ['history', 'historical', 'past', 'ancient', 'medieval', 'modern'],
-            geography: ['geography', 'earth', 'climate', 'map', 'country', 'continent'],
-            civics: ['civics', 'government', 'democracy', 'politics', 'constitution', 'rights'],
-            economics: ['economics', 'economy', 'money', 'trade', 'business', 'market']
-        };
-        
-        const msg = message.toLowerCase();
-        const foundSubjects = [];
-        
-        for (const [subject, patterns] of Object.entries(subjectPatterns)) {
-            if (patterns.some(pattern => msg.includes(pattern))) {
-                foundSubjects.push(subject);
+            if (languagePatterns.english.words.includes(word)) {
+                scores.english += languagePatterns.english.weight;
             }
-        }
-        
-        return foundSubjects;
-    }
-
-    extractNumbers(message) {
-        const numbers = message.match(/\d+/g);
-        return numbers ? numbers.map(Number) : [];
-    }
-
-    extractDifficulty(message) {
-        const msg = message.toLowerCase();
-        if (msg.includes('easy') || msg.includes('simple') || msg.includes('basic')) return 'easy';
-        if (msg.includes('medium') || msg.includes('moderate') || msg.includes('intermediate')) return 'medium';
-        if (msg.includes('hard') || msg.includes('difficult') || msg.includes('advanced') || msg.includes('challenging')) return 'hard';
-        return null;
-    }
-
-    async generateUltimateResponse(message, analysis) {
-        console.log('💎 Generating ultimate response for intent:', analysis.intent);
-        
-        const intent = analysis.intent;
-        
-        try {
-            switch (intent) {
-                case 'test_generation':
-                    return await this.generateAdvancedTestResponse(message, analysis);
-                
-                case 'solution_request':
-                    return await this.generateDetailedSolutionResponse(message, analysis);
-                
-                case 'concept_explanation':
-                    return await this.generateConceptExplanationResponse(message, analysis);
-                
-                case 'study_planning':
-                    return await this.generateStudyPlanResponse(message, analysis);
-                
-                case 'performance_analysis':
-                    return await this.generatePerformanceAnalysisResponse(message, analysis);
-                
-                case 'motivation_support':
-                    return await this.generateMotivationResponse(message, analysis);
-                
-                case 'creative_interaction':
-                    return await this.generateCreativeResponse(message, analysis);
-                
-                default:
-                    return await this.generateGeneralResponse(message, analysis);
-            }
-        } catch (error) {
-            console.error('Response generation error:', error);
-            return this.generateErrorRecoveryResponse(message, analysis);
-        }
-    }
-
-    async generateAdvancedTestResponse(message, analysis) {
-        console.log('📝 Generating advanced test...');
-        
-        try {
-            // EXTRACT TEST PARAMETERS
-            const testParams = this.extractAdvancedTestParameters(message, analysis);
             
-            // GENERATE COMPREHENSIVE TEST
-            const testData = await this.generateComprehensiveTestData(testParams);
-            
-            // STORE TEST DATA
-            this.lastGeneratedTest = testData;
-            this.testHistory.push({
-                timestamp: Date.now(),
-                testData,
-                testParams,
-                analysis
-            });
-            
-            // FORMAT RESPONSE
-            return this.formatAdvancedTestResponse(testData, testParams, analysis);
-            
-        } catch (error) {
-            console.error('Test generation error:', error);
-            return `I encountered an issue generating the test. Let me try a simpler approach.\n\nPlease specify:\n• Subject (Math, Science, English, Hindi, Social Science)\n• Number of questions\n• Difficulty level\n\nExample: "Create a Math test with 10 questions, medium difficulty"`;
-        }
-    }
-
-    extractAdvancedTestParameters(message, analysis) {
-        const params = {
-            subject: 'mixed',
-            difficulty: 'medium',
-            questionCount: 15,
-            totalMarks: 60,
-            timeLimit: 120,
-            includeHints: true,
-            includeSolutions: false,
-            testType: 'comprehensive',
-            sources: ['textbook', 'pyq', 'sqp']
-        };
-        
-        // EXTRACT SUBJECT FROM ENTITIES
-        if (analysis.entities.subjects.length > 0) {
-            params.subject = analysis.entities.subjects[0];
-        }
-        
-        // EXTRACT DIFFICULTY
-        if (analysis.entities.difficulty) {
-            params.difficulty = analysis.entities.difficulty;
-        }
-        
-        // EXTRACT NUMBERS FOR QUESTION COUNT OR MARKS
-        if (analysis.entities.numbers.length > 0) {
-            const primaryNumber = analysis.entities.numbers[0];
-            if (primaryNumber <= 30) {
-                params.questionCount = primaryNumber;
-                params.totalMarks = primaryNumber * 4; // 4 marks average
-            } else if (primaryNumber <= 100) {
-                params.totalMarks = primaryNumber;
-                params.questionCount = Math.ceil(primaryNumber / 4);
-            }
-        }
-        
-        return params;
-    }
-
-    async generateComprehensiveTestData(params) {
-        console.log('🎯 Generating comprehensive test data:', params);
-        
-        // GET QUESTIONS FROM COMPREHENSIVE DATABASE
-        const questions = await this.getAdvancedQuestions(params);
-        
-        // CALCULATE METADATA
-        const metadata = {
-            totalQuestions: questions.length,
-            totalMarks: questions.reduce((sum, q) => sum + q.marks, 0),
-            timeLimit: params.timeLimit,
-            difficulty: params.difficulty,
-            subject: params.subject,
-            estimatedTime: questions.length * 8, // 8 minutes per question average
-            difficultyDistribution: this.calculateDifficultyDistribution(questions)
-        };
-        
-        return {
-            questions,
-            metadata,
-            params,
-            timestamp: Date.now(),
-            testId: this.generateTestId()
-        };
-    }
-
-    async getAdvancedQuestions(params) {
-        // ULTRA-COMPREHENSIVE QUESTION DATABASE
-        const questionDatabase = {
-            mathematics: [
-                {
-                    question: "Find the zeros of the quadratic polynomial f(x) = 2x² - 8x + 6 and verify the relationship between zeros and coefficients.",
-                    marks: 5,
-                    chapter: "Quadratic Equations",
-                    difficulty: "medium",
-                    source: "pyq",
-                    solution: "2x² - 8x + 6 = 0\nDividing by 2: x² - 4x + 3 = 0\n(x - 1)(x - 3) = 0\nZeros: x = 1, x = 3\nSum of zeros = 1 + 3 = 4 = -(-8)/2 = 4/1 ✓\nProduct of zeros = 1 × 3 = 3 = 6/2 = 3 ✓",
-                    keyTips: ["Factor the quadratic", "Verify using sum and product formulas", "Check your arithmetic"],
-                    realWorldApp: "Trajectory calculations in physics"
-                },
-                {
-                    question: "Prove that the sum of first n natural numbers is n(n+1)/2 using mathematical induction.",
-                    marks: 6,
-                    chapter: "Arithmetic Progressions",
-                    difficulty: "hard",
-                    source: "sqp",
-                    solution: "Step 1: Base case (n=1): Sum = 1 = 1(1+1)/2 = 1 ✓\nStep 2: Assume true for n=k: 1+2+...+k = k(k+1)/2\nStep 3: Prove for n=k+1:\n1+2+...+k+(k+1) = k(k+1)/2 + (k+1) = (k+1)[k/2 + 1] = (k+1)(k+2)/2 ✓",
-                    keyTips: ["Follow induction steps carefully", "Algebraic manipulation is key", "Verify base case"],
-                    realWorldApp: "Series calculations in engineering"
+            languagePatterns.hinglish.patterns.forEach(pattern => {
+                if (pattern.test(word)) {
+                    scores.hinglish += languagePatterns.hinglish.weight;
                 }
-            ],
-            science: [
-                {
-                    question: "Explain the process of photosynthesis. Write the balanced chemical equation and explain its significance.",
-                    marks: 5,
-                    chapter: "Life Processes",
-                    difficulty: "medium",
-                    source: "ncert",
-                    solution: "Photosynthesis equation: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂\nProcess: Light-dependent reactions in thylakoids produce ATP and NADPH. Light-independent reactions (Calvin cycle) in stroma use CO₂ to make glucose.\nSignificance: Primary production, oxygen release, food chain foundation.",
-                    keyTips: ["Balance the equation correctly", "Explain both phases", "Mention chloroplast structure"],
-                    realWorldApp: "Understanding plant growth and environmental impact"
-                }
-            ],
-            english: [
-                {
-                    question: "Write a letter to the editor expressing concern about increasing pollution in your city. Include specific examples and suggest solutions.",
-                    marks: 8,
-                    chapter: "Letter Writing",
-                    difficulty: "medium",
-                    source: "sqp",
-                    solution: "Format: Address, Date, Recipient details, Subject, Salutation, Body (3 paragraphs), Closing\nContent: Current situation, specific examples (air/water pollution), health impacts, suggested solutions (waste management, public transport, tree plantation), call for action",
-                    keyTips: ["Follow formal letter format", "Include specific examples", "Suggest practical solutions"],
-                    realWorldApp: "Environmental advocacy and civic participation"
-                }
-            ]
-        };
-        
-        // SELECT QUESTIONS BASED ON SUBJECT
-        let availableQuestions = [];
-        if (params.subject === 'mixed') {
-            // Combine questions from multiple subjects
-            Object.values(questionDatabase).forEach(subjectQuestions => {
-                availableQuestions.push(...subjectQuestions);
             });
-        } else {
-            availableQuestions = questionDatabase[params.subject] || questionDatabase.mathematics;
-        }
-        
-        // FILTER BY DIFFICULTY
-        if (params.difficulty !== 'medium') {
-            availableQuestions = availableQuestions.filter(q => q.difficulty === params.difficulty);
-        }
-        
-        // SHUFFLE AND SELECT REQUIRED NUMBER
-        const shuffled = this.shuffleArray([...availableQuestions]);
-        const selected = shuffled.slice(0, params.questionCount).map((q, index) => ({
-            ...q,
-            number: index + 1,
-            id: this.generateQuestionId()
-        }));
-        
-        return selected;
-    }
-
-    formatAdvancedTestResponse(testData, params, analysis) {
-        const language = analysis.language;
-        
-        let response = '';
-        
-        // DYNAMIC HEADER
-        if (language === 'hindi') {
-            response += `**📝 CBSE कक्षा 10 - ${this.getSubjectNameHindi(params.subject)} परीक्षा पत्र**\n\n`;
-        } else if (language === 'hinglish') {
-            response += `**📝 CBSE Class 10 - ${this.getSubjectName(params.subject)} Test Paper**\n\n`;
-        } else {
-            response += `**📝 CBSE Class 10 ${this.getSubjectName(params.subject).toUpperCase()} Test Paper**\n\n`;
-        }
-        
-        // COMPREHENSIVE TEST INFORMATION
-        response += `**📊 Test Analytics:**\n`;
-        response += `• **Subject Focus:** ${this.getSubjectName(params.subject)}\n`;
-        response += `• **Total Questions:** ${testData.questions.length}\n`;
-        response += `• **Total Marks:** ${testData.metadata.totalMarks}\n`;
-        response += `• **Difficulty Level:** ${params.difficulty.charAt(0).toUpperCase() + params.difficulty.slice(1)}\n`;
-        response += `• **Estimated Time:** ${testData.metadata.estimatedTime} minutes\n`;
-        response += `• **Test ID:** ${testData.testId}\n\n`;
-        
-        // DETAILED INSTRUCTIONS
-        response += `**📋 Examination Instructions:**\n`;
-        response += `• All questions are compulsory unless specified otherwise\n`;
-        response += `• Read each question carefully and understand what is being asked\n`;
-        response += `• Show all working steps clearly for mathematical problems\n`;
-        response += `• Draw neat, well-labeled diagrams wherever required\n`;
-        response += `• Write in clear, legible handwriting with proper formatting\n`;
-        response += `• Manage your time effectively using the suggested timings\n`;
-        response += `• Review your answers in the final 10-15 minutes\n\n`;
-        
-        response += `**═══════════════════════════════════════════════════════════════**\n\n`;
-        
-        // ORGANIZE QUESTIONS BY MARKS
-        const questionsByMarks = this.organizeQuestionsByMarks(testData.questions);
-        
-        Object.keys(questionsByMarks).sort((a, b) => parseInt(a) - parseInt(b)).forEach(marks => {
-            const questions = questionsByMarks[marks];
-            const sectionName = this.getSectionName(parseInt(marks));
-            
-            response += `**SECTION ${this.getSectionLetter(marks)}: ${sectionName}**\n`;
-            response += `**Time Allocation: ${Math.round(parseInt(marks) * 2)} minutes per question**\n\n`;
-            
-            questions.forEach((q) => {
-                response += `**Q${q.number}.** ${q.question}`;
-                
-                // ADD METADATA
-                if (q.chapter) response += ` *(Chapter: ${q.chapter})*`;
-                if (q.source) response += ` *[${q.source.toUpperCase()}]*`;
-                if (q.realWorldApp) response += ` *{Application: ${q.realWorldApp}}*`;
-                
-                response += ` **[${q.marks} marks]**\n\n`;
-            });
-            
-            response += `**─────────────────────────────────────────────────────────────**\n\n`;
         });
         
-        // COMPREHENSIVE ANALYTICS
-        response += `**📈 Test Analytics & Strategy:**\n\n`;
+        // DETERMINE PRIMARY LANGUAGE
+        const maxScore = Math.max(scores.hindi, scores.english, scores.hinglish);
+        if (maxScore === 0) return 'english'; // Default
         
-        response += `**Question Distribution:**\n`;
-        Object.entries(testData.metadata.difficultyDistribution).forEach(([diff, count]) => {
-            response += `• **${diff.charAt(0).toUpperCase() + diff.slice(1)}:** ${count} questions\n`;
-        });
-        response += '\n';
-        
-        response += `**Success Strategy:**\n`;
-        response += `• **Phase 1 (First 25%):** Quick scan + easy questions\n`;
-        response += `• **Phase 2 (Next 50%):** Medium difficulty questions\n`;
-        response += `• **Phase 3 (Next 20%):** Challenging questions\n`;
-        response += `• **Phase 4 (Final 5%):** Review and polish\n\n`;
-        
-        response += `**💡 Pro Tips for This Test:**\n`;
-        response += `• Start with ${params.difficulty} level questions to build confidence\n`;
-        response += `• Spend approximately ${Math.round(testData.metadata.estimatedTime / testData.questions.length)} minutes per question\n`;
-        response += `• Don't get stuck on any single question for too long\n`;
-        response += `• Use elimination method for multiple-choice questions\n`;
-        response += `• Show all steps even if answer seems obvious\n\n`;
-        
-        response += `**═══════════════════════════════════════════════════════════════**\n\n`;
-        
-        response += `**🎯 Ready to excel? Give your best effort!**\n\n`;
-        response += `**After completing the test, ask "show detailed solutions" for comprehensive explanations with:**\n`;
-        response += `• Step-by-step solutions\n`;
-        response += `• CBSE marking schemes\n`;
-        response += `• Alternative solving methods\n`;
-        response += `• Key tips and common mistakes\n`;
-        response += `• Performance analysis and improvement suggestions\n\n`;
-        
-        response += `**🌟 You've got this! Let's achieve excellence together! 💎**`;
-        
-        return response;
+        if (scores.hindi === maxScore) return 'hindi';
+        if (scores.hinglish === maxScore) return 'hinglish';
+        return 'english';
     }
 
-    async generateDetailedSolutionResponse(message, analysis) {
-        if (!this.lastGeneratedTest) {
-            return this.getNoTestAvailableMessage(analysis.language);
-        }
-        
-        return this.formatComprehensiveSolutions(this.lastGeneratedTest, analysis);
-    }
-
-    getNoTestAvailableMessage(language) {
-        const messages = {
-            'hindi': `**📚 कोई परीक्षा उपलब्ध नहीं है**\n\n**समस्या:** अभी तक कोई परीक्षा तैयार नहीं की गई है।\n\n**समाधान:** कृपया पहले एक परीक्षा बनाने का अनुरोध करें:\n• "गणित की परीक्षा बनाओ"\n• "विज्ञान के 15 प्रश्न दो"\n• "अंग्रेजी का टेस्ट पेपर तैयार करो"\n\nफिर मैं विस्तृत समाधान प्रदान कर सकूंगा! 🎓`,
-            
-            'hinglish': `**📚 Koi Test Available Nahi Hai**\n\n**Problem:** Abhi tak koi test generate nahi kiya gaya.\n\n**Solution:** Pehle test banana padega:\n• "Math ka test banao"\n• "Science ke questions do"\n• "English paper ready karo"\n\nPhir main detailed solutions de sakta hun! 🚀`,
-            
-            'english': `**📚 No Test Available for Solutions**\n\n**Issue:** No test has been generated yet to provide solutions for.\n\n**Next Steps:** Please first request a test:\n• "Create a mathematics test with 15 questions"\n• "Generate science practice questions"\n• "Make an English test paper"\n\nOnce you have a test, I can provide:\n• **Step-by-step solutions**\n• **CBSE marking schemes**\n• **Multiple solving methods**\n• **Key insights and tips**\n• **Performance improvement suggestions**\n\n**Ready to get started? Just ask for any subject test! 💎**`
-        };
-        
-        return messages[language] || messages['english'];
-    }
-
-    formatComprehensiveSolutions(testData, analysis) {
-        const language = analysis.language;
-        
-        let response = '';
-        
-        // HEADER
-        if (language === 'hindi') {
-            response += `**💡 संपूर्ण समाधान - ${this.getSubjectNameHindi(testData.params.subject)}**\n\n`;
-        } else {
-            response += `**💡 Comprehensive Solutions - ${this.getSubjectName(testData.params.subject).toUpperCase()}**\n\n`;
-        }
-        
-        response += `**📊 Solution Overview:**\n`;
-        response += `• **Test ID:** ${testData.testId}\n`;
-        response += `• **Subject:** ${this.getSubjectName(testData.params.subject)}\n`;
-        response += `• **Total Questions:** ${testData.questions.length}\n`;
-        response += `• **Total Marks:** ${testData.metadata.totalMarks}\n`;
-        response += `• **Solution Standard:** CBSE Board Level\n\n`;
-        
-        response += `**═══════════════════════════════════════════════════════════════**\n\n`;
-        
-        // DETAILED SOLUTIONS
-        testData.questions.forEach((q, index) => {
-            response += `**Solution ${q.number}:** ${q.question}\n`;
-            response += `**Chapter:** ${q.chapter} | **Marks:** ${q.marks} | **Difficulty:** ${q.difficulty.toUpperCase()}\n\n`;
-            
-            response += `**🔍 Step-by-Step Solution:**\n`;
-            response += `${q.solution}\n\n`;
-            
-            // CBSE MARKING SCHEME
-            response += `**📊 CBSE Marking Scheme:**\n`;
-            response += this.generateDetailedMarkingScheme(q.marks, q.chapter);
-            response += `\n`;
-            
-            // KEY TIPS
-            if (q.keyTips) {
-                response += `**💡 Key Success Tips:**\n`;
-                q.keyTips.forEach(tip => {
-                    response += `• ${tip}\n`;
-                });
-                response += `\n`;
-            }
-            
-            // COMMON MISTAKES
-            response += `**⚠️ Common Mistakes to Avoid:**\n`;
-            response += this.getCommonMistakes(q.chapter, q.difficulty);
-            response += `\n`;
-            
-            // REAL-WORLD APPLICATION
-            if (q.realWorldApp) {
-                response += `**🌍 Real-World Application:**\n`;
-                response += `${q.realWorldApp}\n\n`;
-            }
-            
-            // ALTERNATIVE METHODS
-            response += `**🔄 Alternative Approach:**\n`;
-            response += this.getAlternativeMethod(q.chapter, q.question);
-            response += `\n\n`;
-            
-            response += `**═══════════════════════════════════════════════════════════════**\n\n`;
-        });
-        
-        // PERFORMANCE ANALYSIS
-        response += `**📈 Performance Analysis & Improvement Guide:**\n\n`;
-        
-        response += `**📚 Study Recommendations:**\n`;
-        const subjects = [...new Set(testData.questions.map(q => q.chapter))];
-        subjects.forEach(chapter => {
-            response += `• **${chapter}:** Practice similar problems, review concept notes\n`;
-        });
-        response += `\n`;
-        
-        response += `**🎯 Next Steps for Excellence:**\n`;
-        response += `• **Practice More:** Attempt similar questions from different sources\n`;
-        response += `• **Concept Review:** Revisit fundamental concepts for weak areas\n`;
-        response += `• **Speed Building:** Practice timed tests to improve speed\n`;
-        response += `• **Error Analysis:** Keep a mistake journal and review regularly\n`;
-        response += `• **Peer Discussion:** Discuss solutions with classmates and teachers\n\n`;
-        
-        response += `**🌟 Ready for more practice? Ask for another test or specific chapter questions! 💎**`;
-        
-        return response;
-    }
-
-    async generateConceptExplanationResponse(message, analysis) {
-        console.log('🎓 Generating concept explanation...');
-        
-        // IDENTIFY PRIMARY CONCEPT
-        const concept = this.identifyPrimaryConcept(message, analysis);
-        
-        // GET COMPREHENSIVE EXPLANATION
-        const explanation = await this.getComprehensiveConceptExplanation(concept, analysis);
-        
-        return this.formatConceptExplanation(explanation, analysis);
-    }
-
-    identifyPrimaryConcept(message, analysis) {
+    async classifyAdvancedIntent(message) {
         const msg = message.toLowerCase();
         
-        // MATH CONCEPTS
-        if (msg.includes('quadratic') || msg.includes('equation')) return 'quadratic_equations';
-        if (msg.includes('triangle') || msg.includes('similarity')) return 'triangles';
-        if (msg.includes('coordinate') || msg.includes('geometry')) return 'coordinate_geometry';
-        if (msg.includes('probability') || msg.includes('statistics')) return 'probability_statistics';
-        
-        // SCIENCE CONCEPTS
-        if (msg.includes('photosynthesis')) return 'photosynthesis';
-        if (msg.includes('acid') || msg.includes('base')) return 'acids_bases_salts';
-        if (msg.includes('light') || msg.includes('reflection')) return 'light_reflection_refraction';
-        if (msg.includes('electricity') || msg.includes('current')) return 'electricity';
-        
-        // SOCIAL SCIENCE CONCEPTS
-        if (msg.includes('democracy') || msg.includes('government')) return 'democracy_government';
-        if (msg.includes('nationalism') || msg.includes('freedom')) return 'nationalism_india';
-        
-        // ENGLISH CONCEPTS
-        if (msg.includes('grammar') || msg.includes('tense')) return 'english_grammar';
-        if (msg.includes('poetry') || msg.includes('literature')) return 'english_literature';
-        
-        return 'general_concept';
-    }
-
-    async getComprehensiveConceptExplanation(concept, analysis) {
-        const explanations = {
-            quadratic_equations: {
-                title: "Quadratic Equations - Complete Mastery Guide",
-                definition: "A quadratic equation is a polynomial equation of degree 2, with the general form ax² + bx + c = 0, where a ≠ 0.",
-                
-                keyComponents: [
-                    "**Coefficient 'a':** Determines the parabola's opening direction and width",
-                    "**Coefficient 'b':** Affects the parabola's position and axis of symmetry", 
-                    "**Coefficient 'c':** Represents the y-intercept of the parabola"
+        // INTENT CLASSIFICATION WITH CONFIDENCE SCORING
+        const intentPatterns = {
+            test_generation: {
+                patterns: [
+                    /create.*(test|exam|paper|quiz|questions)/i,
+                    /generate.*(test|exam|paper|quiz|questions)/i,
+                    /make.*(test|exam|paper|quiz|questions)/i,
+                    /give.*(test|exam|paper|quiz|questions)/i,
+                    /(test|exam|paper|quiz).*(create|generate|make|give)/i
                 ],
-                
-                solvingMethods: [
-                    "**1. Factoring Method:** When the equation can be written as (px + q)(rx + s) = 0",
-                    "**2. Quadratic Formula:** x = [-b ± √(b² - 4ac)] / 2a (works for all quadratic equations)",
-                    "**3. Completing the Square:** Converting ax² + bx + c = 0 to (x + d)² = e form",
-                    "**4.
+                keywords: ['test', 'exam', 'paper', 'questions', 'quiz', 'practice', 'assessment'],
+                weight: 5
+            },
+            
+            solution_request: {
+                patterns: [
+                    /show.*(solution|answer)/i,
+                    /explain.*(solution|step|method)/i,
+                    /solve.*(problem|equation|question)/i,
+                    /how to (solve|calculate|find)/i
+                ],
+                keywords: ['solution', 'answer', 'solve', 'explain', 'step', 'method', 'calculate'],
+                weight: 4
+            },
+            
+            concept_explanation: {
+                patterns: [
+                    /what is.*/i,
+                    /explain.*(concept|topic|chapter)/i,
+                    /tell me about.*/i,
+                    /how does.*/i,
+                    /why.*/i
+                ],
+                keywords: ['what', 'explain', 'how', 'why', 'define', 'describe', 'concept', 'topic'],
+                weight: 4
+            },
+            
+            diagram_request: {
+                patterns: [
+                    /show.*(diagram|chart|graph|figure)/i,
+                    /draw.*(diagram|chart|graph|figure)/i,
+                    /diagram.*(of|for|showing)/i,
+                    /visualize.*/i
+                ],
+                keywords: ['diagram', 'chart', 'graph', 'figure', 'draw', 'show', 'visualize', 'illustration'],
+                weight: 6
+            },
+            
+            study_planning: {
+                patterns: [
+                    /study.*(plan|schedule|routine)/i,
+                    /create.*(plan|schedule|routine)/i,
+                    /how to study/i,
+                    /preparation.*(strategy|plan)/i
+                ],
+                keywords: ['study', 'plan', 'schedule', 'routine', 'strategy', 'preparation', 'organize'],
+                weight: 4
+            },
+            
+            performance_analysis: {
+                patterns: [
+                    /analyze.*(performance|progress)/i,
+                    /show.*(progress|improvement)/i,
+                    /my.*(score|performance|progress)/i
+                ],
+                keywords: ['analyze', 'performance', 'progress', 'improvement', 'score', 'results'],
+                weight: 3
+            },
+            
+            motivation_support: {
+                patterns: [
+                    /motivate.*me/i,
+                    /feeling.*(down|demotivated|lost)/i,
+                    /need.*(help|support|encouragement)/i,
+                    /boost.*(confidence|morale)/i
+                ],
+                keywords: ['motivate', 'encourage', 'support', 'confidence', 'morale', 'inspiration'],
+                weight: 3
+            }
+        };
+        
+        let intentScores = {};
+        
+        // PATTERN MATCHING
+        for (const [intent, config] of Object.entries(intentPatterns)) {
+            let score = 0;
+            
+            // Pattern matching
+            config.patterns.forEach(pattern => {
+                if (pattern.test(message)) {
+                    score += config.weight * 2;
+                }
+            });
+            
+            // Keyword matching
+            config.keywords.forEach(keyword => {
+                if (msg.includes(keyword)) {
+                    score += config.weight;
+                }
+            });
+            
+            if (score > 0) {
+                intentScores[intent] = score;
+            }
+        }
+        
+        // RETURN HIGHEST SCORING INTENT
+        if (Object.keys(intentScores).length === 0) {
+            return 'general_help';
+        }
+        
+        return Object.entries(intentScores).reduce((max, [intent, score]) => 
+            score > intentScores[max] ? intent : max
+        );
+    }
+
+    async analyzeEmotionalSpectrum(message) {
+        const emotionalIndicators = {
+            joy: {
+                patterns: [/\b(happy|excited|great|awesome|love|amazing|fantastic|wonderful|brilliant|excellent)\b/gi],
+                intensity: { high: ['ecstatic', 'thrilled', 'overjoyed'], medium: ['happy', 'excited', 'pleased'], low: ['ok', 'fine', 'good'] }
+            },
+            frustration: {
+                patterns: [/\b(frustrated|confused|stuck|difficult|hard|don't understand|can't|annoying|irritating)\b/gi],
+                intensity: { high: ['furious', 'extremely frustrated'], medium: ['frustrated', 'annoyed'], low: ['slightly confused', 'a bit stuck'] }
+            },
+            anxiety: {
+                patterns: [/\b(worried|anxious|stressed|nervous|scared|afraid|concerned|pressure|overwhelmed)\b/gi],
+                intensity: { high: ['panicked', 'terrified', 'overwhelmed'], medium: ['worried', 'anxious', 'stressed'], low: ['slightly concerned', 'a bit nervous'] }
+            },
+            confidence: {
+                patterns: [/\b(confident|sure|ready|understand|easy|got it|clear|know|mastered)\b/gi],
+                intensity: { high: ['absolutely confident', 'completely sure'], medium: ['confident', 'ready'], low: ['somewhat sure', 'think I understand'] }
+            },
+            curiosity: {
+                patterns: [/\b(interesting|curious|wonder|want to know|how does|why does|what if|fascinated)\b/gi],
+                intensity: { high: ['fascinated', 'deeply curious'], medium: ['interested', 'curious'], low: ['somewhat interested'] }
+            },
+            determination: {
+                patterns: [/\b(will|going to|determined|must|need to|want to learn|committed|dedicated)\b/gi],
+                intensity: { high: ['absolutely determined', 'completely committed'], medium: ['determined', 'dedicated'], low: ['want to', 'thinking about'] }
+            }
+        };
+        
+        const detectedEmotions = [];
+        const msg = message.toLowerCase();
+        
+        for (const [emotion, config] of Object.entries(emotionalIndicators)) {
+            let matches = 0;
+            let totalIntensity = 0;
+            
+            config.patterns.forEach(pattern => {
+                const patternMatches = msg.match(pattern);
+                if (patternMatches) {
+                    matches += patternMatches.length;
+                    
+                    // Calculate intensity based on specific words
+                    patternMatches.forEach(match => {
+                        if (config.intensity.high.some(word => match.toLowerCase().includes(word.toLowerCase()))) {
+                            totalIntensity += 3;
+                        } else if (config.intensity.medium.some(word => match.toLowerCase().includes(word.toLowerCase()))) {
+                            totalIntensity += 2;
+                        } else {
+                            totalIntensity += 1;
+                        }
+                    });
+                }
+            });
+            
+            if (matches > 0) {
+                detectedEmotions.push({
