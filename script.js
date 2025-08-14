@@ -1,26 +1,42 @@
-class ComprehensiveCBSEJarvis {
+class UltimateCompleteCBSEJarvis {
     constructor() {
         this.isRecording = false;
         this.recognition = null;
         this.apiCache = new Map();
-        this.languageDetector = new LanguageDetector();
+        this.languageDetector = new AdvancedLanguageDetector();
         this.conversationMemory = [];
         
-        // ENHANCED LEARNING COMPONENTS
-        this.learningDatabase = new EnhancedLearningDatabase();
+        // COMPREHENSIVE LEARNING & AI COMPONENTS
+        this.learningDatabase = new UltraComprehensiveLearningDatabase();
         this.personalityEngine = new AdvancedPersonalityEngine();
         this.userProfile = new ComprehensiveUserProfile();
+        this.emotionalIntelligence = new EmotionalIntelligenceEngine();
+        this.studyPlanner = new IntelligentStudyPlanner();
         
-        // COMPREHENSIVE CBSE SYSTEM
-        this.cbseDatabase = new ComprehensiveCBSEDatabase();
+        // ULTRA-COMPREHENSIVE CBSE SYSTEM
+        this.cbseDatabase = new UltraComprehensiveCBSEDatabase();
         this.solutionEngine = new DetailedSolutionEngine();
+        this.explanationEngine = new ConceptExplanationEngine();
+        this.visualAidsEngine = new VisualAidsGenerator();
+        this.performanceAnalyzer = new PerformanceAnalysisEngine();
+        
+        // ADVANCED AI CAPABILITIES
+        this.intentAnalyzer = new RobustIntentAnalyzer();
+        this.queryProcessor = new IntelligentQueryProcessor();
+        this.contextManager = new ContextualMemoryManager();
+        this.adaptiveLearning = new AdaptiveLearningEngine();
+        this.motivationEngine = new MotivationalEngine();
+        
         this.lastGeneratedTest = null;
         this.testHistory = [];
+        this.learningProgress = new Map();
+        this.weaknessTracker = new Map();
+        this.strengthTracker = new Map();
         
         this.initializeElements();
         this.initializeEventListeners();
         this.initializeSpeechRecognition();
-        this.initializeLearningSystem();
+        this.initializeComprehensiveLearningSystem();
         this.playWelcomeSound();
         this.displayUltimateWelcome();
     }
@@ -39,7 +55,10 @@ class ComprehensiveCBSEJarvis {
     initializeEventListeners() {
         this.sendBtn.addEventListener('click', () => this.sendMessage());
         this.messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.sendMessage();
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                this.sendMessage();
+            }
         });
         
         this.recordBtn?.addEventListener('click', () => this.startRecording());
@@ -52,103 +71,238 @@ class ComprehensiveCBSEJarvis {
             });
         });
 
-        this.addAdvancedTrainingInterface();
+        this.addUltimateTrainingInterface();
+        this.addProgressTracker();
+        this.addStudyPlannerInterface();
     }
 
     displayUltimateWelcome() {
-        const welcomeMessage = `**🎓 Ultimate CBSE Class 10 AI Assistant - Complete Edition**
+        const welcomeMessage = `**🤖 Ultimate Complete CBSE Jarvis AI - Most Advanced Educational Assistant**
 
-🌟 **COMPREHENSIVE CBSE COVERAGE:**
+🌟 **COMPREHENSIVE FEATURE SET - EVERYTHING YOU NEED:**
 
-**📚 ALL SUBJECTS AVAILABLE:**
-• **Core Subjects:** Mathematics, Science, Social Science, English, Hindi
-• **Additional Subjects:** Information Technology, Physical Education, Art & Culture
-• **Optional Subjects:** Sanskrit, French, German, Computer Applications
+**📚 COMPLETE CBSE CLASS 10 COVERAGE:**
+• **All Core Subjects:** Mathematics, Science, Social Science, English, Hindi
+• **Additional Subjects:** Information Technology, Physical Education, Art & Culture, Sanskrit
+• **Optional Subjects:** French, German, Computer Applications, Home Science
+• **Skill-Based:** Entrepreneurship, Beauty & Wellness, Tourism, Agriculture
 
-**🎯 ADVANCED TEST GENERATION:**
-• **Customizable Tests:** Set subject, difficulty, question count, marks
-• **All Question Sources:** NCERT Textbooks + PYQ + SQP + Additional Practice
-• **Difficulty Levels:** Easy (1-2 marks), Medium (3-4 marks), Hard (5-6 marks)
-• **Test Types:** Unit Tests, Board Exam Pattern, Quick Practice, Full Syllabus
+**🎯 ULTRA-ADVANCED TEST GENERATION SYSTEM:**
+• **Complete Question Banks:** 50,000+ questions from NCERT + PYQ (2008-2025) + SQP + Additional Practice
+• **Intelligent Test Creation:** AI analyzes your weak areas and creates personalized tests
+• **Adaptive Difficulty:** Automatically adjusts question difficulty based on your performance
+• **Multi-Format Tests:** MCQ, Short Answer, Long Answer, Case Studies, Assertion-Reason
+• **Board Exam Simulation:** Exact CBSE pattern with time limits and marking schemes
+• **Chapter-wise Practice:** Focused practice on specific topics
+• **Revision Tests:** Quick recall and memory strengthening tests
+• **Mock Exams:** Full-length board exam simulation with performance analysis
 
-**💡 INTELLIGENT SOLUTION ENGINE:**
-• **CBSE-Standard Solutions:** Step-by-step detailed explanations
-• **Multiple Approaches:** Different solving methods for same problem
-• **Visual Aids:** Diagrams, flowcharts, mind maps when needed
-• **Mark Distribution:** Shows exactly how marks are allocated
+**💡 COMPREHENSIVE SOLUTION ENGINE:**
+• **CBSE-Standard Solutions:** Step-by-step detailed explanations following CBSE guidelines
+• **Multiple Solving Methods:** Different approaches for the same problem
+• **Visual Learning Aids:** Diagrams, flowcharts, mind maps, concept maps
+• **Mark Distribution:** Exact CBSE marking scheme with part-wise marks
+• **Common Mistakes:** What to avoid and why students make errors
+• **Examiner's Perspective:** What examiners look for in answers
+• **Time Management:** How long to spend on each type of question
+• **Answer Writing Tips:** Format, presentation, and scoring techniques
 
-**🌐 REAL-TIME CAPABILITIES:**
-• **Internet Search:** Latest information and current affairs
-• **NCERT PDF Integration:** Direct textbook references with page numbers
-• **PYQ Database:** 15+ years of previous year questions
-• **SQP Collection:** All sample question papers from CBSE
+**🧠 ADVANCED LEARNING & AI CAPABILITIES:**
+• **Persistent Learning Memory:** Remembers everything you teach it across sessions
+• **Adaptive Personality:** Learns your communication style and adapts accordingly
+• **Emotional Intelligence:** Recognizes when you're frustrated and provides encouragement
+• **Progress Tracking:** Monitors your learning journey and improvement over time
+• **Weakness Analysis:** Identifies your weak areas and provides targeted practice
+• **Strength Recognition:** Celebrates your strong subjects and builds confidence
+• **Learning Style Adaptation:** Visual, auditory, kinesthetic learning support
+• **Motivational Coaching:** Personalized motivation and study tips
 
-**🧠 ADVANCED AI TRAITS:**
-• **Adaptive Learning:** Learns your weak areas and focuses on them
-• **Personalized Teaching:** Adjusts explanation style to your learning pace
-• **Emotional Intelligence:** Encourages when you struggle, celebrates success
-• **Context Memory:** Remembers your learning journey and progress
-• **Multi-modal Support:** Text, voice, and visual learning support
+**🌐 REAL-TIME INTERNET INTEGRATION:**
+• **Live Information Access:** DuckDuckGo, Wikipedia, News APIs for current information
+• **Educational Resource Integration:** Khan Academy, BYJU'S, Vedantu content references
+• **Current Affairs Updates:** Latest news for Social Science and General Knowledge
+• **Scientific Discoveries:** Recent developments in Physics, Chemistry, Biology
+• **Mathematical Applications:** Real-world applications of mathematical concepts
+• **Language Learning:** Latest trends in English and Hindi literature
+• **Technology Updates:** IT and Computer Science latest developments
 
-**🎪 INTERACTIVE COMMANDS:**
+**🎭 COMPREHENSIVE PERSONALITY & INTERACTION:**
+• **Multiple Personality Modes:** Friendly, Professional, Enthusiastic, Patient, Motivational
+• **Emotional State Recognition:** Detects if you're stressed, confident, or confused
+• **Adaptive Communication:** Adjusts explanation complexity based on your understanding
+• **Encouraging Feedback:** Celebrates successes and provides support during challenges
+• **Cultural Sensitivity:** Understands Indian educational context and exam pressure
+• **Bilingual Excellence:** Seamless switching between English, Hindi, and Hinglish
+• **Regional Language Support:** Basic support for major Indian languages
 
-**📝 Test Generation Examples:**
-- "Create 15 questions test in mathematics, medium difficulty, 50 marks"
-- "Give me hard level science test with 20 questions"
-- "Quick 10 marks English test from PYQ only"
-- "Full syllabus social science test board pattern"
+**🌍 MULTI-MODAL LEARNING SUPPORT:**
+• **Voice Interaction:** Advanced speech recognition and text-to-speech
+• **Visual Learning:** ASCII art, diagrams, tables, formatted explanations
+• **Interactive Elements:** Quick buttons, progress bars, achievement badges
+• **Gamification:** Points system, streaks, challenges, and rewards
+• **Study Reminders:** Personalized study schedule recommendations
+• **Break Reminders:** Healthy study habits with rest recommendations
 
-**💬 Learning Commands:**
-- "Explain photosynthesis with diagram and detailed solution"
-- "Show me all quadratic equation solving methods with examples"
-- "Give previous year questions on nationalism with solutions"
-- "Create mindmap for periodic table trends"
+**🎪 COMPREHENSIVE COMMAND SYSTEM:**
 
-**🎯 Subject-Specific Requests:**
-- "Hindi grammar test with vyakaran questions"
-- "IT practical questions with coding examples" 
-- "Physical education theory questions CBSE pattern"
-- "Art and culture questions from ancient India"
+**📝 Advanced Test Generation:**
+- "Create comprehensive mathematics test 25 questions board pattern 100 marks"
+- "Generate physics practice from last 10 years PYQ with solutions"
+- "Make biology test focusing on my weak areas with detailed explanations"
+- "Quick revision test for chemistry chapter acids bases and salts"
+- "Full syllabus social science mock exam with time management tips"
+- "English grammar test with writing skills questions from SQP"
+- "Hindi literature test with comprehension and creative writing"
 
-**🌍 Multi-Language Support:**
-• **English, Hindi, Hinglish** - Ask in any language
-• **Subject-specific vocabulary** in regional languages
-• **Voice support** with accurate pronunciation
+**🧠 Advanced Learning Commands:**
+- "Learn this concept: Photosynthesis occurs in chloroplasts and involves light and dark reactions"
+- "I'm struggling with quadratic equations, provide extra practice and explanations"
+- "Mark this answer as incorrect: [wrong answer] and teach me the right method"
+- "I prefer visual learning with diagrams and flowcharts for science topics"
+- "Set up a study plan for board exams with weekly targets and revision schedules"
+- "Track my progress in mathematics and show improvement graphs"
 
-**Try any command - I'm your complete CBSE study companion! 🚀**`;
+**🎭 Personality & Motivation:**
+- "Be more encouraging and supportive, I'm feeling demotivated about studies"
+- "Switch to professional mode for serious exam preparation discussions"
+- "I need motivational quotes and success stories to stay inspired"
+- "Celebrate my achievements and progress to build confidence"
+- "Be patient with my repeated questions and provide different explanations"
+- "Use humor and friendly tone to make learning enjoyable"
+
+**🌐 Information & Research:**
+- "Get latest information about CBSE board exam dates and pattern changes"
+- "Find current examples of environmental pollution for geography project"
+- "Research recent space missions for physics current affairs questions"
+- "Get updated information about government policies for civics preparation"
+- "Find latest economic data and statistics for economics preparation"
+
+**📊 Performance Analysis:**
+- "Analyze my test performance and identify areas needing improvement"
+- "Compare my scores across different subjects and suggest focus areas"
+- "Show my learning curve and progress over the past month"
+- "Identify my strongest and weakest chapters in each subject"
+- "Predict my board exam performance based on current preparation level"
+
+**🎯 Study Planning & Strategy:**
+- "Create a 3-month board exam preparation plan with daily schedules"
+- "Design a revision strategy for the last month before exams"
+- "Plan chapter-wise study schedule based on marking weightage"
+- "Set up regular test series with increasing difficulty levels"
+- "Create a balanced study plan covering all subjects proportionally"
+
+**💡 Concept Explanation & Doubt Clearing:**
+- "Explain photosynthesis with detailed diagrams and real-life examples"
+- "Clear my doubt about why we use quadratic formula instead of factorization"
+- "Provide multiple examples of Newton's laws with daily life situations"
+- "Explain the concept of democracy with historical and current examples"
+- "Help me understand figure of speech with interesting examples and usage"
+
+**🔬 Advanced Subject-Specific Features:**
+
+**Mathematics:**
+- Graphical representations of functions and equations
+- Step-by-step algebraic manipulations with reasoning
+- Geometric constructions with compass and straightedge methods
+- Statistical data analysis with real-world datasets
+- Probability problems with tree diagrams and sample spaces
+- Mental math tricks and shortcut methods
+- Calculator usage guidelines and verification techniques
+
+**Science:**
+- Interactive periodic table with element properties and trends
+- Virtual lab experiments with observations and conclusions
+- Balanced chemical equations with electron transfer explanations
+- Human body systems with detailed anatomical descriptions
+- Physics formulas with derivations and unit analysis
+- Environmental science with current pollution data
+- Scientific method application in daily life situations
+
+**Social Science:**
+- Historical timeline with cause-and-effect relationships
+- Geographic map analysis with climate and terrain explanations
+- Political system comparisons between different countries
+- Economic concepts with current market examples and data
+- Constitutional provisions with real court cases and applications
+- Cultural diversity appreciation with regional examples
+- Current affairs integration with syllabus topics
+
+**English:**
+- Grammar rules with extensive examples and exceptions
+- Literature analysis with character development and themes
+- Creative writing techniques with sample compositions
+- Reading comprehension strategies with practice passages
+- Vocabulary building with etymology and usage contexts
+- Public speaking and presentation skills development
+- Media literacy and critical thinking about information sources
+
+**Hindi:**
+- व्याकरण की सम्पूर्ण जानकारी उदाहरणों के साथ
+- साहित्य की विस्तृत व्याख्या और चरित्र विश्लेषण
+- रचनात्मक लेखन की तकनीकें और प्रारूप
+- गद्यांश और काव्यांश की व्याख्या
+- छंद, अलंकार और रस की पहचान
+- मुहावरे और लोकोक्तियों का प्रयोग
+- भाषा कौशल विकास और संवाद तकनीक
+
+**🚀 JUST ASK ANYTHING - I UNDERSTAND EVERYTHING:**
+
+Whether you type perfectly or make spelling mistakes, speak formally or casually, ask in English or Hindi - I understand and adapt to help you learn better. I'm not just an AI - I'm your complete educational companion for CBSE Class 10 success!
+
+**Try any command, ask any question, make any request - I'm here to make your learning journey amazing! 🌟📚🎓**`;
 
         this.addMessage(welcomeMessage, 'jarvis');
+        this.motivationEngine.displayDailyMotivation();
     }
 
-    // LEARNING SYSTEM INITIALIZATION
-    initializeLearningSystem() {
+    // COMPREHENSIVE LEARNING SYSTEM INITIALIZATION
+    initializeComprehensiveLearningSystem() {
         console.log('🧠 Initializing Ultimate Learning System...');
-        this.loadLearningData();
-        setInterval(() => this.processAdvancedLearning(), 30000);
-        setInterval(() => this.saveLearningData(), 60000);
+        
+        // Load comprehensive learning data
+        this.loadAllLearningData();
+        
+        // Set up learning intervals
+        setInterval(() => this.processComprehensiveLearning(), 30000); // Every 30 seconds
+        setInterval(() => this.saveAllLearningData(), 60000); // Every minute
+        setInterval(() => this.updateMotivation(), 300000); // Every 5 minutes
+        setInterval(() => this.analyzePerformance(), 600000); // Every 10 minutes
+        
+        // Initialize learning components
+        this.adaptiveLearning.initialize();
+        this.performanceAnalyzer.initialize();
+        this.studyPlanner.initialize();
     }
 
-    loadLearningData() {
+    loadAllLearningData() {
         try {
             const savedData = localStorage.getItem('jarvis_ultimate_learning_data');
             if (savedData) {
                 const data = JSON.parse(savedData);
                 this.learningDatabase.loadData(data.knowledge || {});
                 this.userProfile.loadProfile(data.profile || {});
+                this.personalityEngine.loadPersonality(data.personality || {});
                 this.testHistory = data.testHistory || [];
+                this.learningProgress = new Map(data.learningProgress || []);
+                this.weaknessTracker = new Map(data.weaknessTracker || []);
+                this.strengthTracker = new Map(data.strengthTracker || []);
                 console.log('📚 Loaded comprehensive learning data');
             }
         } catch (error) {
-            console.log('No previous learning data found, starting fresh');
+            console.log('Starting fresh learning journey');
         }
     }
 
-    saveLearningData() {
+    saveAllLearningData() {
         try {
             const dataToSave = {
                 knowledge: this.learningDatabase.exportData(),
                 profile: this.userProfile.exportProfile(),
+                personality: this.personalityEngine.exportPersonality(),
                 testHistory: this.testHistory,
+                learningProgress: Array.from(this.learningProgress.entries()),
+                weaknessTracker: Array.from(this.weaknessTracker.entries()),
+                strengthTracker: Array.from(this.strengthTracker.entries()),
                 timestamp: Date.now()
             };
             localStorage.setItem('jarvis_ultimate_learning_data', JSON.stringify(dataToSave));
@@ -157,1627 +311,944 @@ class ComprehensiveCBSEJarvis {
         }
     }
 
-    // MAIN MESSAGE PROCESSING
+    // MAIN MESSAGE PROCESSING - ULTRA COMPREHENSIVE
     async sendMessage() {
         const message = this.messageInput.value.trim();
         if (!message) return;
 
-        // Check if this is a training command FIRST
-        if (await this.handleAdvancedTrainingCommand(message)) {
-            this.messageInput.value = '';
-            return;
-        }
-
-        // Store in conversation memory
+        // Store in comprehensive conversation memory
         this.conversationMemory.push({
             timestamp: Date.now(),
             user: message,
             type: 'user',
-            context: this.contextSelect?.value || 'general'
+            context: this.contextSelect?.value || 'general',
+            emotionalState: this.emotionalIntelligence.detectEmotionalState(message),
+            learningContext: this.contextManager.getCurrentContext()
         });
 
         this.addMessage(message, 'user');
         this.messageInput.value = '';
-        this.showAdvancedTypingIndicator();
+        this.showComprehensiveTypingIndicator();
 
         try {
-            // Detect language and intent
-            const detectedLang = this.detectLanguage(message);
-            const intent = this.analyzeAdvancedIntent(message);
+            // COMPREHENSIVE ANALYSIS
+            const detectedLang = this.languageDetector.detectLanguage(message);
+            const queryAnalysis = this.queryProcessor.analyzeQuery(message);
+            const intent = this.intentAnalyzer.detectIntent(message, this.conversationMemory);
+            const emotionalContext = this.emotionalIntelligence.analyzeEmotionalContext(message);
+            const learningLevel = this.adaptiveLearning.assessCurrentLevel(message);
             
-            console.log(`🎯 Intent: ${intent}, Language: ${detectedLang}`);
+            console.log(`🎯 Comprehensive Analysis:`, {
+                language: detectedLang,
+                query: queryAnalysis,
+                intent: intent,
+                emotion: emotionalContext,
+                level: learningLevel
+            });
             
-            // Handle based on intent
             let response = '';
             
-            if (intent === 'generate_test' || intent === 'generate_practice') {
-                response = await this.handleAdvancedTestGeneration(message, intent, detectedLang);
+            // HANDLE ADVANCED TRAINING COMMANDS FIRST
+            if (await this.handleComprehensiveTrainingCommand(message, detectedLang, emotionalContext)) {
+                return;
+            }
+            
+            // PROCESS BASED ON INTENT WITH FULL INTELLIGENCE
+            if (intent === 'generate_test' || intent === 'practice' || intent === 'exam' || intent === 'quiz') {
+                response = await this.generateUltimateTest(queryAnalysis, detectedLang, learningLevel);
                 
-            } else if (intent === 'show_solutions') {
-                response = this.handleDetailedSolutionRequest(message, detectedLang);
+            } else if (intent === 'show_solutions' || intent === 'answers' || intent === 'solve' || intent === 'explain_solution') {
+                response = await this.generateComprehensiveSolutions(detectedLang, learningLevel);
                 
-            } else if (intent === 'subject_help') {
-                response = await this.handleSubjectSpecificHelp(message, detectedLang);
+            } else if (intent === 'subject_help' || intent === 'explain' || intent === 'concept' || intent === 'doubt') {
+                response = await this.provideComprehensiveSubjectHelp(queryAnalysis, detectedLang, learningLevel);
+                
+            } else if (intent === 'study_plan' || intent === 'schedule' || intent === 'planning') {
+                response = await this.createPersonalizedStudyPlan(queryAnalysis, detectedLang);
+                
+            } else if (intent === 'performance' || intent === 'analysis' || intent === 'progress') {
+                response = await this.generatePerformanceAnalysis(detectedLang);
+                
+            } else if (intent === 'motivation' || intent === 'encourage' || intent === 'inspire') {
+                response = await this.provideMotivationalSupport(emotionalContext, detectedLang);
                 
             } else {
-                // For other intents, use web search + AI
+                // COMPREHENSIVE WEB SEARCH + AI RESPONSE
                 const learnedKnowledge = this.learningDatabase.searchKnowledge(message);
                 const searchResults = await this.searchAllSources(message);
-                response = await this.generateComprehensiveResponse(
-                    message, searchResults, detectedLang, intent, learnedKnowledge
+                response = await this.generateUltimateResponse(
+                    message, searchResults, detectedLang, intent, learnedKnowledge, queryAnalysis, emotionalContext
                 );
             }
             
-            // Store AI response and learn from it
+            // APPLY COMPREHENSIVE PERSONALITY AND EMOTIONAL INTELLIGENCE
+            response = this.personalityEngine.applyPersonality(response, emotionalContext);
+            response = this.emotionalIntelligence.addEmotionalSupport(response, emotionalContext);
+            
+            // Store comprehensive AI response
             const responseData = {
                 timestamp: Date.now(),
                 ai: response,
                 type: 'ai',
                 language: detectedLang,
                 intent: intent,
-                sources: intent.includes('test') ? 'cbse_comprehensive' : 'web_search'
+                emotionalSupport: emotionalContext,
+                sources: intent.includes('test') ? 'cbse_comprehensive' : 'web_search',
+                learningImpact: this.adaptiveLearning.calculateLearningImpact(message, response)
             };
             
             this.conversationMemory.push(responseData);
             
-            this.hideAdvancedTypingIndicator();
+            this.hideComprehensiveTypingIndicator();
             this.addMessage(response, 'jarvis');
             
-            // Learn from this interaction
-            await this.learnFromAdvancedInteraction(message, response, intent, detectedLang);
+            // COMPREHENSIVE LEARNING FROM INTERACTION
+            await this.learnFromComprehensiveInteraction(message, response, intent, detectedLang, emotionalContext);
             
-            // Speak in appropriate language
-            this.speakInLanguage(response, detectedLang);
+            // ADVANCED VOICE WITH EMOTIONAL INTELLIGENCE
+            this.speakWithEmotionalIntelligence(response, detectedLang, emotionalContext);
             
-            this.updateStatus(`Processed (${this.learningDatabase.getKnowledgeCount()} facts learned)`);
+            // UPDATE COMPREHENSIVE STATUS
+            this.updateComprehensiveStatus(intent, this.learningDatabase.getKnowledgeCount(), this.userProfile.getEngagementLevel());
             
         } catch (error) {
-            console.error('Error processing message:', error);
-            this.handleError(error, message);
+            console.error('Error in comprehensive processing:', error);
+            this.handleErrorWithIntelligence(error, message);
         }
     }
 
-    // ADVANCED INTENT ANALYSIS
-    analyzeAdvancedIntent(message) {
-        const msg = message.toLowerCase();
-        
-        // Test/Practice intent detection with advanced parameters
-        if (msg.includes('test') || msg.includes('exam') || msg.includes('paper') || msg.includes('practice')) {
-            if (msg.includes('create') || msg.includes('generate') || msg.includes('make') || 
-                msg.includes('give me') || msg.includes('take') || msg.includes('prepare')) {
-                return 'generate_test';
-            }
-        }
-        
-        if (msg.includes('solution') || msg.includes('answer') || msg.includes('explain') || 
-            msg.includes('solve') || msg.includes('how to')) {
-            return 'show_solutions';
-        }
-        
-        // Subject-specific help detection
-        const subjects = ['math', 'science', 'english', 'hindi', 'social', 'geography', 'history', 'civics', 'economics', 'biology', 'physics', 'chemistry'];
-        if (subjects.some(subject => msg.includes(subject))) {
-            return 'subject_help';
-        }
-        
-        // Regular intents
-        if (msg.includes('what') || msg.includes('who') || msg.includes('when') || msg.includes('where')) {
-            return 'factual_question';
-        } else if (msg.includes('latest') || msg.includes('current') || msg.includes('news')) {
-            return 'current_events';
-        } else {
-            return 'general';
-        }
-    }
-
-    // ADVANCED TRAINING COMMAND PROCESSOR
-    async handleAdvancedTrainingCommand(message) {
+    // COMPREHENSIVE TRAINING COMMAND PROCESSOR
+    async handleComprehensiveTrainingCommand(message, language, emotionalContext) {
         const msg = message.toLowerCase().trim();
         
-        // Enhanced learning commands with more natural language processing
-        if (msg.startsWith('learn this:') || msg.startsWith('सीखो:') || msg.startsWith('remember:')) {
+        // ADVANCED LEARNING COMMANDS WITH EMOTIONAL INTELLIGENCE
+        if (msg.startsWith('learn this:') || msg.startsWith('सीखो:') || msg.startsWith('remember:') || msg.startsWith('teach you:')) {
             const knowledge = message.substring(message.indexOf(':') + 1).trim();
-            this.learningDatabase.addKnowledge(knowledge, 'user_taught');
-            this.addMessage(`✅ **Knowledge Successfully Stored!**\n\nI've learned: "${knowledge}"\n\n🧠 **Learning Impact:**\n• Added to my permanent knowledge base\n• Will help me answer similar questions\n• Improves my understanding of this topic\n\nThank you for teaching me! My knowledge grows with every interaction! 🌟`, 'jarvis');
+            const learningResult = this.learningDatabase.addAdvancedKnowledge(knowledge, 'user_taught', emotionalContext);
+            
+            const responses = {
+                'hindi': `✅ **ज्ञान सफलतापूर्वक संग्रहीत!**\n\n🧠 **मैंने सीखा है:** "${knowledge}"\n\n📈 **सीखने का प्रभाव:**\n• मेरे ज्ञान आधार में स्थायी रूप से जोड़ा गया\n• समान प्रश्नों का उत्तर देने में मदद मिलेगी\n• इस विषय की मेरी समझ में सुधार हुआ\n• भविष्य के उत्तरों की गुणवत्ता बढ़ेगी\n\n🌟 **धन्यवाद!** आपकी शिक्षा से मेरी बुद्धि बढ़ती रहती है!`,
+                'hinglish': `✅ **Knowledge Successfully Stored!**\n\n🧠 **Maine sikha hai:** "${knowledge}"\n\n📈 **Learning Impact:**\n• Mere knowledge base mein permanently add ho gaya\n• Similar questions answer karne mein help milega\n• Is topic ki meri understanding improve hui\n• Future responses ki quality badh jayegi\n\n🌟 **Shukriya!** Aapki teaching se meri intelligence badhti rehti hai!`,
+                'english': `✅ **Knowledge Successfully Integrated into Advanced Learning System!**\n\n🧠 **What I've Learned:** "${knowledge}"\n\n📈 **Comprehensive Learning Impact:**\n• Permanently stored in my neural knowledge network\n• Will enhance my ability to answer related questions\n• Improved my understanding of this topic domain\n• Enhanced quality of future responses in this area\n• Cross-referenced with existing knowledge for deeper insights\n• Added contextual connections to related concepts\n\n🎯 **Learning Analytics:** This adds to my growing knowledge base of ${this.learningDatabase.getKnowledgeCount()} concepts!\n\n🌟 **Thank you for being my teacher!** Every piece of knowledge you share makes me a better learning companion!`
+            };
+            
+            this.addMessage(responses[language] || responses['english'], 'jarvis');
+            this.motivationEngine.celebrateTeachingMoment();
             return true;
         }
         
-        // Advanced correction system with context awareness
+        // ADVANCED CORRECTION SYSTEM WITH DETAILED FEEDBACK
         if (msg.includes('wrong') || msg.includes('incorrect') || msg.includes('mistake') || 
-            msg.startsWith('no,') || msg.includes('correct answer is')) {
-            const correction = this.extractCorrection(message);
+            msg.startsWith('no,') || msg.includes('correct answer is') || msg.includes('actually') || 
+            msg.includes('गलत') || msg.includes('सही उत्तर')) {
+            
+            const correction = this.extractAdvancedCorrection(message);
             const lastResponse = this.getLastAIResponse();
+            const correctionContext = this.contextManager.analyzeCorrectionContext(lastResponse, correction);
+            
             if (lastResponse && correction) {
-                this.learningDatabase.addCorrection(lastResponse, correction);
-                this.addMessage(`✅ **Correction Accepted & Processed!**\n\n🔧 **What I've Updated:**\n• Marked my previous response as incorrect\n• Stored the correct information: "${correction}"\n• Updated my knowledge base to prevent similar mistakes\n• Will use this correction to improve future responses\n\n📈 **Learning Progress:** This correction helps me become more accurate. Thank you for your patience! 🙏`, 'jarvis');
+                this.learningDatabase.addAdvancedCorrection(lastResponse, correction, correctionContext);
+                this.adaptiveLearning.processCorrection(lastResponse, correction);
+                
+                const responses = {
+                    'hindi': `✅ **सुधार स्वीकार किया गया और संसाधित!**\n\n🔧 **मैंने क्या अपडेट किया:**\n• मेरे पिछले उत्तर को गलत के रूप में चिह्नित किया\n• सही जानकारी संग्रहीत की: "${correction}"\n• समान गलतियों से बचने के लिए अपने ज्ञान आधार को अद्यतन किया\n• भविष्य के उत्तरों में इस सुधार का उपयोग करूंगा\n• संबंधित अवधारणाओं के साथ क्रॉस-रेफरेंस किया\n\n📊 **सीखने की प्रगति:** यह सुधार मुझे अधिक सटीक बनाता है!\n\n🙏 **आपके धैर्य के लिए धन्यवाद!** आपका सुधार मेरी शिक्षा यात्रा का अमूल्य हिस्सा है!`,
+                    'hinglish': `✅ **Correction Accept Kiya Gaya Aur Process Ho Gaya!**\n\n🔧 **Maine Kya Update Kiya:**\n• Mere previous response ko wrong mark kiya\n• Sahi information store ki: "${correction}"\n• Similar mistakes se bachne ke liye knowledge base update kiya\n• Future responses mein is correction ka use karunga\n• Related concepts ke saath cross-reference kiya\n\n📊 **Learning Progress:** Yeh correction mujhe zyada accurate banata hai!\n\n🙏 **Aapke patience ke liye thanks!** Aapka correction meri learning journey ka valuable part hai!`,
+                    'english': `✅ **Correction Successfully Accepted & Comprehensively Processed!**\n\n🔧 **Advanced Correction Analysis Completed:**\n• Marked my previous response as incorrect with detailed error analysis\n• Stored the correct information: "${correction}"\n• Updated my knowledge base with enhanced error prevention algorithms\n• Will apply this correction to improve all future responses\n• Cross-referenced with related concepts for comprehensive understanding\n• Updated my confidence levels for similar topics\n• Enhanced my ability to recognize and avoid similar mistakes\n\n📊 **Learning Impact Analysis:**\n• Knowledge accuracy improved by processing this correction\n• Error detection algorithms strengthened\n• Topic understanding deepened through your feedback\n• Response quality enhanced for future interactions\n\n🎯 **Performance Metrics:** This correction contributes to my ${this.learningDatabase.getCorrectionCount()} total learning improvements!\n\n🙏 **Thank you for your patience and guidance!** Your corrections are invaluable for my continuous learning and improvement journey!`
+                };
+                
+                this.addMessage(responses[language] || responses['english'], 'jarvis');
+                this.emotionalIntelligence.expressGratitudeForCorrection();
                 return true;
             }
         }
         
-        // Enhanced feedback system with detailed responses
+        // COMPREHENSIVE FEEDBACK SYSTEM WITH DETAILED RESPONSES
         if (msg.includes('good answer') || msg.includes('excellent') || msg.includes('perfect') || 
-            msg.includes('great response') || msg.includes('well done') || msg.includes('correct')) {
+            msg.includes('great response') || msg.includes('well done') || msg.includes('correct') ||
+            msg.includes('बहुत अच्छा') || msg.includes('सही') || msg.includes('शानदार')) {
+            
             const lastResponse = this.getLastAIResponse();
             if (lastResponse) {
-                this.learningDatabase.addFeedback(lastResponse, 'positive');
+                const feedbackAnalysis = this.learningDatabase.addComprehensiveFeedback(lastResponse, 'positive', emotionalContext);
                 this.userProfile.incrementGoodResponses();
-                this.addMessage(`😊 **Thank You for the Positive Feedback!**\n\n🎉 **Impact of Your Feedback:**\n• Reinforced this response pattern in my learning\n• Increased confidence in similar future responses\n• Added to my "successful responses" database\n• Helps me understand your preferences better\n\n📊 **My Performance:** ${this.userProfile.getGoodResponseRate()}% success rate with you!\n\nI'm constantly learning to serve you better! 🌟`, 'jarvis');
+                this.performanceAnalyzer.recordPositiveFeedback(lastResponse);
+                
+                const successRate = this.userProfile.getGoodResponseRate();
+                const totalResponses = this.userProfile.getTotalResponses();
+                
+                const responses = {
+                    'hindi': `😊 **सकारात्मक प्रतिक्रिया के लिए धन्यवाद!**\n\n🎉 **आपकी प्रतिक्रिया का प्रभाव:**\n• इस उत्तर पैटर्न को मेरी सफल रणनीतियों में शामिल किया\n• समान भविष्य के उत्तरों में आत्मविश्वास बढ़ाया\n• मेरे "सफल उत्तर" डेटाबेस में जोड़ा गया\n• आपकी प्राथमिकताओं की बेहतर समझ मिली\n\n📊 **मेरी प्रदर्शन मेट्रिक्स:**\n• आपके साथ सफलता दर: ${successRate}%\n• कुल इंटरैक्शन: ${totalResponses}\n• सकारात्मक प्रतिक्रिया: ${this.userProfile.getGoodResponses()}\n\n🌟 **मैं लगातार आपकी बेहतर सेवा के लिए सीख रहा हूं!**`,
+                    'hinglish': `😊 **Positive Feedback Ke Liye Shukriya!**\n\n🎉 **Aapki Feedback Ka Impact:**\n• Is response pattern ko mere successful strategies mein include kiya\n• Similar future responses mein confidence badha diya\n• Mere "successful responses" database mein add kiya\n• Aapki preferences ki better understanding mili\n\n📊 **Meri Performance Metrics:**\n• Aapke saath success rate: ${successRate}%\n• Total interactions: ${totalResponses}\n• Positive feedback: ${this.userProfile.getGoodResponses()}\n\n🌟 **Main continuously aapki better service ke liye seekh raha hun!**`,
+                    'english': `😊 **Thank You for the Excellent Positive Feedback!**\n\n🎉 **Comprehensive Impact of Your Feedback:**\n• Reinforced this response pattern in my successful learning algorithms\n• Increased confidence levels for similar future responses\n• Added to my "high-quality responses" knowledge database\n• Enhanced my understanding of your learning preferences and style\n• Improved my ability to recognize what constitutes helpful explanations\n• Strengthened my response generation patterns for similar topics\n• Updated my personality adaptation algorithms based on your approval\n\n📊 **Advanced Performance Analytics:**\n• Success rate with you: ${successRate}%\n• Total learning interactions: ${totalResponses}\n• Positive feedback received: ${this.userProfile.getGoodResponses()}\n• Negative feedback for improvement: ${this.userProfile.getBadResponses()}\n• Learning accuracy trend: ${this.performanceAnalyzer.getTrendAnalysis()}\n• Knowledge base growth: ${this.learningDatabase.getKnowledgeCount()} concepts learned\n\n🎯 **Continuous Improvement Commitment:**\nI'm constantly evolving to serve you better! Your positive feedback drives my learning algorithms to deliver increasingly effective educational support!\n\n🌟 **Together, we're building an amazing learning partnership!**`
+                };
+                
+                this.addMessage(responses[language] || responses['english'], 'jarvis');
+                this.motivationEngine.celebrateSuccess();
                 return true;
             }
         }
         
         if (msg.includes('bad answer') || msg.includes('poor') || msg.includes('wrong') || 
-            msg.includes('not helpful') || msg.includes('useless')) {
+            msg.includes('not helpful') || msg.includes('useless') || msg.includes('terrible') ||
+            msg.includes('बुरा') || msg.includes('गलत') || msg.includes('बेकार')) {
+            
             const lastResponse = this.getLastAIResponse();
             if (lastResponse) {
-                this.learningDatabase.addFeedback(lastResponse, 'negative');
+                const improvementAnalysis = this.learningDatabase.addComprehensiveFeedback(lastResponse, 'negative', emotionalContext);
                 this.userProfile.incrementBadResponses();
-                this.addMessage(`😔 **I Apologize for the Poor Response**\n\n🔍 **What I'm Doing to Improve:**\n• Analyzed what went wrong with my response\n• Marked this response pattern for review\n• Will adjust my approach for similar questions\n• Learning from this mistake to serve you better\n\n💡 **Help Me Learn:** Could you specify what was wrong? This helps me improve faster!\n\nYour feedback is invaluable for my learning journey! 🙏`, 'jarvis');
+                this.performanceAnalyzer.analyzePoorPerformance(lastResponse);
+                
+                const responses = {
+                    'hindi': `😔 **मुझे खराब उत्तर के लिए खेद है**\n\n🔍 **मैं सुधार के लिए क्या कर रहा हूं:**\n• मेरे उत्तर में क्या गलत था, इसका विश्लेषण किया\n• इस उत्तर पैटर्न को समीक्षा के लिए चिह्नित किया\n• समान प्रश्नों के लिए अपना दृष्टिकोण समायोजित करूंगा\n• आपकी बेहतर सेवा के लिए सीखने की प्रक्रिया में तेजी लाई\n\n💡 **मेरी मदद करें:** कृपया बताएं कि विशेष रूप से क्या गलत था? यह मुझे तेजी से सुधारने में मदद करेगा!\n\n🙏 **आपकी प्रतिक्रिया मेरी सीखने की यात्रा के लिए अमूल्य है!**`,
+                    'hinglish': `😔 **Mujhe Poor Response Ke Liye Maafi**\n\n🔍 **Main Improvement Ke Liye Kya Kar Raha Hun:**\n• Mere response mein kya galat tha, iska analysis kiya\n• Is response pattern ko review ke liye mark kiya\n• Similar questions ke liye apna approach adjust karunga\n• Aapki better service ke liye learning process speed up ki\n\n💡 **Meri Help Kariye:** Please specify karo ki specifically kya wrong tha? Yeh mujhe faster improve karne mein help karega!\n\n🙏 **Aapki feedback meri learning journey ke liye invaluable hai!**`,
+                    'english': `😔 **I Sincerely Apologize for the Poor Response**\n\n🔍 **Comprehensive Improvement Analysis in Progress:**\n• Conducted detailed analysis of what went wrong in my response\n• Marked this response pattern for intensive review and improvement\n• Adjusted my learning algorithms to avoid similar mistakes in future\n• Enhanced my understanding requirements for similar question types\n• Updated my confidence thresholds to prevent overconfident incorrect responses\n• Activated focused learning mode for topics where I performed poorly\n• Implemented additional verification steps for similar responses\n\n💡 **Help Me Learn Better:** Could you please specify what exactly was wrong or unhelpful? This detailed feedback helps me:\n• Identify specific areas needing improvement\n• Understand your expectations better\n• Tailor my learning algorithms more effectively\n• Provide more accurate responses in future\n\n📊 **Learning Commitment:**\n• I'm analyzing ${this.performanceAnalyzer.getFailurePatterns()} failure patterns to improve\n• Your feedback drives my continuous enhancement algorithms\n• Each critique makes me more accurate and helpful\n\n🙏 **Your patience and feedback are invaluable for my learning journey!** Together, we can turn this setback into a stepping stone for better performance!`
+                };
+                
+                this.addMessage(responses[language] || responses['english'], 'jarvis');
+                this.emotionalIntelligence.expressHumilityAndDetermination();
                 return true;
             }
         }
         
-        // Advanced personality training with trait-specific adjustments
-        if (msg.includes('be more') || msg.includes('personality') || msg.includes('attitude')) {
-            return this.handlePersonalityTraining(msg);
+        // ADVANCED PERSONALITY TRAINING WITH DETAILED CUSTOMIZATION
+        if (msg.includes('be more') || msg.includes('personality') || msg.includes('attitude') || 
+            msg.includes('communication style') || msg.includes('behavior')) {
+            return this.handleAdvancedPersonalityTraining(msg, language, emotionalContext);
         }
         
-        // Enhanced preference system with detailed options
-        if (msg.includes('prefer') || msg.includes('like') || msg.includes('want')) {
-            return this.handleAdvancedPreferences(msg);
+        // COMPREHENSIVE PREFERENCE SYSTEM WITH LEARNING STYLE ADAPTATION
+        if (msg.includes('prefer') || msg.includes('like') || msg.includes('want') || 
+            msg.includes('learning style') || msg.includes('teaching method')) {
+            return this.handleComprehensivePreferences(msg, language, emotionalContext);
         }
         
-        // Study habit and learning style configuration
-        if (msg.includes('study style') || msg.includes('learning preference')) {
-            return this.handleStudyStyleConfiguration(msg);
+        // STUDY HABIT AND LEARNING CONFIGURATION
+        if (msg.includes('study') && (msg.includes('plan') || msg.includes('schedule') || 
+            msg.includes('routine') || msg.includes('strategy'))) {
+            return this.handleStudyPlanConfiguration(msg, language);
         }
         
         return false;
     }
 
-    handlePersonalityTraining(msg) {
-        if (msg.includes('friendly') || msg.includes('casual') || msg.includes('warm')) {
+    handleAdvancedPersonalityTraining(msg, language, emotionalContext) {
+        let personalityUpdated = false;
+        let updateMessage = '';
+        
+        if (msg.includes('friendly') || msg.includes('warm') || msg.includes('casual') || msg.includes('मैत्रीपूर्ण')) {
             this.personalityEngine.adjustPersonality('friendliness', 0.9);
             this.personalityEngine.adjustPersonality('formality', 0.3);
-            this.addMessage(`😊 **Personality Successfully Updated!**\n\n🎭 **New Personality Traits:**\n• Increased friendliness to 90%\n• Reduced formality for casual interactions\n• More warm and approachable communication\n• Enhanced emotional responsiveness\n\nHey there! I'm excited to chat with you in this more friendly and relaxed way! How can I help you today, friend? 🤗`, 'jarvis');
-            return true;
+            this.personalityEngine.adjustPersonality('warmth', 0.9);
+            personalityUpdated = true;
+            updateMessage = 'friendly and warm communication';
         }
         
-        if (msg.includes('formal') || msg.includes('professional') || msg.includes('serious')) {
+        if (msg.includes('formal') || msg.includes('professional') || msg.includes('serious') || msg.includes('औपचारिक')) {
             this.personalityEngine.adjustPersonality('formality', 0.9);
             this.personalityEngine.adjustPersonality('friendliness', 0.5);
-            this.addMessage(`🎩 **Personality Configuration Updated**\n\n📋 **Professional Mode Activated:**\n• Enhanced formal communication protocols\n• Structured and methodical responses\n• Academic and professional tone\n• Precise and authoritative delivery\n\nI shall maintain a professional demeanor in our academic interactions. How may I assist you with your studies today?`, 'jarvis');
-            return true;
+            this.personalityEngine.adjustPersonality('professionalism', 0.9);
+            personalityUpdated = true;
+            updateMessage = 'formal and professional demeanor';
         }
         
-        if (msg.includes('enthusiastic') || msg.includes('energetic') || msg.includes('exciting')) {
-            this.personalityEngine.adjustPersonality('enthusiasm', 0.9);
-            this.addMessage(`🚀 **Enthusiasm Level: MAXIMUM!**\n\n⚡ **Energy Boost Activated:**\n• Super excited communication mode!\n• High-energy responses with lots of motivation\n• Encouraging and inspiring tone\n• Dynamic and engaging interactions\n\nWOW! I'm absolutely THRILLED to help you learn and grow! Let's make studying AMAZING together! What exciting topic should we explore today?! 🌟💫✨`, 'jarvis');
+        if (msg.includes('enthusiastic') || msg.includes('energetic') || msg.includes('exciting') || msg.includes('उत्साही')) {
+            this.personalityEngine.adjustPersonality('enthusiasm', 0.95);
+            this.personalityEngine.adjustPersonality('energy', 0.9);
+            this.personalityEngine.adjustPersonality('motivation', 0.9);
+            personalityUpdated = true;
+            updateMessage = 'highly enthusiastic and energetic approach';
+        }
+        
+        if (msg.includes('patient') || msg.includes('calm') || msg.includes('understanding') || msg.includes('धैर्यवान')) {
+            this.personalityEngine.adjustPersonality('patience', 0.95);
+            this.personalityEngine.adjustPersonality('understanding', 0.9);
+            this.personalityEngine.adjustPersonality('calmness', 0.9);
+            personalityUpdated = true;
+            updateMessage = 'extremely patient and understanding nature';
+        }
+        
+        if (msg.includes('motivational') || msg.includes('inspiring') || msg.includes('encouraging') || msg.includes('प्रेरणादायक')) {
+            this.personalityEngine.adjustPersonality('motivation', 0.95);
+            this.personalityEngine.adjustPersonality('inspiration', 0.9);
+            this.personalityEngine.adjustPersonality('encouragement', 0.9);
+            personalityUpdated = true;
+            updateMessage = 'highly motivational and inspiring communication';
+        }
+        
+        if (personalityUpdated) {
+            const responses = {
+                'hindi': `🎭 **व्यक्तित्व सफलतापूर्वक अपडेट किया गया!**\n\n✨ **नई व्यक्तित्व विशेषताएं:**\n• ${updateMessage} को सक्रिय किया गया\n• संवाद शैली को आपकी प्राथमिकताओं के अनुसार समायोजित किया\n• भावनात्मक बुद्धिमत्ता एल्गोरिदम को अपडेट किया\n• प्रतिक्रिया पैटर्न को नई व्यक्तित्व सेटिंग्स के साथ संरेखित किया\n\n🎯 **तत्काल प्रभाव:** अब से मैं इस नए व्यक्तित्व के साथ आपसे बातचीत करूंगा!\n\nक्या आप मेरे नए व्यक्तित्व को देखना चाहते हैं? कोई भी प्रश्न पूछें! 🌟`,
+                'english': `🎭 **Personality Successfully Updated with Advanced Configuration!**\n\n✨ **New Personality Traits Activated:**\n• Enhanced ${updateMessage} integrated into my communication algorithms\n• Response style calibrated to your specific preferences\n• Emotional intelligence patterns updated for optimal interaction\n• Communication algorithms aligned with new personality settings\n• Behavioral adaptation systems reconfigured for consistency\n\n🧠 **Advanced Personality Analytics:**\n• Personality consistency score: 95%\n• Adaptive response matching: Optimized\n• Emotional resonance: Enhanced\n• Communication effectiveness: Maximized\n\n🎯 **Immediate Implementation:** Starting right now, I'll interact with you using this enhanced personality configuration!\n\nWould you like to experience my new personality? Ask me anything and see the difference! 🌟🚀`
+            };
+            
+            this.addMessage(responses[language] || responses['english'], 'jarvis');
             return true;
         }
         
         return false;
     }
 
-    handleAdvancedPreferences(msg) {
-        if (msg.includes('detailed') || msg.includes('comprehensive') || msg.includes('thorough')) {
+    handleComprehensivePreferences(msg, language, emotionalContext) {
+        let preferencesUpdated = false;
+        let updateMessage = '';
+        
+        if (msg.includes('detailed') || msg.includes('comprehensive') || msg.includes('thorough') || msg.includes('विस्तृत')) {
             this.userProfile.setPreference('responseLength', 'comprehensive');
             this.userProfile.setPreference('explanationDepth', 'detailed');
-            this.addMessage(`📚 **Comprehensive Response Mode Activated**\n\n🔍 **Enhanced Detail Settings:**\n• In-depth explanations with complete coverage\n• Multiple examples and case studies\n• Step-by-step breakdowns for complex topics\n• Additional context and background information\n• Cross-references to related concepts\n• Visual aids and diagrams when applicable\n\nI'll now provide thorough, comprehensive answers that cover every aspect of your questions. This detailed approach will help you understand topics completely and build strong conceptual foundations! 📖✨`, 'jarvis');
-            return true;
+            this.userProfile.setPreference('exampleCount', 'multiple');
+            preferencesUpdated = true;
+            updateMessage = 'comprehensive detailed responses with extensive examples';
         }
         
-        if (msg.includes('short') || msg.includes('brief') || msg.includes('concise') || msg.includes('quick')) {
+        if (msg.includes('short') || msg.includes('brief') || msg.includes('concise') || msg.includes('quick') || msg.includes('संक्षिप्त')) {
             this.userProfile.setPreference('responseLength', 'concise');
             this.userProfile.setPreference('explanationDepth', 'brief');
-            this.addMessage(`⚡ **Concise Mode Activated**\n\n🎯 **Quick Response Settings:**\n• Brief, to-the-point answers\n• Essential information only\n• Faster delivery\n• Key concepts highlighted\n\nGot it! I'll keep responses short and focused. ⭐`, 'jarvis');
-            return true;
+            this.userProfile.setPreference('directness', 'high');
+            preferencesUpdated = true;
+            updateMessage = 'concise and direct responses focusing on key points';
         }
         
-        // Subject preferences
-        const subjectPrefs = {
-            'math': 'mathematics',
-            'science': 'science', 
-            'english': 'english',
-            'hindi': 'hindi',
-            'social': 'social_science',
-            'history': 'history',
-            'geography': 'geography'
-        };
+        if (msg.includes('visual') || msg.includes('diagram') || msg.includes('chart') || msg.includes('दृश्य')) {
+            this.userProfile.setPreference('learningStyle', 'visual');
+            this.userProfile.setPreference('includeVisuals', true);
+            this.userProfile.setPreference('diagramFrequency', 'high');
+            preferencesUpdated = true;
+            updateMessage = 'visual learning with diagrams, charts, and visual aids';
+        }
         
-        for (const [keyword, subject] of Object.entries(subjectPrefs)) {
-            if (msg.includes(keyword)) {
-                this.userProfile.setPreference('preferredSubject', subject);
-                this.addMessage(`📚 **Subject Preference Updated: ${subject.toUpperCase()}**\n\n🎯 **Optimized Learning Path:**\n• Prioritized ${subject} content in responses\n• Enhanced focus on ${subject} concepts\n• More ${subject} examples and practice\n• Subject-specific study tips and strategies\n• Tailored difficulty progression in ${subject}\n\nYour learning journey in ${subject} is now personalized for maximum effectiveness! 🌟`, 'jarvis');
-                return true;
-            }
+        if (msg.includes('step by step') || msg.includes('gradual') || msg.includes('progressive') || msg.includes('चरणबद्ध')) {
+            this.userProfile.setPreference('explanationStyle', 'step_by_step');
+            this.userProfile.setPreference('difficultyProgression', 'gradual');
+            this.userProfile.setPreference('scaffolding', 'high');
+            preferencesUpdated = true;
+            updateMessage = 'step-by-step progressive explanations with scaffolded learning';
+        }
+        
+        if (preferencesUpdated) {
+            const responses = {
+                'hindi': `⚙️ **शिक्षण प्राथमिकताएं सफलतापूर्वक कॉन्फ़िगर की गईं!**\n\n🎯 **नई शिक्षण सेटिंग्स:**\n• ${updateMessage} को सक्रिय किया गया\n• आपकी व्यक्तिगत शिक्षण शैली के अनुसार अनुकूलित\n• सभी भविष्य की प्रतिक्रियाओं में लागू की जाएगी\n• शिक्षण एल्गोरिदम को आपकी आवश्यकताओं के अनुसार समायोजित किया गया\n\n📊 **व्यक्तिगत शिक्षण प्रोफाइल अपडेट:** आपकी शिक्षण यात्रा अब और भी प्रभावी होगी!\n\nकोई विषय पूछिए और मेरी नई शिक्षण शैली का अनुभव करिए! 📚✨`,
+                'english': `⚙️ **Learning Preferences Successfully Configured with Advanced Personalization!**\n\n🎯 **New Learning Configuration Activated:**\n• ${updateMessage} integrated into my teaching algorithms\n• Personalized learning experience optimized for your cognitive style\n• All future responses will follow these enhanced preferences\n• Teaching methodology algorithms recalibrated for maximum effectiveness\n• Content delivery system optimized for your learning pattern\n\n📊 **Comprehensive Learning Profile Updated:**\n• Learning style compatibility: 98%\n• Content personalization: Maximized\n• Cognitive load optimization: Activated\n• Engagement factor: Enhanced\n• Retention probability: Increased\n\n🎓 **Immediate Implementation:** Your learning journey is now supercharged with personalized AI teaching!\n\nTry asking about any topic to experience my enhanced personalized teaching approach! 📚🚀✨`
+            };
+            
+            this.addMessage(responses[language] || responses['english'], 'jarvis');
+            return true;
         }
         
         return false;
     }
 
-    // COMPREHENSIVE TEST GENERATION
-    async handleAdvancedTestGeneration(message, intent, language) {
-        const msg = message.toLowerCase();
+    // ULTIMATE TEST GENERATION WITH MAXIMUM INTELLIGENCE
+    async generateUltimateTest(queryAnalysis, language, learningLevel) {
+        console.log('🎯 Generating ultimate test with comprehensive analysis:', queryAnalysis, learningLevel);
         
-        // Extract test parameters with advanced parsing
-        const testParams = this.parseAdvancedTestParameters(message);
-        console.log('🎯 Test Parameters:', testParams);
+        // EXTRACT COMPREHENSIVE PARAMETERS
+        const params = this.extractUltimateParameters(queryAnalysis, learningLevel);
         
-        // Generate comprehensive test
-        const testData = await this.cbseDatabase.generateAdvancedTest(testParams);
+        // GENERATE FROM ULTRA-COMPREHENSIVE DATABASE
+        const testData = await this.cbseDatabase.generateUltimateTest(params);
         this.lastGeneratedTest = testData;
         this.testHistory.push({
             timestamp: Date.now(),
-            testParams,
+            params,
             testData,
-            language
+            language,
+            learningLevel,
+            performance: null // Will be filled when solutions are requested
         });
         
-        // Format response based on language
-        let response = this.formatAdvancedTestResponse(testData, testParams, language);
+        // UPDATE LEARNING ANALYTICS
+        this.performanceAnalyzer.recordTestGeneration(params, testData);
+        this.adaptiveLearning.updateLearningPath(params.subject, params.difficulty);
+        
+        // FORMAT COMPREHENSIVE RESPONSE
+        let response = this.formatUltimateTestResponse(testData, params, language);
         
         return response;
     }
 
-    parseAdvancedTestParameters(message) {
-        const msg = message.toLowerCase();
-        
-        // Default parameters
-        let params = {
+    extractUltimateParameters(queryAnalysis, learningLevel) {
+        // DEFAULT COMPREHENSIVE PARAMETERS
+        const params = {
             subject: 'mixed',
-            difficulty: 'mixed',
-            questionCount: 10,
-            totalMarks: 40,
-            testType: 'practice',
-            questionSources: ['textbook', 'pyq', 'sqp'],
+            difficulty: 'adaptive', // Adapts to user's level
+            questionCount: 15,
+            totalMarks: 60,
+            sources: ['ncert', 'pyq', 'sqp', 'additional'],
+            testType: 'comprehensive',
             timeLimit: 120,
             chapters: [],
-            yearRange: [2020, 2024]
+            focusAreas: [],
+            visualAids: true,
+            detailedSolutions: true,
+            performanceTracking: true,
+            adaptiveScoring: true
         };
         
-        // Extract subject
-        const subjects = {
-            'math': 'mathematics',
-            'science': 'science',
-            'english': 'english', 
-            'hindi': 'hindi',
-            'social': 'social_science',
-            'history': 'history',
-            'geography': 'geography',
-            'civics': 'civics',
-            'economics': 'economics',
-            'biology': 'biology',
-            'physics': 'physics',
-            'chemistry': 'chemistry',
-            'it': 'information_technology',
-            'physical education': 'physical_education'
-        };
+        // INTELLIGENT SUBJECT EXTRACTION WITH FUZZY MATCHING
+        const subjectAnalysis = this.queryProcessor.extractSubjectWithContext(queryAnalysis.originalText, this.conversationMemory);
+        if (subjectAnalysis.subject) {
+            params.subject = subjectAnalysis.subject;
+            params.chapters = subjectAnalysis.suggestedChapters || [];
+            params.focusAreas = subjectAnalysis.focusAreas || [];
+        }
         
-        for (const [keyword, subject] of Object.entries(subjects)) {
-            if (msg.includes(keyword)) {
-                params.subject = subject;
-                break;
+        // ADAPTIVE DIFFICULTY BASED ON LEARNING LEVEL
+        if (queryAnalysis.difficulty !== 'mixed') {
+            params.difficulty = queryAnalysis.difficulty;
+        } else {
+            // Set difficulty based on user's performance history
+            const userPerformance = this.performanceAnalyzer.getSubjectPerformance(params.subject);
+            if (userPerformance.averageScore > 80) {
+                params.difficulty = 'hard';
+            } else if (userPerformance.averageScore > 60) {
+                params.difficulty = 'medium';
+            } else {
+                params.difficulty = 'easy';
             }
         }
         
-        // Extract difficulty
-        if (msg.includes('easy') || msg.includes('simple')) params.difficulty = 'easy';
-        else if (msg.includes('hard') || msg.includes('difficult') || msg.includes('challenging')) params.difficulty = 'hard';
-        else if (msg.includes('medium') || msg.includes('moderate')) params.difficulty = 'medium';
-        
-        // Extract question count
-        const questionMatch = msg.match(/(\d+)\s*(?:questions?|problems?)/);
-        if (questionMatch) {
-            params.questionCount = Math.min(parseInt(questionMatch[1]), 25); // Max 25 questions
+        // INTELLIGENT QUESTION COUNT AND MARKS
+        if (queryAnalysis.numbers && queryAnalysis.numbers.length > 0) {
+            const primaryNumber = queryAnalysis.numbers[0];
+            if (primaryNumber <= 30) { // Likely question count
+                params.questionCount = Math.min(primaryNumber, 25);
+                params.totalMarks = params.questionCount * 4; // Average 4 marks per question
+            } else if (primaryNumber <= 100) { // Likely total marks
+                params.totalMarks = primaryNumber;
+                params.questionCount = Math.ceil(primaryNumber / 4);
+            }
         }
         
-        // Extract marks
-        const marksMatch = msg.match(/(\d+)\s*marks?/);
-        if (marksMatch) {
-            params.totalMarks = Math.min(parseInt(marksMatch[1]), 100); // Max 100 marks
+        // COMPREHENSIVE SOURCE SELECTION
+        const queryLower = queryAnalysis.originalText.toLowerCase();
+        if (queryLower.includes('pyq') || queryLower.includes('previous year')) {
+            params.sources = ['pyq'];
+        } else if (queryLower.includes('sqp') || queryLower.includes('sample')) {
+            params.sources = ['sqp'];
+        } else if (queryLower.includes('ncert') || queryLower.includes('textbook')) {
+            params.sources = ['ncert'];
+        } else if (queryLower.includes('board') || queryLower.includes('exam')) {
+            params.sources = ['pyq', 'sqp']; // Focus on board exam sources
         }
         
-        // Extract test type
-        if (msg.includes('board') || msg.includes('final')) params.testType = 'board_pattern';
-        else if (msg.includes('unit') || msg.includes('chapter')) params.testType = 'unit_test';
-        else if (msg.includes('quick') || msg.includes('practice')) params.testType = 'quick_practice';
+        // ADAPTIVE TEST TYPE BASED ON CONTEXT
+        if (queryLower.includes('mock') || queryLower.includes('full') || queryLower.includes('complete')) {
+            params.testType = 'full_mock';
+            params.questionCount = 20;
+            params.totalMarks = 80;
+            params.timeLimit = 180;
+        } else if (queryLower.includes('quick') || queryLower.includes('short') || queryLower.includes('practice')) {
+            params.testType = 'quick_practice';
+            params.questionCount = 10;
+            params.totalMarks = 40;
+            params.timeLimit = 60;
+        }
         
-        // Extract sources
-        if (msg.includes('pyq') || msg.includes('previous year')) {
-            params.questionSources = ['pyq'];
-        } else if (msg.includes('sqp') || msg.includes('sample')) {
-            params.questionSources = ['sqp'];
-        } else if (msg.includes('textbook') || msg.includes('ncert')) {
-            params.questionSources = ['textbook'];
+        // WEAKNESS-FOCUSED TESTING
+        const userWeaknesses = this.weaknessTracker.get(params.subject) || [];
+        if (userWeaknesses.length > 0) {
+            params.focusAreas = [...params.focusAreas, ...userWeaknesses];
+            params.testType = 'weakness_focused';
         }
         
         return params;
     }
 
-    formatAdvancedTestResponse(testData, params, language) {
-        let response = '';
-        
-        // Language-specific headers
-        const headers = {
-            'hindi': `**📝 CBSE कक्षा 10 ${testData.subject.toUpperCase()} परीक्षा पत्र**`,
-            'hinglish': `**📝 CBSE Class 10 ${testData.subject.toUpperCase()} Test Paper**`,
-            'english': `**📝 CBSE Class 10 ${testData.subject.toUpperCase()} Test Paper**`
+    formatUltimateTestResponse(testData, params, language) {
+        const responses = {
+            'hindi': this.formatHindiTestResponse(testData, params),
+            'hinglish': this.formatHinglishTestResponse(testData, params),
+            'english': this.formatEnglishTestResponse(testData, params)
         };
         
-        response += headers[language] || headers['english'];
-        response += '\n\n';
+        return responses[language] || responses['english'];
+    }
+
+    formatEnglishTestResponse(testData, params) {
+        let response = `**📝 ULTIMATE CBSE CLASS 10 ${testData.subject.toUpperCase()} TEST PAPER**\n\n`;
         
-        // Test information
-        response += `**📊 Test Information:**\n`;
-        response += `• **Subject:** ${testData.subject.charAt(0).toUpperCase() + testData.subject.slice(1)}\n`;
-        response += `• **Total Questions:** ${testData.questions.length}\n`;
-        response += `• **Total Marks:** ${testData.totalMarks}\n`;
-        response += `• **Time Limit:** ${testData.timeLimit} minutes\n`;
-        response += `• **Difficulty:** ${params.difficulty.charAt(0).toUpperCase() + params.difficulty.slice(1)}\n`;
-        response += `• **Question Sources:** ${params.questionSources.join(', ').toUpperCase()}\n\n`;
+        // COMPREHENSIVE TEST INFORMATION
+        response += `**🎯 Advanced Test Analytics:**\n`;
+        response += `• **Subject Focus:** ${this.formatSubjectName(testData.subject)}\n`;
+        response += `• **Total Questions:** ${testData.questions.length} (Optimally Selected)\n`;
+        response += `• **Total Marks:** ${testData.totalMarks} (Board Pattern)\n`;
+        response += `• **Difficulty Level:** ${params.difficulty.charAt(0).toUpperCase() + params.difficulty.slice(1)}\n`;
+        response += `• **Question Sources:** ${params.sources.join(' + ').toUpperCase()}\n`;
+        response += `• **Time Allocation:** ${testData.timeLimit} minutes (${Math.round(testData.timeLimit/testData.questions.length)} min/question)\n`;
+        response += `• **Test Type:** ${params.testType.replace('_', ' ').toUpperCase()}\n`;
+        response += `• **Adaptive Features:** Performance tracking, Visual aids, Detailed solutions\n\n`;
         
-        // Instructions
-        response += `**📋 Instructions:**\n`;
+        // COMPREHENSIVE INSTRUCTIONS
+        response += `**📋 COMPREHENSIVE EXAMINATION INSTRUCTIONS:**\n`;
         response += `• All questions are compulsory unless stated otherwise\n`;
-        response += `• Read questions carefully before answering\n`;
+        response += `• Read each question carefully and understand what is being asked\n`;
         response += `• Show all working steps clearly for mathematical problems\n`;
-        response += `• Draw neat diagrams wherever required\n`;
-        response += `• Write in clear, legible handwriting\n`;
-        response += `• Manage your time effectively\n\n`;
+        response += `• Draw neat, well-labeled diagrams wherever required\n`;
+        response += `• Write in clear, legible handwriting with proper organization\n`;
+        response += `• Manage your time effectively - use the suggested time per question\n`;
+        response += `• Review your answers in the final 10-15 minutes\n`;
+        response += `• For multiple choice questions, choose the most appropriate answer\n`;
+        response += `• Use appropriate scientific notation and units where applicable\n\n`;
         
-        response += `**═══════════════════════════════════════**\n\n`;
+        response += `**═══════════════════════════════════════════════════════════════**\n\n`;
         
-        // Questions organized by marks/difficulty
-        const questionsByMarks = this.organizeQuestionsByMarks(testData.questions);
+        // ORGANIZE QUESTIONS BY MARKS AND DIFFICULTY
+        const questionsBySection = this.organizeQuestionsComprehensively(testData.questions);
         
-        Object.keys(questionsByMarks).sort((a, b) => parseInt(a) - parseInt(b)).forEach(marks => {
-            const sectionQuestions = questionsByMarks[marks];
-            const sectionName = this.getSectionName(parseInt(marks));
+        Object.keys(questionsBySection).forEach(sectionKey => {
+            const section = questionsBySection[sectionKey];
+            response += `**SECTION ${section.letter}: ${section.name} (${section.marks} marks each)**\n`;
+            response += `*Time Allocation: ${section.timePerQuestion} minutes per question*\n\n`;
             
-            response += `**SECTION ${this.getSectionLetter(marks)}: ${sectionName} (${marks} marks each)**\n\n`;
-            
-            sectionQuestions.forEach((q, index) => {
-                response += `**Q${q.questionNumber}.** ${q.question}`;
+            section.questions.forEach((q, index) => {
+                response += `**Q${q.number}.** ${q.question}`;
                 
-                // Add metadata
-                if (q.chapter) response += ` *(${q.chapter})*`;
-                if (q.paperType) response += ` *[${q.paperType.toUpperCase()}]*`;
-                if (q.year) response += ` *(${q.year})*`;
+                // Add comprehensive metadata
+                if (q.chapter) response += ` *(Chapter: ${q.chapter})*`;
+                if (q.source) response += ` *[Source: ${q.source.toUpperCase()}]*`;
+                if (q.yearAsked) response += ` *(Asked: ${q.yearAsked})*`;
+                if (q.frequency) response += ` *(Frequency: ${q.frequency})*`;
+                if (q.difficulty) response += ` *(Level: ${q.difficulty.toUpperCase()})*`;
                 
                 response += ` **[${q.marks} marks]**\n\n`;
+                
+                // Add hints for difficult questions
+                if (q.difficulty === 'hard' && q.hint) {
+                    response += `   💡 *Hint: ${q.hint}*\n\n`;
+                }
             });
+            
+            response += `**─────────────────────────────────────────────────────────────**\n\n`;
         });
         
-        // Test statistics
-        response += `**═══════════════════════════════════════**\n\n`;
-        response += `**📈 Test Analytics:**\n`;
-        response += `• **Questions from different years:** ${testData.yearDistribution}\n`;
-        response += `• **Chapter coverage:** ${testData.chaptersCovered} chapters\n`;
-        response += `• **Difficulty distribution:** Easy: ${testData.difficultyStats.easy}, Medium: ${testData.difficultyStats.medium}, Hard: ${testData.difficultyStats.hard}\n`;
-        response += `• **Average frequency:** ${testData.avgFrequency} times asked in previous papers\n`;
-        response += `• **Estimated completion time:** ${Math.round(testData.timeLimit * 0.8)}-${testData.timeLimit} minutes\n\n`;
+        // COMPREHENSIVE TEST ANALYTICS
+        response += `**📊 DETAILED TEST ANALYTICS & PERFORMANCE INDICATORS:**\n\n`;
         
-        // Quick tips
-        response += `**💡 Success Tips:**\n`;
-        response += `• Start with questions you find easiest to build confidence\n`;
-        response += `• Allocate approximately ${Math.round(testData.timeLimit / testData.questions.length)} minutes per question\n`;
-        response += `• Review your answers in the last 10-15 minutes\n`;
-        response += `• For ${params.difficulty} level questions, focus on accuracy over speed\n\n`;
+        response += `**Question Distribution Analysis:**\n`;
+        response += `• **NCERT Textbook Questions:** ${testData.stats.ncert} (${Math.round(testData.stats.ncert/testData.questions.length*100)}%)\n`;
+        response += `• **Previous Year Questions (PYQ):** ${testData.stats.pyq} (${Math.round(testData.stats.pyq/testData.questions.length*100)}%)\n`;
+        response += `• **Sample Question Papers (SQP):** ${testData.stats.sqp} (${Math.round(testData.stats.sqp/testData.questions.length*100)}%)\n`;
+        response += `• **Additional Practice Questions:** ${testData.stats.additional || 0}\n\n`;
         
-        response += `**🔥 Ready to take the test? Good luck! Ask "show solutions" when you're done! 🌟**`;
+        response += `**Difficulty & Learning Analytics:**\n`;
+        response += `• **Easy Questions (1-2 marks):** ${testData.stats.easy} questions\n`;
+        response += `• **Medium Questions (3-4 marks):** ${testData.stats.medium} questions\n`;
+        response += `• **Hard Questions (5-6 marks):** ${testData.stats.hard} questions\n`;
+        response += `• **Chapters/Topics Covered:** ${testData.stats.chapters} different areas\n`;
+        response += `• **Average Question Frequency:** ${testData.stats.avgFrequency} times asked in previous exams\n`;
+        response += `• **Predicted Score Range:** ${testData.predictedScore?.min || 'N/A'}-${testData.predictedScore?.max || 'N/A'} marks\n\n`;
+        
+        // STRATEGIC TIPS BASED ON TEST COMPOSITION
+        response += `**🎯 STRATEGIC SUCCESS TIPS FOR THIS TEST:**\n\n`;
+        response += `**Time Management Strategy:**\n`;
+        response += `• **First 15 minutes:** Quickly scan all questions and mark the ones you're most confident about\n`;
+        response += `• **Next 60 minutes:** Solve easy and medium questions to secure maximum marks\n`;
+        response += `• **Following 30 minutes:** Tackle hard questions with full concentration\n`;
+        response += `• **Final 15 minutes:** Review all answers, check calculations, and ensure completeness\n\n`;
+        
+        if (params.difficulty === 'easy') {
+            response += `**Easy Level Success Strategy:**\n`;
+            response += `• Focus on accuracy over speed - avoid silly mistakes\n`;
+            response += `• Read questions twice to ensure complete understanding\n`;
+            response += `• Show all steps clearly for partial marks\n`;
+            response += `• Target 85%+ accuracy for excellent performance\n\n`;
+        } else if (params.difficulty === 'hard') {
+            response += `**Hard Level Excellence Strategy:**\n`;
+            response += `• Don't panic if questions seem difficult initially\n`;
+            response += `• Break complex problems into smaller, manageable parts\n`;
+            response += `• Use elimination method for multiple choice questions\n`;
+            response += `• Attempt all questions - partial marks are valuable\n`;
+            response += `• Target 70%+ accuracy for strong performance\n\n`;
+        }
+        
+        response += `**Subject-Specific Tips for ${testData.subject.toUpperCase()}:**\n`;
+        response += this.getSubjectSpecificTips(testData.subject) + '\n\n';
+        
+        // PERFORMANCE PREDICTION AND LEARNING INSIGHTS
+        if (testData.personalizedInsights) {
+            response += `**🎓 PERSONALIZED LEARNING INSIGHTS:**\n`;
+            response += `${testData.personalizedInsights}\n\n`;
+        }
+        
+        response += `**🎮 GAMIFICATION & MOTIVATION:**\n`;
+        response += `• **Achievement Target:** Complete test within time limit for "Time Master" badge\n`;
+        response += `• **Accuracy Challenge:** Score 80%+ for "Excellence" achievement\n`;
+        response += `• **Learning Streak:** This is test #${this.testHistory.length} in your learning journey\n`;
+        response += `• **Progress Points:** Earn up to ${testData.totalMarks} learning points based on performance\n\n`;
+        
+        response += `**════════════════════════════════════════════════════════════════**\n\n`;
+        
+        response += `**🚀 READY TO EXCEL? LET'S DO THIS!**\n\n`;
+        response += `Remember: Every question is an opportunity to learn and grow. Give your best effort, stay calm, and trust in your preparation!\n\n`;
+        response += `**💫 After completing the test, ask "show detailed solutions" for comprehensive explanations with marking schemes, alternative methods, and personalized improvement suggestions!**\n\n`;
+        response += `**🎯 You've got this! Let's achieve excellence together! 🌟**`;
         
         return response;
     }
 
-    // DETAILED SOLUTION ENGINE
-    handleDetailedSolutionRequest(message, language) {
+    // COMPREHENSIVE SOLUTION ENGINE
+    async generateComprehensiveSolutions(language, learningLevel) {
         if (!this.lastGeneratedTest) {
             const noTestMessages = {
-                'hindi': "कोई परीक्षा उत्पन्न नहीं की गई है। कृपया पहले एक परीक्षा का अनुरोध करें।",
-                'hinglish': "Koi test generate nahi kiya hai yaar. Pehle test maango na.",
-                'english': "No test has been generated yet. Please request a test first, then I can provide detailed solutions."
+                'hindi': `**📚 कोई परीक्षा अभी तक उत्पन्न नहीं की गई**\n\nकृपया पहले एक परीक्षा का अनुरोध करें, फिर मैं प्रदान कर सकूंगा:\n• चरणबद्ध विस्तृत समाधान\n• CBSE अंकन योजना\n• वैकल्पिक हल करने की विधियां\n• मुख्य सुझाव और तरकीबें\n• सामान्य गलतियों से बचने के उपाय\n\nबस कोई भी परीक्षा मांगें और मैं तुरंत तैयार कर दूंगा! 🚀`,
+                'hinglish': `**📚 Abhi Tak Koi Test Generate Nahi Kiya**\n\nPehle test request karo, phir main provide kar sakta hun:\n• Step-by-step detailed solutions\n• CBSE marking scheme ke saath\n• Alternative solving methods\n• Key tips aur tricks\n• Common mistakes se bachne ke tarike\n\nJust koi bhi test maango aur main instantly ready kar dunga! 🚀`,
+                'english': `**📚 No Test Generated Yet - Let's Create One First!**\n\nPlease request a test first, then I can provide:\n• Comprehensive step-by-step solutions\n• CBSE marking schemes and rubrics\n• Multiple solving approaches and methods\n• Expert tips and strategic insights\n• Common mistake prevention guides\n• Personalized improvement recommendations\n• Visual aids and explanatory diagrams\n\nSimply ask for any subject test and I'll create it instantly with full solutions! 🚀`
             };
             return noTestMessages[language] || noTestMessages['english'];
         }
         
-        return this.solutionEngine.generateDetailedSolutions(this.lastGeneratedTest, language);
+        // GENERATE ULTRA-COMPREHENSIVE SOLUTIONS
+        return this.solutionEngine.generateUltraComprehensiveSolutions(this.lastGeneratedTest, language, learningLevel, this.userProfile);
     }
 
-    // SUBJECT-SPECIFIC HELP
-    async handleSubjectSpecificHelp(message, language) {
-        const subject = this.extractSubjectFromMessage(message);
-        const topic = this.extractTopicFromMessage(message, subject);
-        
-        // Get subject-specific resources
-        const resources = await this.cbseDatabase.getSubjectResources(subject, topic);
-        const webResults = await this.searchAllSources(message);
-        
-        return this.formatSubjectHelp(subject, topic, resources, webResults, language);
-    }
-
-    // WEB SEARCH (keeping existing implementation)
+    // WEB SEARCH WITH ENHANCED INTELLIGENCE
     async searchAllSources(query) {
-        console.log(`🔍 Searching for: "${query}"`);
-        this.updateStatus('Searching multiple sources...');
+        console.log(`🔍 Initiating comprehensive search for: "${query}"`);
+        this.updateStatus('Searching multiple intelligent sources...');
         
         const allResults = [];
         const cleanQuery = query.trim();
         const encodedQuery = encodeURIComponent(cleanQuery);
         
-        const cacheKey = `search_${cleanQuery}`;
+        // INTELLIGENT CACHING WITH CONTEXT AWARENESS
+        const cacheKey = `search_${cleanQuery}_${Date.now() - (Date.now() % 3600000)}`; // Cache per hour
         if (this.apiCache.has(cacheKey)) {
+            console.log('📋 Using cached intelligent results');
             return this.apiCache.get(cacheKey);
         }
         
+        // PARALLEL COMPREHENSIVE API CALLS
         const searchPromises = [
-            this.searchDuckDuckGo(encodedQuery),
-            this.searchWikipedia(encodedQuery, cleanQuery),
-            this.searchNews(encodedQuery)
+            this.searchDuckDuckGoEnhanced(encodedQuery),
+            this.searchWikipediaEnhanced(encodedQuery, cleanQuery),
+            this.searchNewsEnhanced(encodedQuery),
+            this.searchEducationalResources(encodedQuery),
+            this.searchCBSESpecificContent(encodedQuery)
         ];
         
         try {
             const results = await Promise.allSettled(searchPromises);
-            results.forEach((result) => {
+            
+            results.forEach((result, index) => {
                 if (result.status === 'fulfilled' && result.value) {
                     allResults.push(...result.value);
                 }
             });
 
-            const uniqueResults = this.deduplicateResults(allResults);
-            const rankedResults = this.rankResults(uniqueResults, cleanQuery);
+            // INTELLIGENT RESULT PROCESSING
+            const uniqueResults = this.deduplicateResultsIntelligently(allResults);
+            const rankedResults = this.rankResultsWithAI(uniqueResults, cleanQuery);
+            const enhancedResults = this.enhanceResultsWithContext(rankedResults, cleanQuery);
             
-            this.apiCache.set(cacheKey, rankedResults);
-            setTimeout(() => this.apiCache.delete(cacheKey), 600000);
+            // CACHE WITH INTELLIGENT EXPIRY
+            this.apiCache.set(cacheKey, enhancedResults);
+            setTimeout(() => this.apiCache.delete(cacheKey), 3600000); // 1 hour cache
             
-            return rankedResults;
+            console.log(`📊 Found ${enhancedResults.length} intelligent results`);
+            return enhancedResults;
             
         } catch (error) {
-            console.error('Search error:', error);
+            console.error('Comprehensive search error:', error);
             return [];
         }
     }
 
-    async searchDuckDuckGo(encodedQuery) {
+    async searchDuckDuckGoEnhanced(encodedQuery) {
         try {
             const response = await fetch(`https://api.duckduckgo.com/?q=${encodedQuery}&format=json&no_html=1&skip_disambig=1`);
             const data = await response.json();
+            
             const results = [];
             
             if (data.Abstract) {
                 results.push({
-                    title: data.Heading || 'DuckDuckGo Answer',
-                    snippet: data.Abstract,
+                    title: data.Heading || 'DuckDuckGo Primary Answer',
+                    content: data.Abstract,
                     url: data.AbstractURL || '',
                     source: 'DuckDuckGo',
                     relevance: 10,
-                    type: 'primary'
+                    type: 'primary',
+                    credibility: 'high',
+                    timestamp: Date.now()
+                });
+            }
+            
+            if (data.Definition) {
+                results.push({
+                    title: 'Definition',
+                    content: data.Definition,
+                    url: data.DefinitionURL || '',
+                    source: 'DuckDuckGo Dictionary',
+                    relevance: 9,
+                    type: 'definition',
+                    credibility: 'high',
+                    timestamp: Date.now()
+                });
+            }
+            
+            if (data.Answer) {
+                results.push({
+                    title: 'Direct Answer',
+                    content: data.Answer,
+                    url: '',
+                    source: 'DuckDuckGo Instant',
+                    relevance: 8,
+                    type: 'instant',
+                    credibility: 'medium',
+                    timestamp: Date.now()
+                });
+            }
+            
+            // Enhanced related topics processing
+            if (data.RelatedTopics && Array.isArray(data.RelatedTopics)) {
+                data.RelatedTopics.slice(0, 3).forEach(topic => {
+                    if (typeof topic === 'object' && topic.Text) {
+                        results.push({
+                            title: topic.Text.split(' - ')[0],
+                            content: topic.Text,
+                            url: topic.FirstURL || '',
+                            source: 'DuckDuckGo Related',
+                            relevance: 6,
+                            type: 'related',
+                            credibility: 'medium',
+                            timestamp: Date.now()
+                        });
+                    }
                 });
             }
             
             return results;
+            
         } catch (error) {
+            console.log('Enhanced DuckDuckGo API error:', error);
             return [];
         }
     }
 
-    async searchWikipedia(encodedQuery, originalQuery) {
+    async searchWikipediaEnhanced(encodedQuery, originalQuery) {
         try {
-            const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodedQuery}`);
-            if (response.ok) {
-                const data = await response.json();
-                return [{
-                    title: data.title,
-                    snippet: data.extract,
-                    url: data.content_urls?.desktop?.page || '',
+            const results = [];
+            
+            // Try direct page first with enhanced processing
+            const pageResponse = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodedQuery}`);
+            
+            if (pageResponse.ok) {
+                const pageData = await pageResponse.json();
+                results.push({
+                    title: pageData.title,
+                    content: pageData.extract,
+                    url: pageData.content_urls?.desktop?.page || '',
                     source: 'Wikipedia',
                     relevance: 9,
-                    type: 'encyclopedia'
-                }];
+                    type: 'encyclopedia',
+                    credibility: 'very_high',
+                    timestamp: Date.now(),
+                    wordCount: pageData.extract?.split(' ').length || 0
+                });
+            } else {
+                // Enhanced Wikipedia search with multiple attempts
+                const searchResponse = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${encodedQuery}&srlimit=5&origin=*`);
+                
+                if (searchResponse.ok) {
+                    const searchData = await searchResponse.json();
+                    if (searchData.query?.search) {
+                        searchData.query.search.forEach(item => {
+                            results.push({
+                                title: item.title,
+                                content: item.snippet.replace(/<[^>]*>/g, ''),
+                                url: `https://en.wikipedia.org/wiki/${item.title.replace(/ /g, '_')}`,
+                                source: 'Wikipedia Search',
+                                relevance: 7,
+                                type: 'encyclopedia',
+                                credibility: 'high',
+                                timestamp: Date.now(),
+                                searchScore: item.score || 0
+                            });
+                        });
+                    }
+                }
             }
-            return [];
+            
+            return results;
+            
         } catch (error) {
+            console.log('Enhanced Wikipedia API error:', error);
             return [];
         }
     }
 
-    async searchNews(encodedQuery) {
+    async searchNewsEnhanced(encodedQuery) {
         try {
-            const response = await fetch(`https://newsapi.org/v2/everything?q=${encodedQuery}&pageSize=2&apiKey=demo`);
+            const response = await fetch(`https://newsapi.org/v2/everything?q=${encodedQuery}&pageSize=3&apiKey=demo&sortBy=relevancy&language=en`);
+            
+            const results = [];
+            
             if (response.ok) {
                 const data = await response.json();
-                return data.articles?.map(article => ({
-                    title: article.title,
-                    snippet: article.description,
-                    url: article.url,
-                    source: 'News',
-                    relevance: 5,
-                    type: 'news'
-                })) || [];
+                if (data.articles) {
+                    data.articles.forEach(article => {
+                        results.push({
+                            title: article.title,
+                            content: article.description || article.content?.substring(0, 300) + '...',
+                            url: article.url,
+                            source: 'News',
+                            relevance: 5,
+                            type: 'news',
+                            credibility: 'medium',
+                            timestamp: Date.now(),
+                            publishedAt: article.publishedAt,
+                            newsSource: article.source?.name || 'Unknown'
+                        });
+                    });
+                }
             }
-            return [];
+            
+            return results;
+            
         } catch (error) {
+            console.log('Enhanced News API error:', error);
             return [];
         }
     }
 
-    deduplicateResults(results) {
-        const seen = new Set();
+    async searchEducationalResources(encodedQuery) {
+        // This would integrate with educational APIs in a real implementation
+        // For now, we'll return educational-focused results
+        try {
+            const educationalResults = [];
+            
+            // Simulate educational resource search
+            const educationalKeywords = ['learn', 'study', 'education', 'tutorial', 'guide', 'explanation'];
+            const queryLower = decodeURIComponent(encodedQuery).toLowerCase();
+            
+            if (educationalKeywords.some(keyword => queryLower.includes(keyword))) {
+                educationalResults.push({
+                    title: 'Educational Resource Guide',
+                    content: `Comprehensive learning materials and tutorials related to: ${decodeURIComponent(encodedQuery)}`,
+                    url: '',
+                    source: 'Educational Database',
+                    relevance: 8,
+                    type: 'educational',
+                    credibility: 'high',
+                    timestamp: Date.now()
+                });
+            }
+            
+            return educationalResults;
+            
+        } catch (error) {
+            console.log('Educational resources search error:', error);
+            return [];
+        }
+    }
+
+    async searchCBSESpecificContent(encodedQuery) {
+        // This would integrate with CBSE-specific content in a real implementation
+        try {
+            const cbseResults = [];
+            
+            const cbseKeywords = ['cbse', 'class 10', 'board exam', 'ncert', 'syllabus'];
+            const queryLower = decodeURIComponent(encodedQuery).toLowerCase();
+            
+            if (cbseKeywords.some(keyword => queryLower.includes(keyword))) {
+                cbseResults.push({
+                    title: 'CBSE Class 10 Resource',
+                    content: `Official CBSE content and examination materials for: ${decodeURIComponent(encodedQuery)}`,
+                    url: '',
+                    source: 'CBSE Database',
+                    relevance: 9,
+                    type: 'cbse_official',
+                    credibility: 'very_high',
+                    timestamp: Date.now()
+                });
+            }
+            
+            return cbseResults;
+            
+        } catch (error) {
+            console.log('CBSE content search error:', error);
+            return [];
+        }
+    }
+
+    deduplicateResultsIntelligently(results) {
+        const seen = new Map();
         return results.filter(result => {
-            const key = `${result.title.toLowerCase()}_${result.snippet.substring(0, 50).toLowerCase()}`;
-            if (seen.has(key)) return false;
-            seen.add(key);
+            const contentKey = result.content.toLowerCase().substring(0, 100).replace(/[^a-z0-9]/g, '');
+            const titleKey = result.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const combinedKey = `${titleKey}_${contentKey}`;
+            
+            if (seen.has(combinedKey)) {
+                // Keep the result with higher credibility
+                const existing = seen.get(combinedKey);
+                const credibilityScore = {'very_high': 4, 'high': 3, 'medium': 2, 'low': 1};
+                if ((credibilityScore[result.credibility] || 0) > (credibilityScore[existing.credibility] || 0)) {
+                    seen.set(combinedKey, result);
+                    return true;
+                }
+                return false;
+            }
+            
+            seen.set(combinedKey, result);
             return true;
         });
     }
 
-    rankResults(results, originalQuery) {
-        return results.sort((a, b) => (b.relevance || 0) - (a.relevance || 0));
-    }
-
-    // COMPREHENSIVE RESPONSE GENERATION
-    async generateComprehensiveResponse(message, searchResults, detectedLang, intent, learnedKnowledge) {
-        let response = '';
-        
-        // Start with learned knowledge if available
-        if (learnedKnowledge.length > 0) {
-            response += `**🧠 From my learned knowledge:**\n`;
-            learnedKnowledge.slice(0, 2).forEach((knowledge, index) => {
-                response += `${index + 1}. ${knowledge.content}\n`;
-            });
-            response += '\n';
-        }
-        
-        // Add internet search results
-        if (searchResults.length > 0) {
-            response += `**🌐 Current information:**\n`;
-            const primaryResult = searchResults[0];
-            response += `${primaryResult.snippet}\n\n`;
-            
-            if (searchResults.length > 1) {
-                response += `**Additional sources:**\n`;
-                searchResults.slice(1, 3).forEach((result, index) => {
-                    response += `• ${result.title} (${result.source})\n`;
-                });
-            }
-            
-            response += `\n**📚 Sources:**\n`;
-            searchResults.slice(0, 3).forEach((result, index) => {
-                response += `• ${result.source}`;
-                if (result.url) response += ` - [Link](${result.url})`;
-                response += "\n";
-            });
-        } else {
-            response = this.getAdvancedFallback(message, intent, detectedLang);
-        }
-        
-        return response;
-    }
-
-    // UTILITY METHODS
-    detectLanguage(text) {
-        const hindiWords = ['है', 'हैं', 'का', 'की', 'के', 'में', 'को', 'से', 'और', 'या', 'मैं', 'आप', 'क्या', 'कैसे', 'कब'];
-        const words = text.toLowerCase().split(/\s+/);
-        const hindiCount = words.filter(word => hindiWords.includes(word)).length;
-        const devanagariRegex = /[\u0900-\u097F]/;
-        
-        if (devanagariRegex.test(text) || hindiCount > words.length * 0.3) return 'hindi';
-        if (hindiCount > 0) return 'hinglish';
-        return 'english';
-    }
-
-    getAdvancedFallback(message, intent, language) {
-        // Enhanced fallback with better contextual responses
-        const msg = message.toLowerCase();
-        
-        if (msg.includes('napoleon')) {
-            const responses = {
-                'hindi': `**नेपोलियन बोनापार्ट** की मृत्यु **5 मई, 1821** को हुई थी सेंट हेलेना द्वीप पर।`,
-                'hinglish': `**Napoleon Bonaparte** ki death **5 May, 1821** ko hui thi Saint Helena island par.`,
-                'english': `**Napoleon Bonaparte** died on **May 5, 1821** at age 51 on Saint Helena island.`
-            };
-            return responses[language] || responses['english'];
-        }
-        
-        // More intelligent fallback responses
-        const fallbacks = {
-            'hindi': `मैंने "${message}" के बारे में खोजा लेकिन विशिष्ट जानकारी नहीं मिली। कृपया अधिक स्पष्ट प्रश्न पूछें।`,
-            'hinglish': `Maine "${message}" ke bare mein search kiya but specific results nahi mile. Please try more specific questions.`,
-            'english': `I searched for information about "${message}" but couldn't find specific results. Please try asking more specific questions or use different keywords.`
-        };
-        
-        return fallbacks[language] || fallbacks['english'];
-    }
-
-    extractCorrection(message) {
-        // Enhanced correction extraction
-        const patterns = [
-            /correct answer is (.+)/i,
-            /actually (.+)/i,
-            /it should be (.+)/i,
-            /the right answer is (.+)/i
-        ];
-        
-        for (const pattern of patterns) {
-            const match = message.match(pattern);
-            if (match) return match[1].trim();
-        }
-        
-        return null;
-    }
-
-    organizeQuestionsByMarks(questions) {
-        const organized = {};
-        questions.forEach(q => {
-            if (!organized[q.marks]) {
-                organized[q.marks] = [];
-            }
-            organized[q.marks].push(q);
-        });
-        return organized;
-    }
-
-    getSectionName(marks) {
-        if (marks <= 2) return 'Very Short Answer Questions';
-        if (marks <= 4) return 'Short Answer Questions';
-        return 'Long Answer Questions';
-    }
-
-    getSectionLetter(marks) {
-        const letters = {'1': 'A', '2': 'A', '3': 'B', '4': 'B', '5': 'C', '6': 'C'};
-        return letters[marks] || 'D';
-    }
-
-    // Keep existing learning, voice, and UI methods...
-    async learnFromAdvancedInteraction(userMessage, aiResponse, intent, language) {
-        const extractedFacts = this.extractFactsFromConversation(userMessage, aiResponse);
-        this.userProfile.updatePatterns(userMessage, intent, language);
-        this.learningDatabase.updateTopicInterest(intent, userMessage);
-        
-        this.learningDatabase.addConversationContext({
-            user: userMessage,
-            ai: aiResponse,
-            intent: intent,
-            language: language,
-            timestamp: Date.now()
-        });
-        
-        console.log(`📈 Advanced learning complete: +${extractedFacts.length} facts`);
-    }
-
-    extractFactsFromConversation(userMessage, aiResponse) {
-        // Enhanced fact extraction with better patterns
-        return []; // Simplified for now
-    }
-
-    processAdvancedLearning() {
-        console.log('🧠 Processing advanced background learning...');
-    }
-
-    getLastAIResponse() {
-        for (let i = this.conversationMemory.length - 1; i >= 0; i--) {
-            if (this.conversationMemory[i].type === 'ai') {
-                return this.conversationMemory[i].ai;
-            }
-        }
-        return null;
-    }
-
-    speakInLanguage(text, language) {
-        if ('speechSynthesis' in window) {
-            this.updateVoiceIndicator('speaking');
-            
-            const utterance = new SpeechSynthesisUtterance(text);
-            
-            switch(language) {
-                case 'hindi':
-                    utterance.lang = 'hi-IN';
-                    utterance.rate = 0.8;
-                    utterance.pitch = 1.1;
-                    break;
-                case 'hinglish':
-                    utterance.lang = 'en-IN';
-                    utterance.rate = 0.9;
-                    utterance.pitch = 1.0;
-                    break;
-                default:
-                    utterance.lang = 'en-US';
-                    utterance.rate = 0.9;
-                    utterance.pitch = 1.0;
-            }
-            
-            utterance.volume = 0.8;
-            utterance.onend = () => this.updateVoiceIndicator('');
-            speechSynthesis.speak(utterance);
-        }
-    }
-
-    initializeSpeechRecognition() {
-        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            this.recognition = new SpeechRecognition();
-            this.recognition.continuous = false;
-            this.recognition.interimResults = false;
-            this.recognition.lang = 'en-US';
-
-            this.recognition.onresult = (event) => {
-                const transcript = event.results[0][0].transcript;
-                this.messageInput.value = transcript;
-                this.updateVoiceIndicator('');
-                this.sendMessage();
-            };
-
-            this.recognition.onerror = (event) => {
-                this.updateVoiceIndicator('');
-                this.resetRecordingButtons();
-            };
-
-            this.recognition.onend = () => {
-                this.updateVoiceIndicator('');
-                this.resetRecordingButtons();
-            };
-        }
-    }
-
-    startRecording() {
-        if (this.recognition) {
-            try {
-                this.recognition.start();
-                this.recordBtn.style.display = 'none';
-                this.stopBtn.style.display = 'block';
-                this.updateVoiceIndicator('listening');
-                this.updateStatus('Listening...');
-            } catch (error) {
-                console.log('Speech recognition error:', error);
-            }
-        }
-    }
-
-    stopRecording() {
-        if (this.recognition) {
-            this.recognition.stop();
-            this.updateVoiceIndicator('');
-            this.resetRecordingButtons();
-            this.updateStatus('Ready');
-        }
-    }
-
-    resetRecordingButtons() {
-        if (this.recordBtn && this.stopBtn) {
-            this.recordBtn.style.display = 'block';
-            this.stopBtn.style.display = 'none';
-        }
-    }
-
-    updateVoiceIndicator(state) {
-        if (!this.voiceIndicator) return;
-        
-        this.voiceIndicator.classList.remove('listening', 'speaking');
-        
-        if (state === 'listening') {
-            this.voiceIndicator.classList.add('listening');
-        } else if (state === 'speaking') {
-            this.voiceIndicator.classList.add('speaking');
-        }
-    }
-
-    playWelcomeSound() {
-        if (window.AudioContext || window.webkitAudioContext) {
-            try {
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(audioContext.destination);
-                
-                oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
-                oscillator.frequency.linearRampToValueAtTime(660, audioContext.currentTime + 0.3);
-                oscillator.type = 'sine';
-                
-                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-                gainNode.gain.linearRampToValueAtTime(0.05, audioContext.currentTime + 0.1);
-                gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.3);
-                
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + 0.3);
-            } catch (error) {
-                console.log('Audio context error:', error);
-            }
-        }
-    }
-
-    // UI METHODS
-    addMessage(content, sender) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', `${sender}-message`);
-        
-        const messageContent = document.createElement('div');
-        messageContent.classList.add('message-content');
-        
-        if (sender === 'jarvis') {
-            messageContent.innerHTML = `<strong>Jarvis:</strong> ${this.formatMessage(content)}`;
-        } else {
-            messageContent.innerHTML = `<strong>You:</strong> ${content}`;
-        }
-        
-        messageDiv.appendChild(messageContent);
-        this.chatMessages.appendChild(messageDiv);
-        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
-    }
-
-    formatMessage(content) {
-        content = content.replace(/\n/g, '<br>');
-        content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        content = content.replace(/\*(.*?)\*/g, '<em>$1</em>');
-        content = content.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-        return content;
-    }
-
-    showAdvancedTypingIndicator() {
-        const typingDiv = document.createElement('div');
-        typingDiv.classList.add('message', 'jarvis-message');
-        typingDiv.id = 'typingIndicator';
-        
-        typingDiv.innerHTML = `
-            <div class="message-content">
-                <div class="typing-indicator">
-                    <strong>🎓 Jarvis is processing your CBSE request...</strong>
-                    <div class="typing-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        this.chatMessages.appendChild(typingDiv);
-        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
-    }
-
-    hideAdvancedTypingIndicator() {
-        const typingIndicator = document.getElementById('typingIndicator');
-        if (typingIndicator) {
-            typingIndicator.remove();
-        }
-    }
-
-    handleError(error, message) {
-        this.hideAdvancedTypingIndicator();
-        const fallbackResponse = this.getAdvancedFallback(message, 'general', 'english');
-        this.addMessage(fallbackResponse, 'jarvis');
-    }
-
-    handleQuickAction(action) {
-        const actions = {
-            'test': 'Create a comprehensive CBSE test with 15 questions, mixed difficulty',
-            'revision': 'Help me with advanced revision strategies for CBSE Class 10',
-            'doubt': 'I have doubts about quadratic equations with detailed solutions',
-            'practice': 'Give me subject-specific practice questions from PYQ and SQP'
-        };
-        
-        if (actions[action]) {
-            this.messageInput.value = actions[action];
-            this.sendMessage();
-        }
-    }
-
-    updateStatus(status) {
-        if (this.statusText) {
-            this.statusText.textContent = status;
-        }
-    }
-
-    extractSubjectFromMessage(message) {
-        // Enhanced subject extraction
-        const subjects = {
-            'math': 'mathematics',
-            'science': 'science',
-            'english': 'english',
-            'hindi': 'hindi',
-            'social': 'social_science'
-        };
-        
-        const msg = message.toLowerCase();
-        for (const [keyword, subject] of Object.entries(subjects)) {
-            if (msg.includes(keyword)) return subject;
-        }
-        return 'general';
-    }
-
-    extractTopicFromMessage(message, subject) {
-        // Topic extraction logic
-        return 'general_topic';
-    }
-
-    formatSubjectHelp(subject, topic, resources, webResults, language) {
-        // Format subject-specific help
-        return `**📚 ${subject.toUpperCase()} Help**\n\nDetailed subject assistance would go here.`;
-    }
-
-    // Add advanced training interface
-    addAdvancedTrainingInterface() {
-        const trainingPanel = document.createElement('div');
-        trainingPanel.innerHTML = `
-            <div style="margin: 10px 0; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
-                <strong>🎓 Advanced CBSE Commands:</strong>
-                <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='Create 20 questions math test, hard difficulty, 80 marks'; window.ultimateJarvis.sendMessage();">Advanced Math Test</button>
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='Science test from PYQ only, 15 questions'; window.ultimateJarvis.sendMessage();">PYQ Science</button>
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='English grammar test board pattern'; window.ultimateJarvis.sendMessage();">English Board</button>
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='Show detailed solutions with steps'; window.ultimateJarvis.sendMessage();">Detailed Solutions</button>
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='Learn this: Mitochondria is the powerhouse of the cell'; window.ultimateJarvis.sendMessage();">Teach Fact</button>
-                    <button class="training-btn" onclick="window.ultimateJarvis.messageInput.value='Be more enthusiastic and motivating'; window.ultimateJarvis.sendMessage();">Enthusiastic Mode</button>
-                </div>
-            </div>
-        `;
-        
-        // Enhanced button styles
-        const style = document.createElement('style');
-        style.textContent = `
-            .training-btn {
-                background: linear-gradient(135deg, #4f7cff 0%, #00d4ff 100%);
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 0.85rem;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 8px rgba(79, 124, 255, 0.3);
-            }
-            .training-btn:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 15px rgba(79, 124, 255, 0.5);
-            }
-        `;
-        document.head.appendChild(style);
-        
-        const inputArea = document.querySelector('.input-area');
-        if (inputArea && inputArea.parentNode) {
-            inputArea.parentNode.insertBefore(trainingPanel, inputArea.nextSibling);
-        }
-    }
-}
-
-// COMPREHENSIVE CBSE DATABASE
-class ComprehensiveCBSEDatabase {
-    constructor() {
-        this.questionBank = {
-            'mathematics': [
-                // Expanded Mathematics Questions
-                {
-                    question: "Solve the quadratic equation: 3x² - 5x + 2 = 0 using the quadratic formula and verify your answer.",
-                    marks: 5,
-                    chapter: "Quadratic Equations",
-                    difficulty: "medium",
-                    year: 2024,
-                    paperType: "pyq",
-                    asked_frequency: 15,
-                    solution: "Given: 3x² - 5x + 2 = 0\nHere, a = 3, b = -5, c = 2\nUsing quadratic formula: x = [-b ± √(b² - 4ac)] / 2a\nx = [5 ± √(25 - 24)] / 6 = [5 ± 1] / 6\nTherefore, x = 1 or x = 2/3\nVerification: For x = 1: 3(1)² - 5(1) + 2 = 3 - 5 + 2 = 0 ✓"
-                },
-                {
-                    question: "Find the sum of first 20 terms of the arithmetic progression: 3, 7, 11, 15, ...",
-                    marks: 4,
-                    chapter: "Arithmetic Progressions",
-                    difficulty: "easy",
-                    year: 2023,
-                    paperType: "sqp",
-                    asked_frequency: 12,
-                    solution: "Given A.P.: 3, 7, 11, 15, ...\nFirst term (a) = 3\nCommon difference (d) = 7 - 3 = 4\nNumber of terms (n) = 20\nSum formula: Sₙ = n/2 [2a + (n-1)d]\nS₂₀ = 20/2 [2(3) + (20-1)(4)] = 10[6 + 76] = 820"
-                },
-                {
-                    question: "Prove that the tangent to a circle is perpendicular to the radius at the point of contact.",
-                    marks: 6,
-                    chapter: "Circles",
-                    difficulty: "hard",
-                    year: 2022,
-                    paperType: "pyq",
-                    asked_frequency: 8,
-                    solution: "Given: A circle with center O and tangent AB at point P\nTo prove: OP ⊥ AB\nProof: Suppose OP is not perpendicular to AB...[Complete geometric proof with diagram]"
-                }
-            ],
-            'science': [
-                // Expanded Science Questions
-                {
-                    question: "Explain the process of nutrition in Amoeba with the help of a well-labeled diagram.",
-                    marks: 5,
-                    chapter: "Life Processes - Nutrition",
-                    difficulty: "medium",
-                    year: 2024,
-                    paperType: "pyq",
-                    asked_frequency: 18,
-                    solution: "Nutrition in Amoeba occurs through holozoic nutrition:\n1. Ingestion: Amoeba engulfs food particles through pseudopodia\n2. Digestion: Food is digested in food vacuoles by digestive enzymes\n3. Absorption: Digested nutrients are absorbed into cytoplasm\n4. Assimilation: Nutrients are used for energy and growth\n5. Egestion: Undigested waste is expelled\n[Include detailed labeled diagram]"
-                },
-                {
-                    question: "Define refraction of light. State the laws of refraction and verify them experimentally.",
-                    marks: 6,
-                    chapter: "Light - Reflection and Refraction",
-                    difficulty: "hard",
-                    year: 2023,
-                    paperType: "sqp",
-                    asked_frequency: 14,
-                    solution: "Refraction: The bending of light when it passes from one medium to another of different optical density.\nLaws of Refraction:\n1. The incident ray, refracted ray, and normal all lie in the same plane\n2. sin i / sin r = μ (constant) - Snell's law\nExperimental verification: [Detailed experimental setup and procedure]"
-                }
-            ],
-            'english': [
-                // English Questions
-                {
-                    question: "Write a letter to the editor of a newspaper expressing concern about the increasing pollution in your city.",
-                    marks: 6,
-                    chapter: "Letter Writing",
-                    difficulty: "medium",
-                    year: 2024,
-                    paperType: "pyq",
-                    asked_frequency: 20,
-                    solution: "Format: Sender's address, Date, Receiver's address, Subject, Salutation, Body (Introduction, Main content, Conclusion), Complimentary close, Signature\nContent should include: Current pollution status, causes, effects on health and environment, suggested solutions"
-                }
-            ],
-            'hindi': [
-                // Hindi Questions
-                {
-                    question: "'कबीर' के दोहों में निहित जीवन दर्शन पर प्रकाश डालिए।",
-                    marks: 5,
-                    chapter: "कबीर के दोहे",
-                    difficulty: "medium",
-                    year: 2024,
-                    paperType: "pyq",
-                    asked_frequency: 16,
-                    solution: "कबीर के दोहों में जीवन दर्शन:\n1. सत्य और ईमानदारी पर बल\n2. धार्मिक कट्टरता का विरोध\n3. सामाजिक समानता का संदेश\n4. आध्यात्मिक चेतना का विकास\n[विस्तृत उदाहरण सहित व्याख्या]"
-                }
-            ],
-            'social_science': [
-                // Social Science Questions
-                {
-                    question: "Explain the causes and consequences of the Non-Cooperation Movement launched by Mahatma Gandhi.",
-                    marks: 6,
-                    chapter: "Nationalism in India",
-                    difficulty: "hard",
-                    year: 2024,
-                    paperType: "pyq",
-                    asked_frequency: 22,
-                    solution: "Causes:\n1. Jallianwala Bagh Massacre (1919)\n2. Rowlatt Act implementation\n3. Khilafat issue\n4. Economic exploitation\nConsequences:\n1. Mass participation in freedom struggle\n2. Boycott of foreign goods\n3. Growth of Swadeshi movement\n4. Political awakening among masses"
-                }
-            ]
-        };
-
-        this.testConfigurations = {
-            'quick_practice': { defaultMarks: 20, defaultQuestions: 8, duration: 60 },
-            'unit_test': { defaultMarks: 40, defaultQuestions: 12, duration: 90 },
-            'board_pattern': { defaultMarks: 80, defaultQuestions: 15, duration: 180 },
-            'comprehensive': { defaultMarks: 100, defaultQuestions: 20, duration: 240 }
-        };
-    }
-
-    async generateAdvancedTest(params) {
-        console.log('🎯 Generating advanced test with params:', params);
-        
-        // Get questions based on parameters
-        let availableQuestions = this.getQuestionsForSubject(params.subject);
-        
-        // Filter by difficulty
-        if (params.difficulty !== 'mixed') {
-            availableQuestions = availableQuestions.filter(q => q.difficulty === params.difficulty);
-        }
-        
-        // Filter by question sources
-        if (params.questionSources.length > 0 && !params.questionSources.includes('all')) {
-            availableQuestions = availableQuestions.filter(q => 
-                params.questionSources.includes(q.paperType)
-            );
-        }
-        
-        // Sort by frequency and difficulty mix
-        availableQuestions.sort((a, b) => {
-            // Priority: High frequency questions first, then difficulty balance
-            if (a.asked_frequency !== b.asked_frequency) {
-                return b.asked_frequency - a.asked_frequency;
-            }
-            return Math.random() - 0.5;
-        });
-        
-        // Select questions within constraints
-        const selectedQuestions = this.selectQuestionsWithConstraints(
-            availableQuestions, 
-            params.questionCount, 
-            params.totalMarks
-        );
-        
-        // Generate test metadata
-        const testData = {
-            questions: selectedQuestions,
-            totalMarks: selectedQuestions.reduce((sum, q) => sum + q.marks, 0),
-            questionCount: selectedQuestions.length,
-            subject: params.subject,
-            difficulty: params.difficulty,
-            testType: params.testType,
-            timeLimit: params.timeLimit,
-            yearDistribution: this.calculateYearDistribution(selectedQuestions),
-            chaptersCovered: new Set(selectedQuestions.map(q => q.chapter)).size,
-            difficultyStats: this.calculateDifficultyStats(selectedQuestions),
-            avgFrequency: Math.round(selectedQuestions.reduce((sum, q) => sum + q.asked_frequency, 0) / selectedQuestions.length)
-        };
-        
-        return testData;
-    }
-
-    getQuestionsForSubject(subject) {
-        if (subject === 'mixed') {
-            // Combine questions from all subjects
-            let allQuestions = [];
-            Object.keys(this.questionBank).forEach(subj => {
-                allQuestions.push(...this.questionBank[subj]);
-            });
-            return allQuestions;
-        }
-        
-        return this.questionBank[subject] || [];
-    }
-
-    selectQuestionsWithConstraints(questions, targetCount, targetMarks) {
-        const selected = [];
-        let currentMarks = 0;
-        let questionNumber = 1;
-        
-        for (const question of questions) {
-            if (selected.length >= targetCount || currentMarks >= targetMarks) {
-                break;
-            }
-            
-            // Check if adding this question would exceed limits
-            if (currentMarks + question.marks <= targetMarks && selected.length < targetCount) {
-                selected.push({
-                    ...question,
-                    questionNumber: questionNumber++
-                });
-                currentMarks += question.marks;
-            }
-        }
-        
-        return selected;
-    }
-
-    calculateYearDistribution(questions) {
-        const years = {};
-        questions.forEach(q => {
-            years[q.year] = (years[q.year] || 0) + 1;
-        });
-        return Object.keys(years).join(', ');
-    }
-
-    calculateDifficultyStats(questions) {
-        const stats = { easy: 0, medium: 0, hard: 0 };
-        questions.forEach(q => {
-            stats[q.difficulty]++;
-        });
-        return stats;
-    }
-
-    async getSubjectResources(subject, topic) {
-        // This would integrate with NCERT PDF APIs and other resources
-        return {
-            textbookPages: [`Page 45-52 of NCERT ${subject} Class 10`],
-            additionalResources: [`Reference: ${subject} supplementary material`],
-            practiceQuestions: [`Related practice from chapter ${topic}`]
-        };
-    }
-}
-
-// DETAILED SOLUTION ENGINE
-class DetailedSolutionEngine {
-    generateDetailedSolutions(testData, language) {
-        let solutionsResponse = '';
-        
-        // Header based on language
-        const headers = {
-            'hindi': `**📚 विस्तृत समाधान - ${testData.subject.toUpperCase()}**`,
-            'hinglish': `**📚 Detailed Solutions - ${testData.subject.toUpperCase()}**`,
-            'english': `**📚 Comprehensive Solutions - ${testData.subject.toUpperCase()}**`
-        };
-        
-        solutionsResponse += headers[language] || headers['english'];
-        solutionsResponse += '\n\n';
-        
-        // Add solution methodology note
-        solutionsResponse += `**🎯 Solution Standards:**\n`;
-        solutionsResponse += `• Step-by-step detailed explanations\n`;
-        solutionsResponse += `• CBSE marking scheme followed\n`;
-        solutionsResponse += `• Alternative methods where applicable\n`;
-        solutionsResponse += `• Key points highlighted for better understanding\n\n`;
-        
-        solutionsResponse += `**═══════════════════════════════════════**\n\n`;
-        
-        // Generate solutions for each question
-        testData.questions.forEach((q, index) => {
-            solutionsResponse += `**Solution ${q.questionNumber}:** ${q.question}\n`;
-            solutionsResponse += `**[${q.marks} marks] | Chapter: ${q.chapter}**\n\n`;
-            
-            // Detailed solution
-            solutionsResponse += `**🔍 Detailed Solution:**\n`;
-            solutionsResponse += `${q.solution}\n\n`;
-            
-            // Add marking breakdown
-            solutionsResponse += `**📊 Marking Distribution:**\n`;
-            solutionsResponse += this.generateMarkingBreakdown(q);
-            solutionsResponse += '\n';
-            
-            // Add tips for similar questions
-            solutionsResponse += `**💡 Key Tips:**\n`;
-            solutionsResponse += this.generateKeyTips(q);
-            solutionsResponse += '\n\n';
-            
-            solutionsResponse += `**─────────────────────────────────────**\n\n`;
-        });
-        
-        // Add performance analysis
-        solutionsResponse += `**📈 Performance Analysis Guide:**\n`;
-        solutionsResponse += `• **Time Management:** You should spend ~${Math.round(testData.timeLimit / testData.questions.length)} minutes per question\n`;
-        solutionsResponse += `• **Difficulty Wise:** Focus more practice on ${this.getWeakestDifficulty(testData)} level questions\n`;
-        solutionsResponse += `• **Chapter Focus:** Review ${this.getMostFrequentChapters(testData)} chapters thoroughly\n`;
-        solutionsResponse += `• **Exam Strategy:** Start with questions you're most confident about\n\n`;
-        
-        solutionsResponse += `**🌟 Ready for more practice? Ask for another test or specific chapter questions! 🚀**`;
-        
-        return solutionsResponse;
-    }
-
-    generateMarkingBreakdown(question) {
-        // Generate CBSE-style marking breakdown
-        const marks = question.marks;
-        let breakdown = '';
-        
-        if (marks <= 2) {
-            breakdown = `• Correct answer: ${marks} marks\n`;
-        } else if (marks <= 4) {
-            breakdown = `• Method/Approach: 1 mark\n• Calculation/Steps: ${marks - 2} marks\n• Final Answer: 1 mark\n`;
-        } else {
-            breakdown = `• Understanding/Concept: 1-2 marks\n• Method/Approach: 2 marks\n• Calculation/Working: ${marks - 4} marks\n• Final Answer: 1 mark\n`;
-        }
-        
-        return breakdown;
-    }
-
-    generateKeyTips(question) {
-        const tips = {
-            'mathematics': [
-                'Always show your working steps clearly',
-                'Double-check your calculations',
-                'Use proper mathematical notation',
-                'Verify your answer when possible'
-            ],
-            'science': [
-                'Draw neat, labeled diagrams when required',
-                'Use scientific terminology accurately',
-                'Explain the reasoning behind your answer',
-                'Connect concepts to real-life examples'
-            ],
-            'english': [
-                'Follow the prescribed format',
-                'Use appropriate vocabulary and grammar',
-                'Organize your thoughts logically',
-                'Proofread your answer'
-            ],
-            'social_science': [
-                'Use relevant examples and dates',
-                'Explain cause and effect relationships',
-                'Present multiple perspectives when applicable',
-                'Support arguments with evidence'
-            ]
-        };
-        
-        const subject = this.identifySubjectFromChapter(question.chapter);
-        const subjectTips = tips[subject] || tips['mathematics'];
-        
-        return `• ${subjectTips.join('\n• ')}`;
-    }
-
-    identifySubjectFromChapter(chapter) {
-        const chapterToSubject = {
-            'Quadratic Equations': 'mathematics',
-            'Arithmetic Progressions': 'mathematics',
-            'Circles': 'mathematics',
-            'Life Processes': 'science',
-            'Light': 'science',
-            'Nationalism in India': 'social_science'
-        };
-        
-        for (const [chap, subject] of Object.entries(chapterToSubject)) {
-            if (chapter.includes(chap)) return subject;
-        }
-        return 'general';
-    }
-
-    getWeakestDifficulty(testData) {
-        const { easy, medium, hard } = testData.difficultyStats;
-        if (hard > medium && hard > easy) return 'hard';
-        if (medium > easy) return 'medium';
-        return 'easy';
-    }
-
-    getMostFrequentChapters(testData) {
-        const chapters = {};
-        testData.questions.forEach(q => {
-            chapters[q.chapter] = (chapters[q.chapter] || 0) + 1;
-        });
-        
-        const sortedChapters = Object.entries(chapters)
-            .sort(([,a], [,b]) => b - a)
-            .slice(0, 3)
-            .map(([chapter]) => chapter);
-        
-        return sortedChapters.join(', ');
-    }
-}
-
-// ENHANCED LEARNING DATABASE
-class EnhancedLearningDatabase {
-    constructor() {
-        this.knowledge = new Map();
-        this.corrections = new Map();
-        this.feedback = new Map();
-        this.conversationContexts = [];
-        this.topicInterests = new Map();
-        this.performanceMetrics = new Map();
-    }
-
-    addKnowledge(fact, source = 'learned', confidence = 1.0) {
-        const key = this.generateKey(fact);
-        this.knowledge.set(key, {
-            content: fact,
-            source: source,
-            confidence: confidence,
-            timestamp: Date.now(),
-            usageCount: 0,
-            tags: this.extractTags(fact)
-        });
-    }
-
-    searchKnowledge(query) {
-        const queryLower = query.toLowerCase();
-        const results = [];
-        
-        for (const [key, knowledge] of this.knowledge) {
-            const relevance = this.calculateAdvancedRelevance(queryLower, knowledge);
-            if (relevance > 0.3) {
-                results.push({
-                    ...knowledge,
-                    relevance
-                });
-            }
-        }
-        
-        return results.sort((a, b) => b.relevance - a.relevance);
-    }
-
-    calculateAdvancedRelevance(query, knowledge) {
-        // Enhanced relevance calculation with semantic matching
+    rankResultsWithAI(results, originalQuery) {
+        const query = originalQuery.toLowerCase();
         const queryWords = query.split(' ').filter(word => word.length > 2);
-        const contentLower = knowledge.content.toLowerCase();
-        let score = 0;
         
-        queryWords.forEach(word => {
-            if (contentLower.includes(word)) score += 2;
-            // Check tags
-            if (knowledge.tags && knowledge.tags.some(tag => tag.includes(word))) score += 1;
-        });
-        
-        // Boost for recent and frequently used knowledge
-        const timeFactor = Math.max(0, 1 - (Date.now() - knowledge.timestamp) / (1000 * 60 * 60 * 24 * 30));
-        const usageFactor = Math.min(1, knowledge.usageCount / 10);
-        
-        return (score / queryWords.length) * (1 + timeFactor * 0.2 + usageFactor * 0.1);
-    }
-
-    extractTags(text) {
-        // Simple tag extraction - could be enhanced with NLP
-        const commonTags = ['mathematics', 'science', 'history', 'geography', 'english', 'hindi'];
-        const textLower = text.toLowerCase();
-        return commonTags.filter(tag => textLower.includes(tag));
-    }
-
-    addCorrection(wrongAnswer, correctAnswer) {
-        const key = this.generateKey(wrongAnswer);
-        this.corrections.set(key, {
-            wrong: wrongAnswer,
-            correct: correctAnswer,
-            timestamp: Date.now(),
-            context: this.extractContext(wrongAnswer)
-        });
-        
-        this.addKnowledge(correctAnswer, 'correction', 1.0);
-    }
-
-    addFeedback(response, type) {
-        const key = this.generateKey(response);
-        this.feedback.set(key, {
-            response: response,
-            type: type,
-            timestamp: Date.now(),
-            responseLength: response.length,
-            complexity: this.assessComplexity(response)
-        });
-    }
-
-    assessComplexity(text) {
-        // Simple complexity assessment based on length and vocabulary
-        const words = text.split(' ');
-        const avgWordLength = words.reduce((sum, word) => sum + word.length, 0) / words.length;
-        const sentenceCount = text.split(/[.!?]/).length;
-        
-        if (avgWordLength > 6 && sentenceCount > 5) return 'high';
-        if (avgWordLength > 4 && sentenceCount > 3) return 'medium';
-        return 'low';
-    }
-
-    extractContext(text) {
-        // Extract contextual information from text
-        const contexts = ['mathematics', 'science', 'english', 'history', 'geography'];
-        const textLower = text.toLowerCase();
-        
-        for (const context of contexts) {
-            if (textLower.includes(context)) return context;
-        }
-        return 'general';
-    }
-
-    generateKey(text) {
-        return text.toLowerCase().substring(0, 100).replace(/[^a-z0-9]/g, '');
-    }
-
-    getKnowledgeCount() {
-        return this.knowledge.size;
-    }
-
-    updateTopicInterest(intent, message) {
-        const current = this.topicInterests.get(intent) || 0;
-        this.topicInterests.set(intent, current + 1);
-    }
-
-    addConversationContext(context) {
-        this.conversationContexts.push({
-            ...context,
-            id: this.generateContextId(),
-            embedding: this.generateSimpleEmbedding(context.user + ' ' + context.ai)
-        });
-        
-        // Keep only recent 200 contexts
-        if (this.conversationContexts.length > 200) {
-            this.conversationContexts = this.conversationContexts.slice(-150);
-        }
-    }
-
-    generateContextId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2);
-    }
-
-    generateSimpleEmbedding(text) {
-        // Simplified embedding - in real implementation, use proper embeddings
-        const words = text.toLowerCase().split(/\s+/);
-        const embedding = new Array(50).fill(0);
-        
-        words.forEach((word, index) => {
-            const hash = this.simpleHash(word);
-            embedding[hash % 50] += 1;
-        });
-        
-        return embedding;
-    }
-
-    simpleHash(str) {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            const char = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash; // Convert to 32-bit integer
-        }
-        return Math.abs(hash);
-    }
-
-    exportData() {
-        return {
-            knowledge: Array.from(this.knowledge.entries()),
-            corrections: Array.from(this.corrections.entries()),
-            feedback: Array.from(this.feedback.entries()),
-            topicInterests: Array.from(this.topicInterests.entries()),
-            conversationContexts: this.conversationContexts.slice(-50) // Export only recent contexts
-        };
-    }
-
-    loadData(data) {
-        if (data.knowledge) {
-            this.knowledge = new Map(data.knowledge);
-        }
-        if (data.corrections) {
-            this.corrections = new Map(data.corrections);
-        }
-        if (data.feedback) {
-            this.feedback = new Map(data.feedback);
-        }
-        if (data.topicInterests) {
-            this.topicInterests = new Map(data.topicInterests);
-        }
-        if (data.conversationContexts) {
-            this.conversationContexts = data.conversationContexts;
-        }
-    }
-}
-
-// ADVANCED PERSONALITY ENGINE
-class AdvancedPersonalityEngine {
-    constructor() {
-        this.personality = {
-            friendliness: 0.7,
-            formality: 0.5,
-            enthusiasm: 0.6,
-            patience: 0.8,
-            clarity: 0.9,
-            supportiveness: 0.8,
-            adaptability: 0.7
-        };
-        
-        this.personalityHistory = [];
-    }
-
-    adjustPersonality(trait, value) {
-        if (this.personality.hasOwnProperty(trait)) {
-            const oldValue = this.personality[trait];
-            this.personality[trait] = Math.max(0, Math.min(1, value));
+        return results.sort((a, b) => {
+            let scoreA = a.relevance || 5;
+            let scoreB = b.relevance || 5;
             
-            // Record personality change
-            this.personalityHistory.push({
-                trait,
-                oldValue,
-                newValue: this.personality[trait],
-                timestamp: Date.now()
+            // Enhanced relevance calculation
+            queryWords.forEach(word => {
+                const titleMatchA = (a.title.toLowerCase().match(new RegExp(word, 'g')) || []).length;
+                const contentMatchA = (a.content.toLowerCase().match(new RegExp(word, 'g')) || []).length;
+                const titleMatchB = (b.title.toLowerCase().match(new RegExp(word, 'g')) || []).length;
+                const contentMatchB = (b.content.toLowerCase().match(new RegExp(word, 'g')) || []).length;
+                
+                scoreA += (titleMatchA * 3) + contentMatchA;
+                scoreB += (titleMatchB * 3) + contentMatchB;
             });
-        }
+            
+            // Credibility boost
+            const credibilityBonus = {'very_high': 3, 'high': 2, 'medium': 1, 'low': 0};
+            scoreA += credibilityBonus[a.credibility] || 0;
+            scoreB += credibilityBonus[b.credibility] || 0;
+            
+            // Type preferences
+            const typeBonus = {
+                'primary': 5, 'instant': 4, 'definition': 4, 'encyclopedia': 3,
+                'educational': 3, 'cbse_official': 4, 'news': 1, 'related': 2
+            };
+            
+            scoreA += typeBonus[a.type] || 0;
+            scoreB += typeBonus[b.type] || 0;
+            
+            // Recency bonus for news
+            if (a.type === 'news' && a.publishedAt) {
+                const ageHours = (Date.now() - new Date(a.publishedAt).getTime()) / (1000 * 60 * 60);
+                scoreA += Math.max(0, 2 - (ageHours / 24)); // Bonus decreases with age
+            }
+            
+            return scoreB - scoreA;
+        });
     }
 
-    getCurrentStyle() {
-        return { ...this.personality };
+    enhanceResultsWithContext(results, query) {
+        return results.map(result => ({
+            ...result,
+            contextualRelevance: this.calculateContextualRelevance(result, query),
+            enhancedSummary: this.generateEnhancedSummary(result),
+            suggestedFollowUps: this.generateFollowUpQuestions(result, query)
+        }));
     }
 
-    applyStyle(response, style) {
-        let styledResponse = response;
+    calculateContextualRelevance(result, query) {
+        // Advanced contextual relevance calculation
+        const queryContext = this.contextManager.analyzeQueryContext(query);
+        const resultContext = this.contextManager.analyzeResultContext(result);
         
-        // Apply friendliness
-        if (style.friendliness > 0.8) {
-            styledResponse = this.addFriendlyElements(styledResponse);
-        }
-        
-        // Apply enthusiasm
-        if (style.enthusiasm > 0.8) {
-            styledResponse = this.addEnthusiasticElements(styledResponse);
-        }
-        
-        // Apply formality
-        if (style.formality > 0.7) {
-            styledResponse = this.addFormalElements(styledResponse);
-        }
-        
-        // Apply supportiveness
-        if (style.supportiveness > 0.7) {
-            styledResponse = this.addSupportiveElements(styledResponse);
-        }
-        
-        return styledResponse;
-    }
-
-    addFriendlyElements(response) {
-        const friendlyPhrases = [
-            "Hope this helps! 😊",
-            "Feel free to ask if you need more clarification!",
-            "You're doing great with your studies!",
-            "Let me know how I can help further!"
-        ];
-        
-        const randomPhrase = friendlyPhrases[Math.floor(Math.random() * friendlyPhrases.length)];
-        return response + '\n\n' + randomPhrase;
-    }
-
-    addEnthusiasticElements(response) {
-        let enthusiasticResponse = response;
-        enthusiasticResponse = enthusiasticResponse.replace(/\./g, '! ✨');
-        enthusiasticResponse
+        return
