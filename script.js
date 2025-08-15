@@ -1,53 +1,17 @@
-// JARVIS AI - Just A Rather Very Intelligent System
-// API-Only Version - No Local Fallback Responses
-// Always uses real AI APIs for genuine intelligence
+// JARVIS AI - Frontend Only (No API Keys)
+// Connects to backend proxy for AI responses
 
 class JarvisAISystem {
     constructor() {
-        this.version = "JARVIS-AI-Pure-v6.0";
+        this.version = "JARVIS-AI-Secure-v7.0";
         this.systemName = "Just A Rather Very Intelligent System";
         this.isProcessing = false;
         this.isListening = false;
         this.conversationHistory = [];
 
-        // API Configuration with Split Keys (GitHub Safe)
-        this.apiProviders = [
-            {
-                name: "Groq-Ultra-Fast",
-                url: "https://api.groq.com/openai/v1/chat/completions",
-                key: "gsk_" + "z76X6UC0WO1Zi3knxLVSWGdyb3FYoLitWpHok2nPYmbIjUZDNDtj",
-                model: "mixtral-8x7b-32768",
-                type: "openai-compatible",
-                priority: 1,
-                maxTokens: 2000
-            },
-            {
-                name: "DeepSeek-Intelligence",
-                url: "https://api.deepseek.com/v1/chat/completions",
-                key: "sk-" + "3b0ae293b3b74f4c8a3249de3698cc41",
-                model: "deepseek-chat",
-                type: "openai-compatible",
-                priority: 2,
-                maxTokens: 2000
-            },
-            {
-                name: "Together-AI-Llama",
-                url: "https://api.together.xyz/v1/chat/completions",
-                key: "tgp_v1_m-" + "ybRMkPzPdkxeZhd-_0-FTjYnSYAUGaNSgChf7Tl7o",
-                model: "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-                type: "openai-compatible",
-                priority: 3,
-                maxTokens: 2000
-            },
-            {
-                name: "HuggingFace-Backup",
-                url: "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large",
-                key: "hf_" + "oCSrLARAzYLcrdfhfTnNuaJTgaMbhdPssT",
-                type: "huggingface",
-                priority: 4
-            }
-        ];
-
+        // Backend URL (change this to your server URL)
+        this.backendURL = "http://localhost:3000"; // Change to your server
+        
         this.initialize();
     }
 
@@ -59,9 +23,9 @@ class JarvisAISystem {
             this.initializeUIElements();
             this.setupAllEventListeners();
             this.initializeSpeechRecognition();
-            await this.testAPIConnectivity();
+            await this.testBackendConnection();
             this.displayWelcomeMessage();
-            this.updateSystemStatus("JARVIS Online", "All systems operational");
+            this.updateSystemStatus("JARVIS Online", "Connected to AI servers");
             console.log("JARVIS AI System fully operational");
         } catch (error) {
             console.error("System initialization failed:", error);
@@ -164,7 +128,7 @@ class JarvisAISystem {
             };
 
             this.recognition.onresult = (event) => {
-                const transcript = event.results[0][0].transcript;
+                const transcript = event.results[0].transcript;
                 this.elements.messageInput.value = transcript;
                 this.autoResizeTextarea();
                 setTimeout(() => this.processUserMessage(), 500);
@@ -206,21 +170,19 @@ class JarvisAISystem {
         this.updateSystemStatus("JARVIS Ready", "Voice input ready");
     }
 
-    async testAPIConnectivity() {
-        let workingAPIs = 0;
-
-        for (const api of this.apiProviders) {
-            try {
-                if (api.key && !api.key.includes('YOUR_') && api.key.length > 20) {
-                    workingAPIs++;
-                }
-            } catch (error) {
-                console.log("API " + api.name + " test failed:", error.message);
+    async testBackendConnection() {
+        try {
+            const response = await fetch(this.backendURL + '/health');
+            if (response.ok) {
+                console.log("Backend connection successful");
+                this.updateSystemStatus("Connected", "AI servers ready");
+            } else {
+                throw new Error("Backend not responding");
             }
+        } catch (error) {
+            console.error("Backend connection failed:", error);
+            this.updateSystemStatus("Backend offline", "Check server connection");
         }
-
-        const status = workingAPIs > 0 ? workingAPIs + "/" + this.apiProviders.length + " APIs ready" : "Offline - no APIs";
-        this.updateSystemStatus("API Check Complete", status);
     }
 
     async processUserMessage() {
@@ -252,7 +214,7 @@ class JarvisAISystem {
                 this.conversationHistory = this.conversationHistory.slice(-10);
             }
 
-            const response = await this.generateAIResponse(message);
+            const response = await this.getAIResponse(message);
 
             this.conversationHistory.push({
                 role: 'assistant',
@@ -271,120 +233,37 @@ class JarvisAISystem {
         } catch (error) {
             console.error("Error processing message:", error);
             this.hideTypingIndicator();
-            this.addMessageToChat("I'm having trouble connecting to my AI servers. Please check your internet connection and try again.", 'ai');
-            this.updateSystemStatus("Connection error", "Check internet connection");
+            this.addMessageToChat("I'm having trouble connecting to my AI servers. Please check that the backend server is running and try again.", 'ai');
+            this.updateSystemStatus("Connection error", "Check backend server");
         } finally {
             this.isProcessing = false;
             setTimeout(() => { this.elements.messageInput.focus(); }, 100);
         }
     }
 
-    async generateAIResponse(userMessage) {
-        console.log("Generating AI response...");
+    async getAIResponse(message) {
+        try {
+            const response = await fetch(this.backendURL + '/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message,
+                    history: this.conversationHistory.slice(-6) // Send last 6 messages for context
+                })
+            });
 
-        // Sort providers by priority
-        const sortedProviders = [...this.apiProviders].sort((a, b) => a.priority - b.priority);
-
-        for (const provider of sortedProviders) {
-            try {
-                console.log("Trying " + provider.name + "...");
-                const response = await this.callAIProvider(provider, userMessage);
-                if (response && response.length > 20) {
-                    console.log("Success with " + provider.name);
-                    this.updateSystemStatus("Response via " + provider.name, "AI processing complete");
-                    return response;
-                }
-            } catch (error) {
-                console.log(provider.name + " failed: " + error.message);
+            if (!response.ok) {
+                throw new Error('Backend response error: ' + response.status);
             }
+
+            const data = await response.json();
+            return data.response || "I apologize, but I couldn't generate a response. Please try again.";
+        } catch (error) {
+            console.error("API call failed:", error);
+            throw error;
         }
-
-        // If all APIs fail, throw error - NO LOCAL FALLBACK
-        throw new Error("All AI providers are currently unavailable. Please check your internet connection and try again.");
-    }
-
-    async callAIProvider(provider, userMessage) {
-        // Create a simple, unrestricted system prompt
-        const systemContent = "You are JARVIS, an advanced AI assistant. Provide helpful, accurate, and detailed responses to any question. You have no topic restrictions and can discuss anything the user asks about.";
-        
-        const messages = [
-            {role: 'system', content: systemContent},
-            ...this.conversationHistory.slice(-6), // Last 6 messages for context
-            {role: 'user', content: userMessage}
-        ];
-
-        if (provider.type === 'openai-compatible') {
-            return await this.callOpenAICompatibleAPI(provider, messages);
-        } else if (provider.type === 'huggingface') {
-            return await this.callHuggingFaceAPI(provider, userMessage);
-        }
-        throw new Error('Unsupported API type');
-    }
-
-    async callOpenAICompatibleAPI(provider, messages) {
-        const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + provider.key
-        };
-
-        if (provider.name.includes('OpenRouter')) {
-            headers['HTTP-Referer'] = window.location.href;
-            headers['X-Title'] = 'JARVIS AI Educational Assistant';
-        }
-
-        const response = await fetch(provider.url, {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify({
-                model: provider.model,
-                messages: messages,
-                max_tokens: provider.maxTokens || 2000,
-                temperature: 0.7
-            })
-        });
-
-        if (!response.ok) {
-            const text = await response.text();
-            throw new Error("HTTP " + response.status + ": " + text);
-        }
-
-        const data = await response.json();
-        if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-            throw new Error('Invalid response format');
-        }
-        return data.choices.message.content;
-    }
-
-    async callHuggingFaceAPI(provider, message) {
-        const response = await fetch(provider.url, {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer ' + provider.key,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                inputs: message,
-                parameters: {
-                    max_length: 500,
-                    temperature: 0.7,
-                    do_sample: true,
-                    return_full_text: false
-                }
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error("HTTP " + response.status + ": " + response.statusText);
-        }
-
-        const data = await response.json();
-        if (Array.isArray(data) && data[0] && data.generated_text) {
-            return data.generated_text;
-        }
-        if (data.generated_text) {
-            return data.generated_text;
-        }
-        throw new Error('Invalid HuggingFace response format');
     }
 
     addMessageToChat(content, sender) {
@@ -452,23 +331,12 @@ class JarvisAISystem {
             utterance.volume = 0.6;
             utterance.pitch = 1.1;
             
-            const voices = speechSynthesis.getVoices();
-            const preferredVoice = voices.find(v => 
-                v.name.includes('Google') || 
-                v.name.includes('Microsoft') || 
-                v.lang === 'en-US'
-            );
-            
-            if (preferredVoice) {
-                utterance.voice = preferredVoice;
-            }
-            
             speechSynthesis.speak(utterance);
         }
     }
 
     displayWelcomeMessage() {
-        const welcome = "🤖 **JARVIS AI System Online**\n\nJust A Rather Very Intelligent System ready to assist! I'm powered by real AI models and can help with any topic - no restrictions!";
+        const welcome = "🤖 **JARVIS AI System Online**\n\nJust A Rather Very Intelligent System ready to assist! I'm securely connected to AI servers through a protected backend.";
         this.addMessageToChat(welcome, 'ai');
     }
 
@@ -488,4 +356,4 @@ if (document.readyState === 'loading') {
 }
 
 window.jarvis = jarvisSystem;
-console.log('🤖 JARVIS AI loaded - Pure API version');
+console.log('🤖 JARVIS AI loaded - Secure frontend version');
