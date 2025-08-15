@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JARVIS AI - Ultimate Educational Assistant</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>JARVIS AI - Ultimate Assistant</title>
     <style>
         * {
             margin: 0;
@@ -13,192 +12,121 @@
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a, #1a1a2e, #16213e);
             color: #00d4ff;
-            overflow-x: hidden;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        /* Animated Background */
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #00d4ff;
-            border-radius: 50%;
-            opacity: 0.7;
-            animation: float 15s infinite linear;
-        }
-
-        .particle:nth-child(odd) {
-            background: #0080ff;
-            animation-duration: 20s;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) translateX(100px) rotate(360deg); opacity: 0; }
-        }
-
-        /* Main Container */
-        .container {
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            max-width: 1400px;
-            margin: 0 auto;
-            background: rgba(10, 10, 26, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
         }
 
-        /* Header */
         .header {
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
-            padding: 25px 30px;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95), rgba(26, 26, 46, 0.95));
+            padding: 20px 25px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
         }
 
-        .logo-container {
+        .logo-section {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .logo-icon {
-            width: 70px;
-            height: 70px;
-            background: radial-gradient(circle, #00d4ff 0%, #0080ff 100%);
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, #00d4ff, #0080ff);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            animation: pulse 3s infinite;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+            font-size: 24px;
+            animation: glow 2s infinite alternate;
         }
 
-        @keyframes pulse {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
-            }
-            50% { 
-                transform: scale(1.05);
-                box-shadow: 0 0 50px rgba(0, 212, 255, 0.9);
-            }
-        }
-
-        .logo-text {
-            flex: 1;
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+            to { box-shadow: 0 0 40px rgba(0, 212, 255, 1); }
         }
 
         .logo-text h1 {
-            font-size: 32px;
+            color: #00d4ff;
+            font-size: 28px;
             font-weight: 700;
-            background: linear-gradient(135deg, #00d4ff, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
         }
 
         .logo-text p {
-            font-size: 16px;
             color: rgba(0, 212, 255, 0.8);
-            margin-bottom: 3px;
-        }
-
-        .logo-text .features {
-            font-size: 12px;
-            color: rgba(0, 212, 255, 0.6);
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            font-size: 14px;
+            margin-top: 2px;
         }
 
         .status-panel {
             text-align: right;
-            font-family: 'Courier New', monospace;
         }
 
-        .status-text {
-            font-size: 16px;
+        .status {
             color: #00ff41;
-            margin-bottom: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: 600;
         }
 
-        .api-status {
-            font-size: 12px;
+        .api-info {
             color: rgba(0, 212, 255, 0.7);
+            font-size: 12px;
+            margin-top: 3px;
         }
 
-        /* Chat Area */
-        .chat-area {
+        .chat-container {
             flex: 1;
             display: flex;
             flex-direction: column;
             background: rgba(10, 10, 26, 0.2);
-            margin: 0 20px;
+            margin: 0 20px 20px 20px;
             border-radius: 20px;
-            overflow: hidden;
             backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            overflow: hidden;
         }
 
-        .messages-container {
+        .messages-area {
             flex: 1;
-            padding: 30px;
+            padding: 25px;
             overflow-y: auto;
             scroll-behavior: smooth;
-            scrollbar-width: thin;
-            scrollbar-color: #00d4ff rgba(10, 10, 26, 0.5);
         }
 
-        .messages-container::-webkit-scrollbar {
-            width: 12px;
+        .messages-area::-webkit-scrollbar {
+            width: 10px;
         }
 
-        .messages-container::-webkit-scrollbar-track {
+        .messages-area::-webkit-scrollbar-track {
             background: rgba(10, 10, 26, 0.3);
-            border-radius: 6px;
+            border-radius: 5px;
         }
 
-        .messages-container::-webkit-scrollbar-thumb {
+        .messages-area::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #00d4ff, #0080ff);
-            border-radius: 6px;
-            border: 2px solid rgba(10, 10, 26, 0.3);
+            border-radius: 5px;
         }
 
-        /* Message Styles */
         .message {
-            margin-bottom: 25px;
-            animation: messageSlide 0.5s ease-out;
+            margin: 20px 0;
+            animation: messageSlide 0.4s ease-out;
         }
 
         @keyframes messageSlide {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -216,118 +144,84 @@
             justify-content: flex-start;
         }
 
-        .message-bubble {
-            max-width: 85%;
-            padding: 20px 25px;
-            border-radius: 20px;
-            position: relative;
+        .message-content {
+            max-width: 80%;
+            padding: 18px 22px;
+            border-radius: 18px;
+            line-height: 1.5;
             word-wrap: break-word;
         }
 
-        .user .message-bubble {
-            background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+        .user .message-content {
+            background: linear-gradient(135deg, #00d4ff, #0080ff);
             color: #0a0a1a;
-            border-radius: 25px 25px 5px 25px;
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+            border-radius: 18px 18px 4px 18px;
+            font-weight: 500;
         }
 
-        .ai .message-bubble {
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.4);
+        .ai .message-content {
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(26, 26, 46, 0.9));
+            border: 1px solid rgba(0, 212, 255, 0.3);
             color: #ffffff;
-            border-radius: 25px 25px 25px 5px;
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+            border-radius: 18px 18px 18px 4px;
             backdrop-filter: blur(10px);
-        }
-
-        .message-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .message-content {
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        .message-content h1,
-        .message-content h2,
-        .message-content h3 {
-            color: #00d4ff;
-            margin: 15px 0 10px 0;
         }
 
         .message-content strong {
             color: #00d4ff;
         }
 
-        .message-content code {
-            background: rgba(0, 212, 255, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
+        .message-content em {
+            color: #66d4ff;
         }
 
-        .message-content ul,
-        .message-content ol {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .message-content li {
-            margin-bottom: 5px;
-        }
-
-        /* Typing Indicator */
         .typing-indicator {
             display: none;
-            margin-bottom: 20px;
+            padding: 15px 25px;
+            color: #00d4ff;
+            font-style: italic;
         }
 
         .typing-dots {
-            display: flex;
-            gap: 8px;
-            margin-top: 15px;
+            display: inline-flex;
+            gap: 4px;
+            margin-left: 10px;
         }
 
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: #00d4ff;
-            animation: typingPulse 1.4s infinite ease-in-out;
+            animation: typingBounce 1.4s infinite ease-in-out;
         }
 
         .dot:nth-child(2) { animation-delay: 0.2s; }
         .dot:nth-child(3) { animation-delay: 0.4s; }
 
-        @keyframes typingPulse {
+        @keyframes typingBounce {
             0%, 60%, 100% {
-                transform: scale(0.8);
-                opacity: 0.5;
+                transform: translateY(0);
+                opacity: 0.6;
             }
             30% {
-                transform: scale(1.2);
+                transform: translateY(-10px);
                 opacity: 1;
             }
         }
 
-        /* Input Area */
         .input-section {
-            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
-            padding: 25px 30px;
-            border-top: 2px solid rgba(0, 212, 255, 0.3);
-            box-shadow: 0 -5px 25px rgba(0, 212, 255, 0.2);
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95), rgba(26, 26, 46, 0.95));
+            padding: 25px;
+            border-top: 1px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
-        .input-container {
+        .input-form {
             display: flex;
             gap: 15px;
             align-items: flex-end;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -336,291 +230,217 @@
             position: relative;
         }
 
-        .input-field {
+        #messageInput {
             width: 100%;
             background: rgba(10, 10, 26, 0.8);
             border: 2px solid rgba(0, 212, 255, 0.4);
-            border-radius: 20px;
-            padding: 20px 25px;
+            border-radius: 16px;
+            padding: 18px 22px;
             color: #ffffff;
             font-size: 16px;
             font-family: inherit;
             resize: none;
-            min-height: 60px;
-            max-height: 200px;
+            min-height: 55px;
+            max-height: 150px;
             outline: none;
             transition: all 0.3s ease;
-            scrollbar-width: thin;
-            scrollbar-color: #00d4ff rgba(10, 10, 26, 0.5);
         }
 
-        .input-field:focus {
+        #messageInput:focus {
             border-color: #00d4ff;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
             background: rgba(10, 10, 26, 0.95);
         }
 
-        .input-field::placeholder {
+        #messageInput::placeholder {
             color: rgba(0, 212, 255, 0.5);
             font-style: italic;
         }
 
-        .input-field::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .input-field::-webkit-scrollbar-thumb {
-            background: #00d4ff;
-            border-radius: 3px;
-        }
-
-        .control-buttons {
+        .input-buttons {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn {
             background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
             border: none;
-            border-radius: 15px;
+            border-radius: 14px;
             color: #0a0a1a;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
         }
 
         .btn:active {
-            transform: translateY(-1px);
+            transform: translateY(0);
         }
 
         .btn-primary {
-            padding: 18px 30px;
-            font-size: 16px;
+            padding: 18px 25px;
         }
 
-        .btn-secondary {
+        .btn-voice {
             padding: 18px;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             justify-content: center;
         }
 
-        .btn-voice.recording {
-            background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
-            color: white;
-        }
-
-        /* Quick Actions */
         .quick-actions {
-            padding: 20px 30px;
-            background: rgba(10, 10, 26, 0.3);
-            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            margin-top: 15px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
         }
 
-        .quick-action-btn {
+        .quick-btn {
             background: rgba(0, 212, 255, 0.1);
             border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 25px;
+            border-radius: 20px;
             color: #00d4ff;
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-size: 13px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
-        .quick-action-btn:hover {
+        .quick-btn:hover {
             background: rgba(0, 212, 255, 0.2);
             border-color: #00d4ff;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-                height: 100vh;
-            }
-
             .header {
-                padding: 20px;
+                padding: 15px 20px;
             }
 
             .logo-text h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
 
-            .chat-area {
-                margin: 0;
-                border-radius: 0;
+            .chat-container {
+                margin: 0 10px 10px 10px;
+                border-radius: 15px;
             }
 
-            .input-container {
+            .input-form {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
-            .control-buttons {
+            .input-buttons {
                 justify-content: center;
             }
 
             .quick-actions {
-                padding: 15px;
                 gap: 8px;
             }
+
+            .quick-btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
         }
 
-        /* Additional Animations */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .bounce-in {
-            animation: bounceIn 0.6s ease-out;
-        }
-
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0.3);
-                opacity: 0;
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            70% {
-                transform: scale(0.9);
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
+        /* Loading animation */
+        .loading {
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="background-animation" id="backgroundAnimation"></div>
-
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="logo-container">
-                <div class="logo-icon bounce-in">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>J.A.R.V.I.S</h1>
-                    <p>Just A Rather Very Intelligent System</p>
-                    <div class="features">
-                        <span>🚀 Unrestricted AI</span>
-                        <span>📚 All Topics</span>
-                        <span>🌐 Live Data</span>
-                        <span>🎯 Multiple APIs</span>
-                    </div>
-                </div>
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo-icon">🤖</div>
+            <div class="logo-text">
+                <h1>J.A.R.V.I.S</h1>
+                <p>Just A Rather Very Intelligent System</p>
             </div>
-            <div class="status-panel">
-                <div class="status-text" id="statusText">Initializing...</div>
-                <div class="api-status" id="apiStatus">Checking APIs...</div>
-            </div>
-        </header>
+        </div>
+        <div class="status-panel">
+            <div class="status" id="statusText">Initializing...</div>
+            <div class="api-info" id="apiInfo">Loading AI models...</div>
+        </div>
+    </div>
 
-        <!-- Chat Area -->
-        <main class="chat-area">
-            <div class="messages-container" id="messagesContainer">
-                <!-- Messages will be added here dynamically -->
+    <div class="chat-container">
+        <div class="messages-area" id="messagesArea">
+            <!-- Messages will be added here -->
+        </div>
+        
+        <div class="typing-indicator" id="typingIndicator">
+            🤖 JARVIS is thinking
+            <div class="typing-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
+        </div>
+    </div>
 
-            <!-- Typing Indicator -->
-            <div class="typing-indicator" id="typingIndicator">
-                <div class="message ai">
-                    <div class="message-bubble">
-                        <div class="message-header">
-                            <i class="fas fa-robot"></i>
-                            <span>JARVIS is thinking...</span>
-                        </div>
-                        <div class="typing-dots">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="input-section">
+        <form class="input-form" id="inputForm">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Ask JARVIS anything - No restrictions! Math, Science, Current Affairs, Any Topic..."
+                    rows="1"
+                    autocomplete="off"
+                ></textarea>
             </div>
-        </main>
-
-        <!-- Input Section -->
-        <section class="input-section">
-            <div class="input-container">
-                <div class="input-wrapper">
-                    <textarea 
-                        id="messageInput" 
-                        class="input-field"
-                        placeholder="Ask JARVIS anything - No restrictions! Math, Science, Current Affairs, Any Topic..."
-                        rows="1"
-                    ></textarea>
-                </div>
-                <div class="control-buttons">
-                    <button type="button" class="btn btn-secondary btn-voice" id="voiceButton" title="Voice Input">
-                        <i class="fas fa-microphone"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary" id="sendButton">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Send</span>
-                    </button>
-                </div>
+            <div class="input-buttons">
+                <button type="button" class="btn btn-voice" id="voiceButton" title="Voice Input">
+                    🎤
+                </button>
+                <button type="submit" class="btn btn-primary" id="sendButton">
+                    ➤ Send
+                </button>
             </div>
-        </section>
-
-        <!-- Quick Actions -->
-        <footer class="quick-actions">
-            <button class="quick-action-btn" data-message="Explain photosynthesis in detail with examples">
-                <i class="fas fa-leaf"></i> Photosynthesis
+        </form>
+        
+        <div class="quick-actions">
+            <button class="quick-btn" data-msg="Explain photosynthesis in detail with examples">
+                🌱 Photosynthesis
             </button>
-            <button class="quick-action-btn" data-message="Solve quadratic equations step by step">
-                <i class="fas fa-calculator"></i> Math Help
+            <button class="quick-btn" data-msg="Solve quadratic equations step by step">
+                📊 Math Help
             </button>
-            <button class="quick-action-btn" data-message="Create practice test for CBSE Class 10">
-                <i class="fas fa-file-alt"></i> Practice Test
+            <button class="quick-btn" data-msg="Create practice test for CBSE Class 10">
+                📝 Practice Test
             </button>
-            <button class="quick-action-btn" data-message="Latest news and current affairs">
-                <i class="fas fa-globe"></i> Current Affairs
+            <button class="quick-btn" data-msg="What's the latest news today?">
+                📰 Current Affairs
             </button>
-            <button class="quick-action-btn" data-message="Study plan for board exams">
-                <i class="fas fa-calendar"></i> Study Plan
+            <button class="quick-btn" data-msg="Study plan for board exams">
+                📅 Study Plan
             </button>
-            <button class="quick-action-btn" data-message="Help with English grammar and writing">
-                <i class="fas fa-pen"></i> English Help
+            <button class="quick-btn" data-msg="Help with English grammar">
+                📖 English
             </button>
-            <button class="quick-action-btn" data-message="Explain any physics concept">
-                <i class="fas fa-atom"></i> Physics
+            <button class="quick-btn" data-msg="Explain physics concepts">
+                ⚡ Physics
             </button>
-            <button class="quick-action-btn" data-message="Chemistry reactions and equations">
-                <i class="fas fa-flask"></i> Chemistry
+            <button class="quick-btn" data-msg="Chemistry reactions help">
+                🧪 Chemistry
             </button>
-        </footer>
+        </div>
     </div>
 
     <!-- Load JavaScript -->
