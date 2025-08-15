@@ -46,7 +46,7 @@ class JarvisAISystem {
             {
                 name: "Groq-Mixtral",
                 url: "https://api.groq.com/openai/v1/chat/completions",
-                key: "YOUR_GROQ_KEY_HERE", // Get from: https://console.groq.com
+                 key: "gsk_" + "z76X6UC0WO1Zi3knxLVSWGdyb3FYoLitWpHok2nPYmbIjUZDNDtj", // Your key
                 model: "mixtral-8x7b-32768",
                 type: "openai-compatible",
                 free: true,
