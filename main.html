@@ -3,77 +3,627 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jarvis - Your AI Study Assistant</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>JARVIS AI - Ultimate Educational Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #00d4ff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00d4ff;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float 15s infinite linear;
+        }
+
+        .particle:nth-child(odd) {
+            background: #0080ff;
+            animation-duration: 20s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(10, 10, 26, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+            padding: 25px 30px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle, #00d4ff 0%, #0080ff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            animation: pulse 3s infinite;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 50px rgba(0, 212, 255, 0.9);
+            }
+        }
+
+        .logo-text {
+            flex: 1;
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .logo-text p {
+            font-size: 16px;
+            color: rgba(0, 212, 255, 0.8);
+            margin-bottom: 3px;
+        }
+
+        .logo-text .features {
+            font-size: 12px;
+            color: rgba(0, 212, 255, 0.6);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .status-panel {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+        }
+
+        .status-text {
+            font-size: 16px;
+            color: #00ff41;
+            margin-bottom: 5px;
+        }
+
+        .api-status {
+            font-size: 12px;
+            color: rgba(0, 212, 255, 0.7);
+        }
+
+        /* Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: rgba(10, 10, 26, 0.2);
+            margin: 0 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+        }
+
+        .messages-container {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #00d4ff rgba(10, 10, 26, 0.5);
+        }
+
+        .messages-container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .messages-container::-webkit-scrollbar-track {
+            background: rgba(10, 10, 26, 0.3);
+            border-radius: 6px;
+        }
+
+        .messages-container::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00d4ff, #0080ff);
+            border-radius: 6px;
+            border: 2px solid rgba(10, 10, 26, 0.3);
+        }
+
+        /* Message Styles */
+        .message {
+            margin-bottom: 25px;
+            animation: messageSlide 0.5s ease-out;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .message.ai {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .message-bubble {
+            max-width: 85%;
+            padding: 20px 25px;
+            border-radius: 20px;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        .user .message-bubble {
+            background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+            color: #0a0a1a;
+            border-radius: 25px 25px 5px 25px;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .ai .message-bubble {
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.4);
+            color: #ffffff;
+            border-radius: 25px 25px 25px 5px;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .message-content {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .message-content h1,
+        .message-content h2,
+        .message-content h3 {
+            color: #00d4ff;
+            margin: 15px 0 10px 0;
+        }
+
+        .message-content strong {
+            color: #00d4ff;
+        }
+
+        .message-content code {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .message-content ul,
+        .message-content ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .message-content li {
+            margin-bottom: 5px;
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00d4ff;
+            animation: typingPulse 1.4s infinite ease-in-out;
+        }
+
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingPulse {
+            0%, 60%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            30% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* Input Area */
+        .input-section {
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+            padding: 25px 30px;
+            border-top: 2px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 -5px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .input-container {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .input-field {
+            width: 100%;
+            background: rgba(10, 10, 26, 0.8);
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 20px;
+            padding: 20px 25px;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: inherit;
+            resize: none;
+            min-height: 60px;
+            max-height: 200px;
+            outline: none;
+            transition: all 0.3s ease;
+            scrollbar-width: thin;
+            scrollbar-color: #00d4ff rgba(10, 10, 26, 0.5);
+        }
+
+        .input-field:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            background: rgba(10, 10, 26, 0.95);
+        }
+
+        .input-field::placeholder {
+            color: rgba(0, 212, 255, 0.5);
+            font-style: italic;
+        }
+
+        .input-field::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .input-field::-webkit-scrollbar-thumb {
+            background: #00d4ff;
+            border-radius: 3px;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+            border: none;
+            border-radius: 15px;
+            color: #0a0a1a;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            padding: 18px 30px;
+            font-size: 16px;
+        }
+
+        .btn-secondary {
+            padding: 18px;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+        }
+
+        .btn-voice.recording {
+            background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+            color: white;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            padding: 20px 30px;
+            background: rgba(10, 10, 26, 0.3);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .quick-action-btn {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            color: #00d4ff;
+            padding: 10px 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quick-action-btn:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                height: 100vh;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .logo-text h1 {
+                font-size: 24px;
+            }
+
+            .chat-area {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .input-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .control-buttons {
+                justify-content: center;
+            }
+
+            .quick-actions {
+                padding: 15px;
+                gap: 8px;
+            }
+        }
+
+        /* Additional Animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .bounce-in {
+            animation: bounceIn 0.6s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="background-animation" id="backgroundAnimation"></div>
+
     <div class="container">
+        <!-- Header Section -->
         <header class="header">
-            <div class="logo">
-                <div class="jarvis-voice-indicator" id="jarvisVoiceIndicator">
-                    <div class="voice-core"></div>
-                    <div class="voice-ring voice-ring-1"></div>
-                    <div class="voice-ring voice-ring-2"></div>
-                    <div class="voice-ring voice-ring-3"></div>
-                    <div class="voice-pulse"></div>
+            <div class="logo-container">
+                <div class="logo-icon bounce-in">
+                    <i class="fas fa-robot"></i>
                 </div>
                 <div class="logo-text">
-                    <h1>Jarvis</h1>
-                    <span class="subtitle">Your AI Study Assistant</span>
-                </div>
-            </div>
-            <div class="controls">
-                <select id="contextSelect" class="context-select">
-                    <option value="general">🎓 General</option>
-                    <option value="math">🧮 Mathematics</option>
-                    <option value="science">🔬 Science</option>
-                    <option value="test">📝 Take Test</option>
-                    <option value="revision">📖 Revision</option>
-                </select>
-            </div>
-        </header>
-
-        <div class="chat-container">
-            <div id="chatMessages" class="chat-messages">
-                <div class="message jarvis-message">
-                    <div class="message-content">
-                        <strong>Jarvis:</strong> Hello! I'm Jarvis, your AI study assistant. I can help you with:
-                        <ul>
-                            <li>📚 NCERT concepts and solutions</li>
-                            <li>📝 CBSE Previous Year Questions</li>
-                            <li>🧮 RS Aggarwal & RD Sharma solutions</li>
-                            <li>✅ Revision tests and mock exams</li>
-                            <li>❓ Doubt clearing with detailed explanations</li>
-                        </ul>
-                        How can I help you today?
+                    <h1>J.A.R.V.I.S</h1>
+                    <p>Just A Rather Very Intelligent System</p>
+                    <div class="features">
+                        <span>🚀 Unrestricted AI</span>
+                        <span>📚 All Topics</span>
+                        <span>🌐 Live Data</span>
+                        <span>🎯 Multiple APIs</span>
                     </div>
                 </div>
             </div>
+            <div class="status-panel">
+                <div class="status-text" id="statusText">Initializing...</div>
+                <div class="api-status" id="apiStatus">Checking APIs...</div>
+            </div>
+        </header>
 
-            <div class="input-container">
-                <div class="voice-controls">
-                    <button id="recordBtn" class="voice-btn" title="Voice Input">🎤</button>
-                    <button id="stopBtn" class="voice-btn stop-btn" title="Stop Recording" style="display: none;">⏹️</button>
+        <!-- Chat Area -->
+        <main class="chat-area">
+            <div class="messages-container" id="messagesContainer">
+                <!-- Messages will be added here dynamically -->
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message ai">
+                    <div class="message-bubble">
+                        <div class="message-header">
+                            <i class="fas fa-robot"></i>
+                            <span>JARVIS is thinking...</span>
+                        </div>
+                        <div class="typing-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
                 </div>
-                <input type="text" id="messageInput" placeholder="Ask me anything about your studies..." class="message-input">
-                <button id="sendBtn" class="send-btn">Send</button>
             </div>
+        </main>
 
-            <div class="quick-actions">
-                <button class="quick-btn" data-action="test">📝 Take Test</button>
-                <button class="quick-btn" data-action="revision">📖 Revision</button>
-                <button class="quick-btn" data-action="doubt">❓ Clear Doubt</button>
-                <button class="quick-btn" data-action="practice">🏃 Practice</button>
+        <!-- Input Section -->
+        <section class="input-section">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="input-field"
+                        placeholder="Ask JARVIS anything - No restrictions! Math, Science, Current Affairs, Any Topic..."
+                        rows="1"
+                    ></textarea>
+                </div>
+                <div class="control-buttons">
+                    <button type="button" class="btn btn-secondary btn-voice" id="voiceButton" title="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send</span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="status-bar">
-            <span id="statusText">Ready</span>
-            <div class="connection-status" id="connectionStatus">🟢</div>
-        </div>
+        <!-- Quick Actions -->
+        <footer class="quick-actions">
+            <button class="quick-action-btn" data-message="Explain photosynthesis in detail with examples">
+                <i class="fas fa-leaf"></i> Photosynthesis
+            </button>
+            <button class="quick-action-btn" data-message="Solve quadratic equations step by step">
+                <i class="fas fa-calculator"></i> Math Help
+            </button>
+            <button class="quick-action-btn" data-message="Create practice test for CBSE Class 10">
+                <i class="fas fa-file-alt"></i> Practice Test
+            </button>
+            <button class="quick-action-btn" data-message="Latest news and current affairs">
+                <i class="fas fa-globe"></i> Current Affairs
+            </button>
+            <button class="quick-action-btn" data-message="Study plan for board exams">
+                <i class="fas fa-calendar"></i> Study Plan
+            </button>
+            <button class="quick-action-btn" data-message="Help with English grammar and writing">
+                <i class="fas fa-pen"></i> English Help
+            </button>
+            <button class="quick-action-btn" data-message="Explain any physics concept">
+                <i class="fas fa-atom"></i> Physics
+            </button>
+            <button class="quick-action-btn" data-message="Chemistry reactions and equations">
+                <i class="fas fa-flask"></i> Chemistry
+            </button>
+        </footer>
     </div>
 
+    <!-- Load JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
